@@ -1,10 +1,9 @@
 ---
 layout: page
-title: Documentation
+title: ClickHouse Backend
 nav_order: 2
 has_children: true
-permalink: /docs/
+parent: Documentation
+permalink: /clickhouse/
 ---
 # Gluten Documents by version
-
-
