@@ -3,6 +3,8 @@ layout: page
 title: Using S3 with Gluten
 nav_order: 3
 parent: Velox Backend
+grand_parent: Documentation
+permalink: /docs/velox/s3
 ---
 Object stores offered by CSPs such as AWS S3 are important for users of Gluten to store their data. This doc will discuss all details of configs, and use cases around using Gluten with object stores. In order to use an S3 endpoint as your data source, please ensure you are using the following S3 configs in your spark-defaults.conf. If you're experiencing any issues authenticating to S3 with additional auth mechanisms, please reach out to us using the 'Issues' tab.
 

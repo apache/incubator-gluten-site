@@ -3,6 +3,8 @@ layout: page
 title: Build Parameters for Velox Backend
 nav_order: 2
 parent: Velox Backend
+grand_parent: Documentation
+permalink: /docs/velox/build_parameters
 ---
 ## Build Parameters
 ### Native build parameters for buildbundle-veloxbe.sh or builddeps-veloxbe.sh

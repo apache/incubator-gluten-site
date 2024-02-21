@@ -3,6 +3,8 @@ layout: page
 title: Getting-Started with Velox Backend
 nav_order: 1
 parent: Velox Backend
+grand_parent: Documentation
+permalink: /docs/velox/getting-started
 ---
 # Supported Version
 | Type  | Version                      |

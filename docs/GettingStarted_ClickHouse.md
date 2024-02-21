@@ -3,6 +3,8 @@ layout: page
 title: Getting Started with ClickHouse Backend
 nav_order: 1
 parent: ClickHouse Backend
+grand_parent: Documentation
+permalink: /docs/clickhouse/getting-started
 ---
 ## ClickHouse Backend
 
