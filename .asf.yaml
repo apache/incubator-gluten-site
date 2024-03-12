@@ -14,7 +14,7 @@
 # limitations under the License.
 
 publish:
-  whoami: asf-site
+  whoami: main
 
 github:
   description: "Apache Gluten is a middle layer responsible for offloading JVM-based SQL engines' execution to native engines."
@@ -33,6 +33,11 @@ github:
     squash: true
     merge: false
     rebase: false
+
+jekyll:
+  whoami: jekyll-source-branch
+  target: asf-staging-jekyll    # output branches need to be asf-site OR asf-staging*
+# outputdir: outputdir          # MAY be needed, but generally can be left out
 
 notifications:
   commits:      commits@gluten.apache.org
