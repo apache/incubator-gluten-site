@@ -19,6 +19,10 @@ publish:
 github:
   description: "Apache Gluten is a middle layer responsible for offloading JVM-based SQL engines' execution to native engines."
   homepage: https://gluten.apache.org/
+  features:
+    issues: false
+    projects: false
+    wiki: false
   labels:
     - sql
     - spark
