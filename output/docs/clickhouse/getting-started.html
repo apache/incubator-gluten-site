@@ -1,0 +1,355 @@
+<!DOCTYPE html> <html lang="en-US"> <head> <meta charset="UTF-8"> <meta http-equiv="X-UA-Compatible" content="IE=Edge"> <link rel="stylesheet" href="/assets/css/just-the-docs-default.css"> <link rel="stylesheet" href="/assets/css/just-the-docs-head-nav.css" id="jtd-head-nav-stylesheet"> <style id="jtd-nav-activation"> .site-nav > ul.nav-list:first-child > li > a, .site-nav > ul.nav-list:first-child > li > ul > li > a, .site-nav > ul.nav-list:first-child > li > ul > li > ul > li:not(:nth-child(1)) > a { background-image: none; } .site-nav > ul.nav-list:not(:first-child) a, .site-nav li.external a { background-image: none; } .site-nav > ul.nav-list:first-child > li:nth-child(2) > ul > li:nth-child(2) > ul > li:nth-child(1) > a { font-weight: 600; text-decoration: none; }.site-nav > ul.nav-list:first-child > li:nth-child(2) > button svg, .site-nav > ul.nav-list:first-child > li:nth-child(2) > ul > li:nth-child(2) > button svg { transform: rotate(-90deg); }.site-nav > ul.nav-list:first-child > li.nav-list-item:nth-child(2) > ul.nav-list, .site-nav > ul.nav-list:first-child > li.nav-list-item:nth-child(2) > ul.nav-list > li.nav-list-item:nth-child(2) > ul.nav-list { display: block; } </style> <script src="/assets/js/vendor/lunr.min.js"></script> <script src="/assets/js/just-the-docs.js"></script> <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Begin Jekyll SEO tag v2.8.0 --> <title>Getting Started with ClickHouse Backend | Apache Gluten incubating</title> <meta name="generator" content="Jekyll v3.9.3" /> <meta property="og:title" content="Getting Started with ClickHouse Backend" /> <meta property="og:locale" content="en_US" /> <meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description." /> <meta property="og:description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description." /> <link rel="canonical" href="https://gluten.apache.org/docs/clickhouse/getting-started" /> <meta property="og:url" content="https://gluten.apache.org/docs/clickhouse/getting-started" /> <meta property="og:site_name" content="Apache Gluten incubating" /> <meta property="og:type" content="website" /> <meta name="twitter:card" content="summary" /> <meta property="twitter:title" content="Getting Started with ClickHouse Backend" /> <script type="application/ld+json"> {"@context":"https://schema.org","@type":"WebPage","description":"Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.","headline":"Getting Started with ClickHouse Backend","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://gluten.apache.org/images/gluten-logo-blue.png"}},"url":"https://gluten.apache.org/docs/clickhouse/getting-started"}</script> <!-- End Jekyll SEO tag --> </head> <body> <a class="skip-to-main" href="#main-content">Skip to main content</a> <svg xmlns="http://www.w3.org/2000/svg" class="d-none"> <symbol id="svg-link" viewBox="0 0 24 24"> <title>Link</title> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-link"> <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path> </svg> </symbol> <symbol id="svg-menu" viewBox="0 0 24 24"> <title>Menu</title> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"> <line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line> </svg> </symbol> <symbol id="svg-arrow-right" viewBox="0 0 24 24"> <title>Expand</title> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"> <polyline points="9 18 15 12 9 6"></polyline> </svg> </symbol> <!-- Feather. MIT License: https://github.com/feathericons/feather/blob/master/LICENSE --> <symbol id="svg-external-link" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-external-link"> <title id="svg-external-link-title">(external link)</title> <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line> </symbol> <symbol id="svg-doc" viewBox="0 0 24 24"> <title>Document</title> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file"> <path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><polyline points="13 2 13 9 20 9"></polyline> </svg> </symbol> <symbol id="svg-search" viewBox="0 0 24 24"> <title>Search</title> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search"> <circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line> </svg> </symbol> <!-- Bootstrap Icons. MIT License: https://github.com/twbs/icons/blob/main/LICENSE.md --> <symbol id="svg-copy" viewBox="0 0 16 16"> <title>Copy</title> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16"> <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/> <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"/> </svg> </symbol> <symbol id="svg-copied" viewBox="0 0 16 16"> <title>Copied</title> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard-check-fill" viewBox="0 0 16 16"> <path d="M6.5 0A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3Zm3 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3Z"/> <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1A2.5 2.5 0 0 1 9.5 5h-3A2.5 2.5 0 0 1 4 2.5v-1Zm6.854 7.354-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708L7.5 10.793l2.646-2.647a.5.5 0 0 1 .708.708Z"/> </svg> </symbol> </svg> <div class="side-bar"> <div class="site-header" role="banner"> <a href="/" class="site-title lh-tight"> <div class="site-logo" role="img" aria-label="Apache Gluten incubating"></div> </a> <button id="menu-button" class="site-button btn-reset" aria-label="Toggle menu" aria-pressed="false"> <svg viewBox="0 0 24 24" class="icon" aria-hidden="true"><use xlink:href="#svg-menu"></use></svg> </button> </div> <nav aria-label="Main" id="site-nav" class="site-nav"> <ul class="nav-list"><li class="nav-list-item"><a href="/" class="nav-list-link">Home</a></li><li class="nav-list-item"><button class="nav-list-expander btn-reset" aria-label="toggle items in Documentation category" aria-pressed="false"> <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg> </button><a href="/docs/" class="nav-list-link">Documentation</a><ul class="nav-list"><li class="nav-list-item"><button class="nav-list-expander btn-reset" aria-label="toggle items in Velox Backend category" aria-pressed="false"> <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg> </button><a href="/docs/velox/" class="nav-list-link">Velox Backend</a><ul class="nav-list"><li class="nav-list-item"> <a href="/docs/velox/getting-started" class="nav-list-link">Getting-Started with Velox Backend</a> </li><li class="nav-list-item"> <a href="/docs/velox/build_parameters" class="nav-list-link">Build Parameters for Velox Backend</a> </li><li class="nav-list-item"> <a href="/docs/velox/s3" class="nav-list-link">Using S3 with Gluten</a> </li><li class="nav-list-item"> <a href="/docs/velox/gcs" class="nav-list-link">Using GCS with Gluten</a> </li></ul></li><li class="nav-list-item"><button class="nav-list-expander btn-reset" aria-label="toggle items in ClickHouse Backend category" aria-pressed="false"> <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg> </button><a href="/clickhouse/" class="nav-list-link">ClickHouse Backend</a><ul class="nav-list"><li class="nav-list-item"> <a href="/docs/clickhouse/getting-started" class="nav-list-link">Getting Started with ClickHouse Backend</a> </li></ul></li></ul></li><li class="nav-list-item"><button class="nav-list-expander btn-reset" aria-label="toggle items in Developers category" aria-pressed="false"> <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg> </button><a href="/developers/" class="nav-list-link">Developers</a><ul class="nav-list"><li class="nav-list-item"><a href="/developers/NewToGluten.html" class="nav-list-link">New To Gluten</a></li><li class="nav-list-item"><a href="/developers/HowTo.html" class="nav-list-link">How To Use Gluten</a></li><li class="nav-list-item"><a href="/developers/MicroBenchmarks.html" class="nav-list-link">Micro Benchmarks for Velox Backend</a></li><li class="nav-list-item"><a href="/developers/CppCodingStyle.html" class="nav-list-link">CPP Code Style</a></li><li class="nav-list-item"><a href="/developers/velox-function-development-guide.html" class="nav-list-link">Velox Function Development</a></li><li class="nav-list-item"><a href="/developers/docker_ubuntu22.04.html" class="nav-list-link">Docker script for Ubuntu 22.04/20.04</a></li><li class="nav-list-item"><a href="/developers/docker_centos8.html" class="nav-list-link">Docker script for CentOS 8</a></li><li class="nav-list-item"><a href="/developers/docker_centos7.html" class="nav-list-link">Docker script for CentOS 7</a></li><li class="nav-list-item"><a href="/developers/SubstraitModifications.html" class="nav-list-link">Substrait Modifications</a></li></ul></li><li class="nav-list-item"><a href="/release.html" class="nav-list-link">Gluten Release</a></li><li class="nav-list-item"><a href="/contact-us.html" class="nav-list-link">Contact Us</a></li><li class="nav-list-item"><a href="/about/" class="nav-list-link">About</a></li></ul> </nav> <footer class="site-footer"> This site uses <a href="https://github.com/just-the-docs/just-the-docs">Just the Docs</a>, a documentation theme for Jekyll. </footer> </div> <div class="main" id="top"> <div id="main-header" class="main-header"> <div class="search" role="search"> <div class="search-input-wrap"> <input type="text" id="search-input" class="search-input" tabindex="0" placeholder="Search Apache Gluten incubating" aria-label="Search Apache Gluten incubating" autocomplete="off"> <label for="search-input" class="search-label"><svg viewBox="0 0 24 24" class="search-icon"><use xlink:href="#svg-search"></use></svg></label> </div> <div id="search-results" class="search-results"></div> </div> <nav aria-label="Auxiliary" class="aux-nav"> <ul class="aux-nav-list"> <li class="aux-nav-list-item"> <a href="//github.com//oap-project/gluten-site" class="site-button" > Apache Gluten website </a> </li> </ul> </nav> </div> <div class="main-content-wrap"> <nav aria-label="Breadcrumb" class="breadcrumb-nav"> <ol class="breadcrumb-nav-list"> <li class="breadcrumb-nav-list-item"><a href="/docs/">Documentation</a></li> <li class="breadcrumb-nav-list-item"><a href="/clickhouse/">ClickHouse Backend</a></li> <li class="breadcrumb-nav-list-item"><span>Getting Started with ClickHouse Backend</span></li> </ol> </nav> <div id="main-content" class="main-content"> <main> <h2 id="clickhouse-backend"> <a href="#clickhouse-backend" class="anchor-heading" aria-labelledby="clickhouse-backend"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> ClickHouse Backend </h2> <p>ClickHouse is a column-oriented database management system (DBMS) for online analytical processing of queries (OLAP), which supports best in the industry query performance, while significantly reducing storage requirements through its innovative use of columnar storage and compression. We port ClickHouse ( based on version <strong>23.1</strong> ) as a library, called ‘libch.so’, and Gluten loads this library through JNI as the native engine. In this way, we don’t need to deploy a standalone ClickHouse Cluster, Spark uses Gluten as SparkPlugin to read and write ClickHouse MergeTree data.</p> <h3 id="architecture"> <a href="#architecture" class="anchor-heading" aria-labelledby="architecture"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Architecture </h3> <p>The architecture of the ClickHouse backend is shown below:</p> <p><img src="../image/ClickHouse/ClickHouse-Backend-Architecture.png" alt="ClickHouse-Backend-Architecture" /></p> <ol> <li>On Spark driver, Spark uses Gluten SparkPlugin to transform the physical plan to the Substrait plan, and then pass the Substrait plan to ClickHouse backend through JNI call on executors.</li> <li>Based on Spark DataSource V2 interface, implementing a ClickHouse Catalog to support operating the ClickHouse tables, and then using Delta to save some metadata about ClickHouse like the MergeTree parts information, and also provide ACID transactions.</li> <li>When querying from a ClickHouse table, it will fetch MergeTree parts information from Delta metadata and assign these parts into Spark partitions according to some strategies.</li> <li>When writing data into a ClickHouse table, it will use ClickHouse library to write MergeTree parts data and collect these MergeTree parts information after writing successfully, and then save these MergeTree parts information into Delta metadata. ( <strong>The feature of writing MergeTree parts is coming soon.</strong> )</li> <li>On Spark executors, each executor will load the ‘libch.so’ through JNI when starting, and then call the operators according to the Substrait plan which is passed from Spark Driver, like reading data from the MergeTree parts, writing the MergeTree parts, filtering data, aggregating data and so on.</li> <li>Currently, the ClickHouse backend only supports reading the MergeTree parts from local storage, it needs to use a high-performance shared file system to share a root bucket on every node of the cluster from the object storage, like JuiceFS.</li> </ol> <h3 id="development-environment-setup"> <a href="#development-environment-setup" class="anchor-heading" aria-labelledby="development-environment-setup"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Development environment setup </h3> <p>In general, we use IDEA for Gluten development and CLion for ClickHouse backend development on <strong>Ubuntu 20</strong>.</p> <h4 id="prerequisites"> <a href="#prerequisites" class="anchor-heading" aria-labelledby="prerequisites"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Prerequisites </h4> <p>Install the software required for compilation, run <code class="language-plaintext highlighter-rouge">sudo ./ep/build-clickhouse/src/install_ubuntu.sh</code>. Under the hood, it will install the following software:</p> <ul> <li>Clang 16.0</li> <li>cmake 3.20 or higher version</li> <li>ninja-build 1.8.2</li> </ul> <p>You can also refer to <a href="https://clickhouse.com/docs/en/development/build/">How-to-Build-ClickHouse-on-Linux</a>. You need to install the following software manually:</p> <ul> <li>Java 8</li> <li>Maven 3.6.3 or higher version</li> <li>Spark 3.2.2 or Spark 3.3.1</li> </ul> <p>Then, get Gluten code:</p> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    git clone https://github.com/oap-project/gluten.git
+</code></pre></div></div> <h4 id="setup-clickhouse-backend-development-environment"> <a href="#setup-clickhouse-backend-development-environment" class="anchor-heading" aria-labelledby="setup-clickhouse-backend-development-environment"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Setup ClickHouse backend development environment </h4> <p>If you don’t care about development environment, you can skip this part.</p> <p>Otherwise, do:</p> <ol> <li>clone Kyligence/ClickHouse repo <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> cd /to/some/place/
+ git clone --recursive --shallow-submodules -b clickhouse_backend https://github.com/Kyligence/ClickHouse.git
+</code></pre></div> </div> </li> <li> <p>Configure cpp-ch ${GLUTEN_SOURCE}/cpp-ch can be treated as an add-on of Kyligence/Clickhouse</p> <p>First, initialize some configuration for this add-on:</p> <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nb">export </span><span class="nv">GLUTEN_SOURCE</span><span class="o">=</span>/path/to/gluten
+ <span class="nb">export </span><span class="nv">CH_SOURCE_DIR</span><span class="o">=</span>/path/to/ClickHouse
+ cmake <span class="nt">-G</span> Ninja <span class="nt">-S</span> <span class="k">${</span><span class="nv">GLUTEN_SOURCE</span><span class="k">}</span>/cpp-ch <span class="nt">-B</span> <span class="k">${</span><span class="nv">GLUTEN_SOURCE</span><span class="k">}</span>/cpp-ch/build_ch <span class="nt">-DCH_SOURCE_DIR</span><span class="o">=</span><span class="k">${</span><span class="nv">CH_SOURCE_DIR</span><span class="k">}</span> <span class="s2">"-DCMAKE_C_COMPILER=</span><span class="si">$(</span><span class="nb">command</span> <span class="nt">-v</span> clang-16<span class="si">)</span><span class="s2">"</span> <span class="s2">"-DCMAKE_CXX_COMPILER=</span><span class="si">$(</span><span class="nb">command</span> <span class="nt">-v</span> clang++-16<span class="si">)</span><span class="s2">"</span> <span class="s2">"-DCMAKE_BUILD_TYPE=RelWithDebInfo"</span>
+</code></pre></div> </div> <p>Next, you need to compile Kyligence/Clickhouse. There are two options:</p> </li> <li> <p>(Option 1) Use CLion</p> <ul> <li>Open ClickHouse repo</li> <li> <p>Choose File -&gt; Settings -&gt; Build, Execution, Deployment -&gt; Toolchains, and then choose Bundled CMake, clang-16 as C Compiler, clang++-16 as C++ Compiler:</p> <p><img src="../image/ClickHouse/CLion-Configuration-1.png" alt="ClickHouse-CLion-Toolchains" /></p> </li> <li> <p>Choose File -&gt; Settings -&gt; Build, Execution, Deployment -&gt; CMake:</p> <p><img src="../image/ClickHouse/CLion-Configuration-2.png" alt="ClickHouse-CLion-Toolchains" /></p> <p>And then add these options into CMake options:</p> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  -DENABLE_PROTOBUF=ON -DENABLE_TESTS=OFF -DENABLE_JEMALLOC=ON -DENABLE_MULTITARGET_CODE=ON -DENABLE_EXTERN_LOCAL_ENGINE=ON
+</code></pre></div> </div> </li> <li> <p>Build ‘ch’ target on ClickHouse Project with Debug mode or Release mode:</p> <p><img src="../image/ClickHouse/CLion-Configuration-3.png" alt="ClickHouse-CLion-Toolchains" /></p> <p>If it builds with Release mode successfully, there is a library file called ‘libch.so’ in path ‘${CH_SOURCE_DIR}/cmake-build-release/utils/extern-local-engine/’.</p> <p>If it builds with Debug mode successfully, there is a library file called ‘libchd.so’ in path ‘${CH_SOURCE_DIR}/cmake-build-debug/utils/extern-local-engine/’.</p> </li> </ul> </li> <li>(Option 2) Use command line <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> cmake --build ${GLUTEN_SOURCE}/cpp-ch/build_ch --target build_ch
+</code></pre></div> </div> <p>If it builds successfully, there is a library file called ‘libch.so’ in path ‘${GLUTEN_SOURCE}/cpp-ch/build/utils/extern-local-engine/’.</p> </li> </ol> <h3 id="directly-compile-clickhouse-backend"> <a href="#directly-compile-clickhouse-backend" class="anchor-heading" aria-labelledby="directly-compile-clickhouse-backend"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Directly Compile ClickHouse backend </h3> <p>In case you don’t want a develop environment, you can use the following command to compile ClickHouse backend directly:</p> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone https://github.com/oap-project/gluten.git
+cd gluten
+bash ./ep/build-clickhouse/src/build_clickhouse.sh
+</code></pre></div></div> <p>This will download Clickhouse for you and build everything. The target file is <code class="language-plaintext highlighter-rouge">/path/to/gluten/cpp-ch/build/utils/extern-local-engine/libch.so</code>.</p> <h3 id="compile-gluten"> <a href="#compile-gluten" class="anchor-heading" aria-labelledby="compile-gluten"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Compile Gluten </h3> <p>The prerequisites are the same as the one mentioned above. Compile Gluten with ClickHouse backend through maven:</p> <ul> <li>for Spark 3.2.2<span id="deploy-spark-322"></span></li> </ul> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    git clone https://github.com/oap-project/gluten.git
+    cd gluten/
+    export MAVEN_OPTS="-Xmx8g -XX:ReservedCodeCacheSize=2g"
+    mvn clean install -Pbackends-clickhouse -Phadoop-2.7.4 -Pspark-3.2 -Dhadoop.version=2.8.5 -DskipTests -Dcheckstyle.skip
+    ls -al backends-clickhouse/target/gluten-XXXXX-spark-3.2-jar-with-dependencies.jar
+</code></pre></div></div> <ul> <li>for Spark 3.3.1</li> </ul> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    git clone https://github.com/oap-project/gluten.git
+    cd gluten/
+    export MAVEN_OPTS="-Xmx8g -XX:ReservedCodeCacheSize=2g"
+    mvn clean install -Pbackends-clickhouse -Phadoop-2.7.4 -Pspark-3.3 -Dhadoop.version=2.8.5 -DskipTests -Dcheckstyle.skip
+    ls -al backends-clickhouse/target/gluten-XXXXX-spark-3.3-jar-with-dependencies.jar
+</code></pre></div></div> <h3 id="gluten-in-local-spark-thrift-server"> <a href="#gluten-in-local-spark-thrift-server" class="anchor-heading" aria-labelledby="gluten-in-local-spark-thrift-server"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Gluten in local Spark Thrift Server </h3> <h4 id="prepare-working-directory"> <a href="#prepare-working-directory" class="anchor-heading" aria-labelledby="prepare-working-directory"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Prepare working directory </h4> <ul> <li>for Spark 3.2.2</li> </ul> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>tar zxf spark-3.2.2-bin-hadoop2.7.tgz
+cd spark-3.2.2-bin-hadoop2.7
+rm -f jars/protobuf-java-2.5.0.jar
+#download protobuf-java-3.23.4.jar, delta-core_2.12-2.0.1.jar and delta-storage-2.0.1.jar
+wget https://repo1.maven.org/maven2/com/google/protobuf/protobuf-java/3.23.4/protobuf-java-3.23.4.jar -P ./jars
+wget https://repo1.maven.org/maven2/io/delta/delta-core_2.12/2.0.1/delta-core_2.12-2.0.1.jar -P ./jars
+wget https://repo1.maven.org/maven2/io/delta/delta-storage/2.0.1/delta-storage-2.0.1.jar -P ./jars
+cp gluten-XXXXX-spark-3.2-jar-with-dependencies.jar jars/
+</code></pre></div></div> <ul> <li>for Spark 3.3.1</li> </ul> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>tar zxf spark-3.3.1-bin-hadoop2.7.tgz
+cd spark-3.3.1-bin-hadoop2.7
+rm -f jars/protobuf-java-2.5.0.jar
+#download protobuf-java-3.23.4.jar, delta-core_2.12-2.2.0.jar and delta-storage-2.2.0.jar
+wget https://repo1.maven.org/maven2/com/google/protobuf/protobuf-java/3.23.4/protobuf-java-3.23.4.jar -P ./jars
+wget https://repo1.maven.org/maven2/io/delta/delta-core_2.12/2.2.0/delta-core_2.12-2.2.0.jar -P ./jars
+wget https://repo1.maven.org/maven2/io/delta/delta-storage/2.2.0/delta-storage-2.2.0.jar -P ./jars
+cp gluten-XXXXX-spark-3.3-jar-with-dependencies.jar jars/
+</code></pre></div></div> <h4 id="query-local-data"> <a href="#query-local-data" class="anchor-heading" aria-labelledby="query-local-data"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Query local data </h4> <h5 id="start-spark-thriftserver-on-local"> <a href="#start-spark-thriftserver-on-local" class="anchor-heading" aria-labelledby="start-spark-thriftserver-on-local"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Start Spark Thriftserver on local </h5> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd spark-3.2.2-bin-hadoop2.7
+./sbin/start-thriftserver.sh \
+  --master local[3] \
+  --driver-memory 10g \
+  --conf spark.serializer=org.apache.spark.serializer.JavaSerializer \
+  --conf spark.sql.sources.ignoreDataLocality=true \
+  --conf spark.default.parallelism=1 \
+  --conf spark.sql.shuffle.partitions=1 \
+  --conf spark.sql.files.minPartitionNum=1 \
+  --conf spark.sql.files.maxPartitionBytes=1073741824 \
+  --conf spark.sql.adaptive.enabled=false \
+  --conf spark.locality.wait=0 \
+  --conf spark.locality.wait.node=0 \
+  --conf spark.locality.wait.process=0 \
+  --conf spark.sql.columnVector.offheap.enabled=true \
+  --conf spark.memory.offHeap.enabled=true \
+  --conf spark.memory.offHeap.size=6442450944 \
+  --conf spark.plugins=io.glutenproject.GlutenPlugin \
+  --conf spark.gluten.sql.columnar.columnarToRow=true \
+  --conf spark.executorEnv.LD_PRELOAD=/path_to_clickhouse_library/libch.so\
+  --conf spark.gluten.sql.columnar.libpath=/path_to_clickhouse_library/libch.so \
+  --conf spark.gluten.sql.columnar.iterator=true \
+  --conf spark.gluten.sql.columnar.loadarrow=false \
+  --conf spark.gluten.sql.columnar.hashagg.enablefinal=true \
+  --conf spark.gluten.sql.enable.native.validation=false \
+  --conf spark.io.compression.codec=snappy \
+  --conf spark.gluten.sql.columnar.forceShuffledHashJoin=true \
+  --conf spark.sql.catalog.spark_catalog=org.apache.spark.sql.execution.datasources.v2.clickhouse.ClickHouseSparkCatalog \
+  --conf spark.databricks.delta.maxSnapshotLineageLength=20 \
+  --conf spark.databricks.delta.snapshotPartitions=1 \
+  --conf spark.databricks.delta.properties.defaults.checkpointInterval=5 \
+  --conf spark.databricks.delta.stalenessLimit=3600000
+
+#connect to Spark Thriftserver by beeline
+bin/beeline -u jdbc:hive2://localhost:10000/ -n root
+</code></pre></div></div> <h5 id="query-local-mergetree-files"> <a href="#query-local-mergetree-files" class="anchor-heading" aria-labelledby="query-local-mergetree-files"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Query local MergeTree files </h5> <ul> <li>Prepare data<span id="data-preparation"></span></li> </ul> <p>Currently, the feature of writing ClickHouse MergeTree parts by Spark is developing, so you need to use command ‘clickhouse-local’ to generate MergeTree parts data manually. We provide a python script to call the command ‘clickhouse-local’ to convert parquet data to MergeTree parts:</p> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+#install ClickHouse community version
+sudo apt-get install -y apt-transport-https ca-certificates dirmngr
+sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 8919F6BD2B48D754
+echo "deb https://packages.clickhouse.com/deb stable main" | sudo tee /etc/apt/sources.list.d/clickhouse.list
+sudo apt-get update
+sudo apt install -y --allow-downgrades clickhouse-server=22.5.1.2079 clickhouse-client=22.5.1.2079 clickhouse-common-static=22.5.1.2079
+
+#generate MergeTree parts
+mkdir -p /path_clickhouse_database/table_path/
+python3 /path_to_clickhouse_backend_src/utils/local-engine/tool/parquet_to_mergetree.py --path=/tmp --source=/path_to_parquet_data/tpch-data-sf100/lineitem --dst=/path_clickhouse_database/table_path/lineitem
+</code></pre></div></div> <p><strong>This python script will convert one parquet data file to one MergeTree parts.</strong></p> <ul> <li>Create a TPC-H lineitem table using ClickHouse DataSource</li> </ul> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    DROP TABLE IF EXISTS lineitem;
+    CREATE TABLE IF NOT EXISTS lineitem (
+     l_orderkey      bigint,
+     l_partkey       bigint,
+     l_suppkey       bigint,
+     l_linenumber    bigint,
+     l_quantity      double,
+     l_extendedprice double,
+     l_discount      double,
+     l_tax           double,
+     l_returnflag    string,
+     l_linestatus    string,
+     l_shipdate      date,
+     l_commitdate    date,
+     l_receiptdate   date,
+     l_shipinstruct  string,
+     l_shipmode      string,
+     l_comment       string)
+     USING clickhouse
+     TBLPROPERTIES (engine='MergeTree'
+                    )
+     LOCATION '/path_clickhouse_database/table_path/lineitem';
+</code></pre></div></div> <ul> <li>TPC-H Q6 test</li> </ul> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    SELECT
+        sum(l_extendedprice * l_discount) AS revenue
+    FROM
+        lineitem
+    WHERE
+        l_shipdate &gt;= date'1994-01-01'
+        AND l_shipdate &lt; date'1994-01-01' + interval 1 year
+        AND l_discount BETWEEN 0.06 - 0.01 AND 0.06 + 0.01
+        AND l_quantity &lt; 24;
+</code></pre></div></div> <ul> <li> <p>Result</p> <p>The DAG is shown on Spark UI as below:</p> <p><img src="../image/ClickHouse/Gluten-ClickHouse-Backend-Q6-DAG.png" alt="ClickHouse-CLion-Toolchains" /></p> </li> </ul> <h5 id="query-local-parquet-files"> <a href="#query-local-parquet-files" class="anchor-heading" aria-labelledby="query-local-parquet-files"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Query local Parquet files </h5> <p>You can query local parquet files directly.</p> <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">-- query on a single file</span>
+<span class="k">select</span> <span class="o">*</span> <span class="k">from</span> <span class="n">parquet</span><span class="p">.</span><span class="nv">`/your_data_root_dir/1.parquet`</span><span class="p">;</span>
+
+<span class="c1">-- query on a directly which has multiple files</span>
+<span class="k">select</span> <span class="o">*</span> <span class="k">from</span> <span class="n">parquet</span><span class="p">.</span><span class="nv">`/your_data_roo_dir/`</span><span class="p">;</span>
+</code></pre></div></div> <p>You can also create a TEMPORARY VIEW for parquet files.</p> <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">create</span> <span class="k">or</span> <span class="k">replace</span> <span class="k">temporary</span> <span class="k">view</span> <span class="n">your_table_name</span>
+<span class="k">using</span> <span class="n">org</span><span class="p">.</span><span class="n">apache</span><span class="p">.</span><span class="n">spark</span><span class="p">.</span><span class="k">sql</span><span class="p">.</span><span class="n">parquet</span>
+<span class="k">options</span><span class="p">(</span>
+    <span class="n">path</span> <span class="nv">"/your_data_root_dir/"</span>
+<span class="p">)</span>
+</code></pre></div></div> <h5 id="query-parquet-files-in-s3"> <a href="#query-parquet-files-in-s3" class="anchor-heading" aria-labelledby="query-parquet-files-in-s3"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Query Parquet files in S3 </h5> <p>If you have parquet files in S3(either AWS S3 or S3 compatible storages like MINIO), you can query them directly. You need to add these additional configs to spark:</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nt">--config</span> spark.hadoop.fs.s3a.endpoint<span class="o">=</span>S3_ENDPOINT
+  <span class="nt">--config</span> spark.hadoop.fs.s3a.path.style.access<span class="o">=</span><span class="nb">true</span>
+  <span class="nt">--config</span> spark.hadoop.fs.s3a.access.key<span class="o">=</span>YOUR_ACCESS_KEY
+  <span class="nt">--config</span> spark.hadoop.fs.s3a.secret.key<span class="o">=</span>YOUR_SECRET_KEY
+</code></pre></div></div> <p>where S3_ENDPOINT must follow the format of <code class="language-plaintext highlighter-rouge">https://s3.region-code.amazonaws.com</code>, e.g. <code class="language-plaintext highlighter-rouge">https://s3.us-east-1.amazonaws.com</code> (or `http://hostname:39090 for MINIO)</p> <p>When you query the parquet files in S3, you need to add the prefix <code class="language-plaintext highlighter-rouge">s3a://</code> to the path, e.g. <code class="language-plaintext highlighter-rouge">s3a://your_bucket_name/path_to_your_parquet</code>.</p> <p>Additionally, you can add these configs to enable local caching of S3 data. Each spark executor will have its own cache. Cache stealing between executors is not supported yet.</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nt">--config</span> spark.gluten.sql.columnar.backend.ch.runtime_config.s3.local_cache.enabled<span class="o">=</span><span class="nb">true</span>
+  <span class="nt">--config</span> spark.gluten.sql.columnar.backend.ch.runtime_config.s3.local_cache.cache_path<span class="o">=</span>/executor_local_folder_for_cache
+</code></pre></div></div> <h5 id="use-beeline-to-execute-queries"> <a href="#use-beeline-to-execute-queries" class="anchor-heading" aria-labelledby="use-beeline-to-execute-queries"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Use beeline to execute queries </h5> <p>After start a spark thriftserver, we can use the beeline to connect to this server.</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># run a file</span>
+/path_to_spark/bin/beeline <span class="nt">-u</span> jdbc:hive2://localhost:10000 <span class="nt">-f</span> &lt;your_sql_file&gt;
+
+<span class="c"># run a query</span>
+/path_to_spark/bin/beeline <span class="nt">-u</span> jdbc:hive2://localhost:10000 <span class="nt">-e</span> <span class="s1">'&lt;your_sql&gt;'</span>
+
+<span class="c"># enter a interactive mode</span>
+/path_to_spark/bin/beeline <span class="nt">-u</span> jdbc:hive2://localhost:10000
+</code></pre></div></div> <h4 id="query-hive-tables-in-hdfs"> <a href="#query-hive-tables-in-hdfs" class="anchor-heading" aria-labelledby="query-hive-tables-in-hdfs"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Query Hive tables in HDFS </h4> <p>Suppose that you have set up hive and hdfs, you can query the data on hive directly.</p> <ul> <li>Copy <code class="language-plaintext highlighter-rouge">hive-site.xml</code> into <code class="language-plaintext highlighter-rouge">/path_to_spark/conf/</code></li> <li>Copy <code class="language-plaintext highlighter-rouge">hdfs-site.xml</code> into <code class="language-plaintext highlighter-rouge">/path_to_spark/conf/</code>, and edit <code class="language-plaintext highlighter-rouge">spark-env.sh</code></li> </ul> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># add this line into spark-env.sh</span>
+<span class="nb">export </span><span class="nv">HADOOP_CONF_DIR</span><span class="o">=</span>/path_to_spark/conf
+</code></pre></div></div> <ul> <li>Start spark thriftserver with hdfs configurations</li> </ul> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">hdfs_conf_file</span><span class="o">=</span>/your_local_path/hdfs-site.xml
+
+<span class="nb">cd </span>spark-3.2.2-bin-hadoop2.7
+<span class="c"># add a new option: spark.gluten.sql.columnar.backend.ch.runtime_config.hdfs.libhdfs3_conf</span>
+./sbin/start-thriftserver.sh <span class="se">\</span>
+  <span class="nt">--master</span> <span class="nb">local</span><span class="o">[</span>3] <span class="se">\</span>
+  <span class="nt">--files</span> <span class="nv">$hdfs_conf_file</span> <span class="se">\</span>
+  <span class="nt">--driver-memory</span> 10g <span class="se">\</span>
+  <span class="nt">--conf</span> spark.serializer<span class="o">=</span>org.apache.spark.serializer.JavaSerializer <span class="se">\</span>
+  <span class="nt">--conf</span> spark.sql.sources.ignoreDataLocality<span class="o">=</span><span class="nb">true</span> <span class="se">\</span>
+  <span class="nt">--conf</span> spark.default.parallelism<span class="o">=</span>1 <span class="se">\</span>
+  <span class="nt">--conf</span> spark.sql.shuffle.partitions<span class="o">=</span>1 <span class="se">\</span>
+  <span class="nt">--conf</span> spark.sql.files.minPartitionNum<span class="o">=</span>1 <span class="se">\</span>
+  <span class="nt">--conf</span> spark.sql.files.maxPartitionBytes<span class="o">=</span>1073741824 <span class="se">\</span>
+  <span class="nt">--conf</span> spark.locality.wait<span class="o">=</span>0 <span class="se">\</span>
+  <span class="nt">--conf</span> spark.locality.wait.node<span class="o">=</span>0 <span class="se">\</span>
+  <span class="nt">--conf</span> spark.locality.wait.process<span class="o">=</span>0 <span class="se">\</span>
+  <span class="nt">--conf</span> spark.sql.columnVector.offheap.enabled<span class="o">=</span><span class="nb">true</span> <span class="se">\</span>
+  <span class="nt">--conf</span> spark.memory.offHeap.enabled<span class="o">=</span><span class="nb">true</span> <span class="se">\</span>
+  <span class="nt">--conf</span> spark.memory.offHeap.size<span class="o">=</span>6442450944 <span class="se">\</span>
+  <span class="nt">--conf</span> spark.plugins<span class="o">=</span>io.glutenproject.GlutenPlugin <span class="se">\</span>
+  <span class="nt">--conf</span> spark.gluten.sql.columnar.columnarToRow<span class="o">=</span><span class="nb">true</span> <span class="se">\</span>
+  <span class="nt">--conf</span> spark.executorEnv.LD_PRELOAD<span class="o">=</span>/path_to_clickhouse_library/libch.so<span class="se">\</span>
+  <span class="nt">--conf</span> spark.gluten.sql.columnar.libpath<span class="o">=</span>/path_to_clickhouse_library/libch.so <span class="se">\</span>
+  <span class="nt">--conf</span> spark.gluten.sql.columnar.iterator<span class="o">=</span><span class="nb">true</span> <span class="se">\</span>
+  <span class="nt">--conf</span> spark.gluten.sql.columnar.loadarrow<span class="o">=</span><span class="nb">false</span> <span class="se">\</span>
+  <span class="nt">--conf</span> spark.gluten.sql.columnar.hashagg.enablefinal<span class="o">=</span><span class="nb">true</span> <span class="se">\</span>
+  <span class="nt">--conf</span> spark.gluten.sql.enable.native.validation<span class="o">=</span><span class="nb">false</span> <span class="se">\</span>
+  <span class="nt">--conf</span> spark.io.compression.codec<span class="o">=</span>snappy <span class="se">\</span>
+  <span class="nt">--conf</span> spark.gluten.sql.columnar.forceShuffledHashJoin<span class="o">=</span><span class="nb">true</span> <span class="se">\</span>
+  <span class="nt">--conf</span> spark.sql.catalog.spark_catalog<span class="o">=</span>org.apache.spark.sql.execution.datasources.v2.clickhouse.ClickHouseSparkCatalog <span class="se">\</span>
+  <span class="nt">--conf</span> spark.databricks.delta.maxSnapshotLineageLength<span class="o">=</span>20 <span class="se">\</span>
+  <span class="nt">--conf</span> spark.databricks.delta.snapshotPartitions<span class="o">=</span>1 <span class="se">\</span>
+  <span class="nt">--conf</span> spark.databricks.delta.properties.defaults.checkpointInterval<span class="o">=</span>5 <span class="se">\</span>
+  <span class="nt">--conf</span> spark.databricks.delta.stalenessLimit<span class="o">=</span>3600000 <span class="se">\</span>
+  <span class="nt">--conf</span> spark.gluten.sql.columnar.backend.ch.runtime_config.hdfs.libhdfs3_conf<span class="o">=</span>./hdfs-site.xml
+</code></pre></div></div> <p>For example, you have a table <code class="language-plaintext highlighter-rouge">demo_database</code>.<code class="language-plaintext highlighter-rouge">demo_table</code> on the hive, you can run queries as below.</p> <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">select</span> <span class="o">*</span> <span class="k">from</span> <span class="n">demo_database</span><span class="p">.</span><span class="n">demo_talbe</span><span class="p">;</span>
+</code></pre></div></div> <h3 id="gluten-in-yarn-cluster"> <a href="#gluten-in-yarn-cluster" class="anchor-heading" aria-labelledby="gluten-in-yarn-cluster"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Gluten in YARN cluster </h3> <p>We can to run a Spark SQL task by gluten on a yarn cluster as following</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#!/bin/bash</span>
+
+<span class="c"># The file contains the sql you want to run</span>
+<span class="nv">sql_file</span><span class="o">=</span>/path/to/spark/sql/file
+
+<span class="nb">export </span><span class="nv">SPARK_HOME</span><span class="o">=</span>/path/to/spark/home
+<span class="nv">spark_cmd</span><span class="o">=</span><span class="nv">$SPARK_HOME</span>/bin/spark-sql
+
+<span class="c"># Define the path to libch.so</span>
+<span class="nv">ch_lib</span><span class="o">=</span>/path/to/libch.so
+<span class="nb">export </span><span class="nv">LD_PRELOAD</span><span class="o">=</span><span class="nv">$ch_lib</span>
+
+<span class="c"># copy gluten jar file to $SPARK_HOME/jar</span>
+<span class="nv">gluten_jar</span><span class="o">=</span>/path/to/gluten/jar/file
+<span class="nb">cp</span> <span class="nv">$gluten_jar</span> <span class="nv">$SPARK_HOME</span>/jar
+
+<span class="nv">batchsize</span><span class="o">=</span>20480
+<span class="nv">hdfs_conf</span><span class="o">=</span>/path/to/hdfs-site.xml
+
+<span class="nv">$spark_cmd</span> <span class="se">\</span>
+  <span class="nt">--name</span> gluten_on_yarn
+  <span class="nt">--master</span> yarn <span class="se">\</span>
+  <span class="nt">--deploy-mode</span> client <span class="se">\</span>
+  <span class="nt">--files</span> <span class="nv">$ch_lib</span> <span class="se">\</span>
+  <span class="nt">--executor-cores</span> 1 <span class="se">\</span>
+  <span class="nt">--num-executors</span> 2 <span class="se">\</span>
+  <span class="nt">--executor-memory</span> 10g <span class="se">\</span>
+  <span class="nt">--conf</span> spark.default.parallelism<span class="o">=</span>4 <span class="se">\</span>
+  <span class="nt">--conf</span> spark.memory.offHeap.enabled<span class="o">=</span><span class="nb">true</span> <span class="se">\</span>
+  <span class="nt">--conf</span> spark.memory.offHeap.size<span class="o">=</span>7g <span class="se">\</span>
+  <span class="nt">--conf</span> spark.driver.maxResultSize<span class="o">=</span>2g <span class="se">\</span>
+  <span class="nt">--conf</span> spark.sql.autoBroadcastJoinThreshold<span class="o">=</span><span class="nt">-1</span> <span class="se">\</span>
+  <span class="nt">--conf</span> spark.sql.parquet.columnarReaderBatchSize<span class="o">=</span><span class="k">${</span><span class="nv">batchsize</span><span class="k">}</span> <span class="se">\</span>
+  <span class="nt">--conf</span> spark.sql.inMemoryColumnarStorage.batchSize<span class="o">=</span><span class="k">${</span><span class="nv">batchsize</span><span class="k">}</span> <span class="se">\</span>
+  <span class="nt">--conf</span> spark.sql.execution.arrow.maxRecordsPerBatch<span class="o">=</span><span class="k">${</span><span class="nv">batchsize</span><span class="k">}</span> <span class="se">\</span>
+  <span class="nt">--conf</span> spark.sql.broadcastTimeout<span class="o">=</span>4800 <span class="se">\</span>
+  <span class="nt">--conf</span> spark.task.maxFailures<span class="o">=</span>1 <span class="se">\</span>
+  <span class="nt">--conf</span> spark.excludeOnFailure.enabled<span class="o">=</span><span class="nb">false</span> <span class="se">\</span>
+  <span class="nt">--conf</span> spark.driver.maxResultSize<span class="o">=</span>4g <span class="se">\</span>
+  <span class="nt">--conf</span> spark.sql.adaptive.enabled<span class="o">=</span><span class="nb">false</span> <span class="se">\</span>
+  <span class="nt">--conf</span> spark.dynamicAllocation.executorIdleTimeout<span class="o">=</span>0s <span class="se">\</span>
+  <span class="nt">--conf</span> spark.sql.shuffle.partitions<span class="o">=</span>112 <span class="se">\</span>
+  <span class="nt">--conf</span> spark.sql.sources.useV1SourceList<span class="o">=</span>avro <span class="se">\</span>
+  <span class="nt">--conf</span> spark.sql.files.maxPartitionBytes<span class="o">=</span>1073741824 <span class="se">\</span>
+  <span class="nt">--conf</span> spark.gluten.sql.columnar.columnartorow<span class="o">=</span><span class="nb">true</span> <span class="se">\</span>
+  <span class="nt">--conf</span> spark.gluten.sql.columnar.loadnative<span class="o">=</span><span class="nb">true</span> <span class="se">\</span>
+  <span class="nt">--conf</span> spark.gluten.sql.columnar.libpath<span class="o">=</span><span class="nv">$ch_lib</span> <span class="se">\</span>
+  <span class="nt">--conf</span> spark.gluten.sql.columnar.iterator<span class="o">=</span><span class="nb">true</span> <span class="se">\</span>
+  <span class="nt">--conf</span> spark.gluten.sql.columnar.loadarrow<span class="o">=</span><span class="nb">false</span> <span class="se">\</span>
+  <span class="nt">--conf</span> spark.gluten.sql.columnar.hashagg.enablefinal<span class="o">=</span><span class="nb">true</span> <span class="se">\</span>
+  <span class="nt">--conf</span> spark.gluten.sql.enable.native.validation<span class="o">=</span><span class="nb">false</span> <span class="se">\</span>
+  <span class="nt">--conf</span> spark.gluten.sql.columnar.forceShuffledHashJoin<span class="o">=</span><span class="nb">true</span> <span class="se">\</span>
+  <span class="nt">--conf</span> spark.gluten.sql.columnar.backend.ch.runtime_config.hdfs.libhdfs3_conf<span class="o">=</span><span class="nv">$hdfs_conf</span> <span class="se">\</span>
+  <span class="nt">--conf</span> spark.gluten.sql.columnar.backend.ch.runtime_config.logger.level<span class="o">=</span>debug <span class="se">\</span>
+  <span class="nt">--conf</span> spark.plugins<span class="o">=</span>io.glutenproject.GlutenPlugin <span class="se">\</span>
+  <span class="nt">--conf</span> spark.executorEnv.LD_PRELOAD<span class="o">=</span><span class="nv">$LD_PRELOAD</span> <span class="se">\</span>
+  <span class="nt">--conf</span> spark.hadoop.input.connect.timeout<span class="o">=</span>600000 <span class="se">\</span>
+  <span class="nt">--conf</span> spark.hadoop.input.read.timeout<span class="o">=</span>600000 <span class="se">\</span>
+  <span class="nt">--conf</span> spark.hadoop.input.write.timeout<span class="o">=</span>600000 <span class="se">\</span>
+  <span class="nt">--conf</span> spark.hadoop.dfs.client.log.severity<span class="o">=</span><span class="s2">"DEBUG2"</span> <span class="se">\</span>
+  <span class="nt">--files</span> <span class="nv">$ch_lib</span> <span class="se">\</span>
+  <span class="nt">-f</span> <span class="nv">$sql_file</span>
+</code></pre></div></div> <p>We also can use <code class="language-plaintext highlighter-rouge">spark-submit</code> to run a task.</p> <h3 id="benchmark-with-tpc-h-100-q6-on-gluten-with-clickhouse-backend"> <a href="#benchmark-with-tpc-h-100-q6-on-gluten-with-clickhouse-backend" class="anchor-heading" aria-labelledby="benchmark-with-tpc-h-100-q6-on-gluten-with-clickhouse-backend"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Benchmark with TPC-H 100 Q6 on Gluten with ClickHouse backend </h3> <p>This benchmark is tested on AWS EC2 cluster, there are 7 EC2 instances:</p> <div class="table-wrapper"><table> <thead> <tr> <th>Node Role</th> <th>EC2 Type</th> <th>Instances Count</th> <th>Resources</th> <th>AMI</th> </tr> </thead> <tbody> <tr> <td>Master</td> <td>m5.4xlarge</td> <td>1</td> <td>16 cores 64G memory per node</td> <td>ubuntu-focal-20.04</td> </tr> <tr> <td>Worker</td> <td>m5.4xlarge</td> <td>1</td> <td>16 cores 64G memory per node</td> <td>ubuntu-focal-20.04</td> </tr> </tbody> </table></div> <h4 id="deploy-on-cloud"> <a href="#deploy-on-cloud" class="anchor-heading" aria-labelledby="deploy-on-cloud"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Deploy on Cloud </h4> <ul> <li> <p>Tested on Spark Standalone cluster, its resources are shown below:</p> <div class="table-wrapper"><table> <thead> <tr> <th> </th> <th>CPU cores</th> <th>Memory</th> <th>Instances Count</th> </tr> </thead> <tbody> <tr> <td>Spark Worker</td> <td>15</td> <td>60G</td> <td>6</td> </tr> </tbody> </table></div> </li> <li> <p>Prepare jars</p> <p>Refer to <a href="#deploy-spark-322">Deploy Spark 3.2.2</a></p> </li> <li> <p>Deploy gluten-core-XXXXX-jar-with-dependencies.jar</p> </li> </ul> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    #deploy 'gluten-core-XXXXX-jar-with-dependencies.jar' to every node, and then
+    cp gluten-core-XXXXX-jar-with-dependencies.jar /path_to_spark/jars/
+</code></pre></div></div> <ul> <li> <p>Deploy ClickHouse library</p> <p>Deploy ClickHouse library ‘libch.so’ to every worker node.</p> </li> </ul> <h5 id="deploy-juicefs"> <a href="#deploy-juicefs" class="anchor-heading" aria-labelledby="deploy-juicefs"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Deploy JuiceFS </h5> <ul> <li>JuiceFS uses Redis to save metadata, install redis firstly:</li> </ul> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    wget https://download.redis.io/releases/redis-6.0.14.tar.gz
+    sudo apt install build-essential
+    tar -zxvf redis-6.0.14.tar.gz
+    cd redis-6.0.14
+    make
+    make install PREFIX=/home/ubuntu/redis6
+    cd ..
+    rm -rf redis-6.0.14
+
+    #start redis server
+    /home/ubuntu/redis6/bin/redis-server /home/ubuntu/redis6/redis.conf
+
+</code></pre></div></div> <ul> <li> <p>Use JuiceFS to format a S3 bucket and mount a volumn on every node</p> <p>Please refer to <a href="https://juicefs.com/docs/community/command_reference">The-JuiceFS-Command-Reference</a></p> </li> </ul> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    wget https://github.com/juicedata/juicefs/releases/download/v0.17.5/juicefs-0.17.5-linux-amd64.tar.gz
+    tar -zxvf juicefs-0.17.5-linux-amd64.tar.gz
+
+    ./juicefs format --block-size 4096 --storage s3 --bucket https://s3.cn-northwest-1.amazonaws.com.cn/s3-gluten-tpch100/ --access-key "XXXXXXXX" --secret-key "XXXXXXXX" redis://:123456@master-ip:6379/1 gluten-tables
+
+    #mount a volumn on every node
+    ./juicefs mount -d --no-usage-report --no-syslog --attr-cache 7200 --entry-cache 7200 --dir-entry-cache 7200 --buffer-size 500 --prefetch 1 --open-cache 86400 --log /home/ubuntu/juicefs-logs/mount1.log --cache-dir /home/ubuntu/juicefs-cache/ --cache-size 102400 redis://:123456@master-ip:6379/1 /home/ubuntu/gluten/gluten_table
+    #create a directory for lineitem table path
+    mkdir -p /home/ubuntu/gluten/gluten_table/lineitem
+
+</code></pre></div></div> <h4 id="preparation"> <a href="#preparation" class="anchor-heading" aria-labelledby="preparation"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Preparation </h4> <p>Please refer to <a href="#data-preparation">Data-preparation</a> to generate MergeTree parts data to the lineitem table path: /home/ubuntu/gluten/gluten_table/lineitem.</p> <h4 id="run-spark-thriftserver"> <a href="#run-spark-thriftserver" class="anchor-heading" aria-labelledby="run-spark-thriftserver"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Run Spark Thriftserver </h4> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd spark-3.2.2-bin-hadoop2.7
+./sbin/start-thriftserver.sh \
+  --master spark://master-ip:7070 --deploy-mode client \
+  --driver-memory 16g --driver-cores 4 \
+  --total-executor-cores 90 --executor-memory 60g --executor-cores 15 \
+  --conf spark.driver.memoryOverhead=8G \
+  --conf spark.default.parallelism=90 \
+  --conf spark.sql.shuffle.partitions=1 \
+  --conf spark.sql.files.minPartitionNum=1 \
+  --conf spark.sql.files.maxPartitionBytes=536870912 \
+  --conf spark.sql.parquet.filterPushdown=true \
+  --conf spark.sql.parquet.enableVectorizedReader=true \
+  --conf spark.locality.wait=0 \
+  --conf spark.locality.wait.node=0 \
+  --conf spark.locality.wait.process=0 \
+  --conf spark.sql.columnVector.offheap.enabled=true \
+  --conf spark.memory.offHeap.enabled=true \
+  --conf spark.memory.offHeap.size=42949672960 \
+  --conf spark.serializer=org.apache.spark.serializer.JavaSerializer \
+  --conf spark.sql.sources.ignoreDataLocality=true \
+  --conf spark.plugins=io.glutenproject.GlutenPlugin \
+  --conf spark.gluten.sql.columnar.columnarToRow=true \
+  --conf spark.gluten.sql.columnar.libpath=/path_to_clickhouse_library/libch.so \
+  --conf spark.gluten.sql.columnar.iterator=true \
+  --conf spark.gluten.sql.columnar.loadarrow=false \
+  --conf spark.gluten.sql.columnar.hashagg.enablefinal=true \
+  --conf spark.gluten.sql.enable.native.validation=false \
+  --conf spark.io.compression.codec=snappy \
+  --conf spark.gluten.sql.columnar.forceShuffledHashJoin=true \
+  --conf spark.sql.catalog.spark_catalog=org.apache.spark.sql.execution.datasources.v2.clickhouse.ClickHouseSparkCatalog \
+  --conf spark.databricks.delta.maxSnapshotLineageLength=20 \
+  --conf spark.databricks.delta.snapshotPartitions=1 \
+  --conf spark.databricks.delta.properties.defaults.checkpointInterval=5 \
+  --conf spark.databricks.delta.stalenessLimit=3600000
+</code></pre></div></div> <h4 id="test-tpc-h-q6-with-jmeter"> <a href="#test-tpc-h-q6-with-jmeter" class="anchor-heading" aria-labelledby="test-tpc-h-q6-with-jmeter"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Test TPC-H Q6 with JMeter </h4> <ul> <li>Create a lineitem table using clickhouse datasource</li> </ul> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    DROP TABLE IF EXISTS lineitem;
+    CREATE TABLE IF NOT EXISTS lineitem (
+     l_orderkey      bigint,
+     l_partkey       bigint,
+     l_suppkey       bigint,
+     l_linenumber    bigint,
+     l_quantity      double,
+     l_extendedprice double,
+     l_discount      double,
+     l_tax           double,
+     l_returnflag    string,
+     l_linestatus    string,
+     l_shipdate      date,
+     l_commitdate    date,
+     l_receiptdate   date,
+     l_shipinstruct  string,
+     l_shipmode      string,
+     l_comment       string)
+     USING clickhouse
+     TBLPROPERTIES (engine='MergeTree'
+                    )
+     LOCATION 'file:///home/ubuntu/gluten/gluten_table/lineitem';
+</code></pre></div></div> <ul> <li>Run TPC-H Q6 test with JMeter <ol> <li>Run TPC-H Q6 test 100 times in the first round;</li> <li>Run TPC-H Q6 test 1000 times in the second round;</li> </ol> </li> </ul> <h4 id="performance"> <a href="#performance" class="anchor-heading" aria-labelledby="performance"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Performance </h4> <p>The performance of Gluten + ClickHouse backend increases by <strong>about 1/3</strong>.</p> <div class="table-wrapper"><table> <thead> <tr> <th> </th> <th>70%</th> <th>80%</th> <th>90%</th> <th>99%</th> <th>Avg</th> </tr> </thead> <tbody> <tr> <td>Spark + Parquet</td> <td>590ms</td> <td>592ms</td> <td>597ms</td> <td>609ms</td> <td>588ms</td> </tr> <tr> <td>Spark + Gluten + ClickHouse backend</td> <td>402ms</td> <td>405ms</td> <td>409ms</td> <td>425ms</td> <td>399ms</td> </tr> </tbody> </table></div> <h3 id="new-ci-system"> <a href="#new-ci-system" class="anchor-heading" aria-labelledby="new-ci-system"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> New CI System </h3> <p>https://opencicd.kyligence.com/job/Gluten/job/gluten-ci/ public read-only account：gluten/hN2xX3uQ4m</p> <h3 id="celeborn-support"> <a href="#celeborn-support" class="anchor-heading" aria-labelledby="celeborn-support"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Celeborn support </h3> <p>Gluten with clickhouse backend has not yet supportted <a href="https://github.com/apache/incubator-celeborn">Celeborn</a> natively as remote shuffle service using columar shuffle. However, you can still use Celeborn with row shuffle, which means a ColumarBatch will be converted to a row during shuffle. Below introduction is used to enable this feature:</p> <p>First refer to this URL(https://github.com/apache/incubator-celeborn) to setup a celeborn cluster.</p> <p>Then add the Spark Celeborn Client packages to your Spark application’s classpath(usually add them into <code class="language-plaintext highlighter-rouge">$SPARK_HOME/jars</code>).</p> <ul> <li>Celeborn: celeborn-client-spark-3-shaded_2.12-0.3.0-incubating.jar</li> </ul> <p>Currently to use Celeborn following configurations are required in <code class="language-plaintext highlighter-rouge">spark-defaults.conf</code></p> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>spark.shuffle.manager org.apache.spark.shuffle.celeborn.SparkShuffleManager
+
+# celeborn master
+spark.celeborn.master.endpoints clb-master:9097
+
+spark.shuffle.service.enabled false
+
+# options: hash, sort
+# Hash shuffle writer use (partition count) * (celeborn.push.buffer.max.size) * (spark.executor.cores) memory.
+# Sort shuffle writer uses less memory than hash shuffle writer, if your shuffle partition count is large, try to use sort hash writer.
+spark.celeborn.client.spark.shuffle.writer hash
+
+# We recommend setting spark.celeborn.client.push.replicate.enabled to true to enable server-side data replication
+# If you have only one worker, this setting must be false 
+# If your Celeborn is using HDFS, it's recommended to set this setting to false
+spark.celeborn.client.push.replicate.enabled true
+
+# Support for Spark AQE only tested under Spark 3
+# we recommend setting localShuffleReader to false to get better performance of Celeborn
+spark.sql.adaptive.localShuffleReader.enabled false
+
+# If Celeborn is using HDFS
+spark.celeborn.storage.hdfs.dir hdfs://&lt;namenode&gt;/celeborn
+
+# If you want to use dynamic resource allocation,
+# please refer to this URL (https://github.com/apache/incubator-celeborn/tree/main/assets/spark-patch) to apply the patch into your own Spark.
+spark.dynamicAllocation.enabled false
+</code></pre></div></div> <h4 id="celeborn-columnar-shuffle-support"> <a href="#celeborn-columnar-shuffle-support" class="anchor-heading" aria-labelledby="celeborn-columnar-shuffle-support"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Celeborn Columnar Shuffle Support </h4> <p>The native Celeborn support can be enabled by the following configuration</p> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>spark.shuffle.manager=org.apache.spark.shuffle.gluten.celeborn.CelebornShuffleManager
+</code></pre></div></div> <p>quickly start a celeborn cluster</p> <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>wget https://dlcdn.apache.org/incubator/celeborn/celeborn-0.3.0-incubating/apache-celeborn-0.3.0-incubating-bin.tgz <span class="o">&amp;&amp;</span> <span class="se">\</span>
+<span class="nb">tar</span> <span class="nt">-zxvf</span> apache-celeborn-0.3.0-incubating-bin.tgz <span class="o">&amp;&amp;</span> <span class="se">\</span>
+<span class="nb">mv </span>apache-celeborn-0.3.0-incubating-bin/conf/celeborn-defaults.conf.template apache-celeborn-0.3.0-incubating-bin/conf/celeborn-defaults.conf <span class="o">&amp;&amp;</span> <span class="se">\</span>
+<span class="nb">mv </span>apache-celeborn-0.3.0-incubating-bin/conf/log4j2.xml.template apache-celeborn-0.3.0-incubating-bin/conf/log4j2.xml <span class="o">&amp;&amp;</span> <span class="se">\</span>
+<span class="nb">mkdir</span> /opt/hadoop <span class="o">&amp;&amp;</span> <span class="nb">chmod </span>777 /opt/hadoop <span class="o">&amp;&amp;</span> <span class="se">\</span>
+<span class="nb">echo</span> <span class="nt">-e</span> <span class="s2">"celeborn.worker.flusher.threads 4</span><span class="se">\n</span><span class="s2">celeborn.worker.storage.dirs /tmp</span><span class="se">\n</span><span class="s2">celeborn.worker.monitor.disk.enabled false"</span> <span class="o">&gt;</span> apache-celeborn-0.3.0-incubating-bin/conf/celeborn-defaults.conf <span class="o">&amp;&amp;</span> <span class="se">\</span>
+bash apache-celeborn-0.3.0-incubating-bin/sbin/start-master.sh <span class="o">&amp;&amp;</span> bash apache-celeborn-0.3.0-incubating-bin/sbin/start-worker.sh
+</code></pre></div></div> <h3 id="columnar-shuffle-mode"> <a href="#columnar-shuffle-mode" class="anchor-heading" aria-labelledby="columnar-shuffle-mode"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Columnar shuffle mode </h3> <p>We have two modes of columnar shuffle</p> <ol> <li>prefer cache</li> <li>prefer spill</li> </ol> <p>Switch through the configuration <code class="language-plaintext highlighter-rouge">spark.gluten.sql.columnar.backend.ch.shuffle.preferSpill</code>, the default is <code class="language-plaintext highlighter-rouge">false</code>, enable prefer cache shuffle.</p> <p>In the prefer cache mode, as much memory as possible will be used to cache the shuffle data. When the memory is insufficient, spark will actively trigger the memory spill. You can also specify the threshold size through <code class="language-plaintext highlighter-rouge">spark.gluten.sql.columnar.backend.ch.spillThreshold</code> to Limit memory usage. The default value is <code class="language-plaintext highlighter-rouge">0MB</code>, which means no limit on memory usage.</p> </main> </div> </div> <div class="search-overlay"></div> </div> <script type="module"> import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10.8.0/dist/mermaid.esm.min.mjs'; var config = {} ; mermaid.initialize(config); mermaid.run({ querySelector: '.language-mermaid', }); </script> </body> </html>
