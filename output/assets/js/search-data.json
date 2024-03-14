@@ -860,160 +860,167 @@
     
     "relUrl": "/about/"
   },"123": {
+    "doc": "Apache Software Foundation",
+    "title": "Apache Software Foundation",
+    "content": "Apache Software Foundation(ASF) . License . Event . Sponsorship . Thanks . Security . Privacy . ",
+    "url": "/asf/",
+    
+    "relUrl": "/asf/"
+  },"124": {
     "doc": "Contact Us",
     "title": "Contact Us",
     "content": "Gluten was initiated by Intel and Kyligence in 2022. Several companies such as Intel, Kyligence, BIGO, Meituan and others, are actively participating in the development of Gluten. This plugin is still under active development now, and doesn’t have a stable release. Welcome to evaluate it. If you encounter any issues or have any suggestions, please submit to our issue list. We’d love to hear your feedback . ",
     "url": "/contact-us.html",
     
     "relUrl": "/contact-us.html"
-  },"124": {
+  },"125": {
     "doc": "Contact Us",
     "title": "Technical Support",
     "content": "If you need any help or have questions on this product, please contact us: . weitingchen@apache.org . ",
     "url": "/contact-us.html#technical-support",
     
     "relUrl": "/contact-us.html#technical-support"
-  },"125": {
+  },"126": {
     "doc": "Contact Us",
     "title": "Issues and Discussions",
     "content": "We use github to track bugs, feature requests, and answer questions. File an issue for a bug or feature request. ",
     "url": "/contact-us.html#issues-and-discussions",
     
     "relUrl": "/contact-us.html#issues-and-discussions"
-  },"126": {
+  },"127": {
     "doc": "Docker script for CentOS 7",
     "title": "Docker script for CentOS 7",
     "content": "Here is a docker script we verified to build Gluten+Velox backend on CentOS 7: . Run on host as root user: . docker pull centos:7 docker run -itd --name gluten centos:7 /bin/bash docker attach gluten . Run in docker: . yum -y install epel-release centos-release-scl yum -y install \\ git \\ dnf \\ cmake3 \\ devtoolset-9 \\ java-1.8.0-openjdk \\ java-1.8.0-openjdk-devel \\ ninja-build \\ wget \\ sudo # gluten need maven version &gt;=3.6.3 wget https://downloads.apache.org/maven/maven-3/3.8.8/binaries/apache-maven-3.8.8-bin.tar.gz tar -xvf apache-maven-3.8.8-bin.tar.gz mv apache-maven-3.8.8 /usr/lib/maven export MAVEN_HOME=/usr/lib/maven export PATH=${PATH}:${MAVEN_HOME}/bin # cmake 3.x is required ln -s /usr/bin/cmake3 /usr/local/bin/cmake # enable gcc 9 . /opt/rh/devtoolset-9/enable || exit 1 export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk export PATH=$JAVA_HOME/bin:$PATH git clone https://github.com/oap-project/gluten.git cd gluten # To access HDFS or S3, you need to add the parameters `--enable_hdfs=ON` and `--enable_s3=ON` # If you have the same error with issue-3283, you need to add the parameter `--compile_arrow_java=ON` ./dev/buildbundle-veloxbe.sh . ",
     "url": "/developers/docker_centos7.html",
     
     "relUrl": "/developers/docker_centos7.html"
-  },"127": {
+  },"128": {
     "doc": "Docker script for CentOS 8",
     "title": "Docker script for CentOS 8",
     "content": "Here is a docker script we verified to build Gluten+Velox backend on Centos8: . Run on host as root user: . docker pull centos:8 docker run -itd --name gluten centos:8 /bin/bash docker attach gluten . Run in docker: . #update mirror sed -i -e \"s|mirrorlist=|#mirrorlist=|g\" /etc/yum.repos.d/CentOS-* sed -i -e \"s|#baseurl=http://mirror.centos.org|baseurl=http://vault.centos.org|g\" /etc/yum.repos.d/CentOS-* dnf install -y epel-release sudo yum install -y dnf-plugins-core yum config-manager --set-enabled powertools dnf --enablerepo=powertools install -y ninja-build dnf --enablerepo=powertools install -y libdwarf-devel dnf install -y --setopt=install_weak_deps=False ccache gcc-toolset-9 git wget which libevent-devel \\ openssl-devel re2-devel libzstd-devel lz4-devel double-conversion-devel \\ curl-devel cmake libicu-devel source /opt/rh/gcc-toolset-9/enable || exit 1 yum install -y java-1.8.0-openjdk-devel patch export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk export PATH=$JAVA_HOME/bin:$PATH #gluten need maven version &gt;=3.6.3 wget https://downloads.apache.org/maven/maven-3/3.8.8/binaries/apache-maven-3.8.8-bin.tar.gz tar -xvf apache-maven-3.8.8-bin.tar.gz mv apache-maven-3.8.8 /usr/lib/maven export MAVEN_HOME=/usr/lib/maven export PATH=${PATH}:${MAVEN_HOME}/bin git clone https://github.com/oap-project/gluten.git cd gluten # To access HDFS or S3, you need to add the parameters `--enable_hdfs=ON` and `--enable_s3=ON` ./dev/buildbundle-veloxbe.sh . ",
     "url": "/developers/docker_centos8.html",
     
     "relUrl": "/developers/docker_centos8.html"
-  },"128": {
+  },"129": {
     "doc": "Docker script for Ubuntu 22.04/20.04",
     "title": "Docker script for Ubuntu 22.04/20.04",
     "content": "To the first build, it’s suggested to build Gluten in a clean docker image. Otherwise it’s easy to run into library version conflict issues. Here is a docker script we verified to build Gluten+Velox backend on Ubuntu22.04/20.04: . Run on host as root user: . docker pull ubuntu:22.04 docker run -itd --network host --name gluten ubuntu:22.04 /bin/bash docker attach gluten . Run in docker: . apt-get update #install gcc and libraries to build arrow apt install software-properties-common apt install maven build-essential cmake libssl-dev libre2-dev libcurl4-openssl-dev clang lldb lld libz-dev git ninja-build uuid-dev autoconf-archive curl zip unzip tar pkg-config bison libtool flex vim #velox script needs sudo to install dependency libraries apt install sudo # make sure jemalloc is uninstalled, jemalloc will be build in vcpkg, which conflicts with the default jemalloc in system apt purge libjemalloc-dev libjemalloc2 librust-jemalloc-sys-dev #make sure jdk8 is used. New version of jdk is not supported apt install -y openjdk-8-jdk apt install -y default-jdk export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64 export PATH=$JAVA_HOME/bin:$PATH #manually install tzdata to avoid the interactive timezone config ln -fs /usr/share/zoneinfo/America/New_York /etc/localtime DEBIAN_FRONTEND=noninteractive apt-get install -y tzdata dpkg --configure -a #setup proxy on necessary #export http_proxy=xxxx #export https_proxy=xxxx #clone gluten git clone https://github.com/oap-project/gluten.git cd gluten/ #config maven proxy #mkdir ~/.m2/ #vim ~/.m2/settings.xml # the script download velox &amp; arrow and compile all dependency library automatically # To access HDFS or S3, you need to add the parameters `--enable_hdfs=ON` and `--enable_s3=ON` # It's suggested to build using static link, enabled by `--enable_vcpkg=ON` # For developer, it's suggested to enable Debug info, by --build_type=RelWithDebInfo. Note RelWithDebInfo uses -o2, release uses -o3 ./dev/buildbundle-veloxbe.sh --enable_vcpkg=ON --build_type=RelWithDebInfo . ",
     "url": "/developers/docker_ubuntu22.04.html",
     
     "relUrl": "/developers/docker_ubuntu22.04.html"
-  },"129": {
+  },"130": {
     "doc": "Developers",
     "title": "Gluten Developers",
     "content": "This document provides a developer overview of the project and covers the following topics: . ",
     "url": "/developers/#gluten-developers",
     
     "relUrl": "/developers/#gluten-developers"
-  },"130": {
+  },"131": {
     "doc": "Developers",
     "title": "Developers",
     "content": " ",
     "url": "/developers/",
     
     "relUrl": "/developers/"
-  },"131": {
+  },"132": {
     "doc": "Documentation",
     "title": "Gluten Documents by version",
     "content": " ",
     "url": "/docs/#gluten-documents-by-version",
     
     "relUrl": "/docs/#gluten-documents-by-version"
-  },"132": {
+  },"133": {
     "doc": "Documentation",
     "title": "Documentation",
     "content": " ",
     "url": "/docs/",
     
     "relUrl": "/docs/"
-  },"133": {
+  },"134": {
     "doc": "Home",
     "title": "Overview",
     "content": "Gluten: Plugin to Double SparkSQL’s Performance. ",
     "url": "/#overview",
     
     "relUrl": "/#overview"
-  },"134": {
+  },"135": {
     "doc": "Home",
     "title": "1 Introduction",
     "content": " ",
     "url": "/#1-introduction",
     
     "relUrl": "/#1-introduction"
-  },"135": {
+  },"136": {
     "doc": "Home",
     "title": "1.1 Problem Statement",
     "content": "Apache Spark is a stable, mature project that has been developed for many years. It is one of the best frameworks to scale out for processing petabyte-scale datasets. However, the Spark community has had to address performance challenges that require various optimizations over time. As a key optimization in Spark 2.0, Whole Stage Code Generation is introduced to replace Volcano Model, which achieves 2x speedup. Henceforth, most optimizations are at query plan level. Single operator’s performance almost stops growing. On the other side, SQL engines have been researched for many years. There are a few libraries like Clickhouse, Arrow and Velox, etc. By using features like native implementation, columnar data format and vectorized data processing, these libraries can outperform Spark’s JVM based SQL engine. However, these libraries only support single node execution. ",
     "url": "/#11-problem-statement",
     
     "relUrl": "/#11-problem-statement"
-  },"136": {
+  },"137": {
     "doc": "Home",
     "title": "1.2 Gluten’s Solution",
     "content": "“Gluten” is Latin for glue. The main goal of Gluten project is to “glue” native libraries with SparkSQL. Thus, we can benefit from high scalability of Spark SQL framework and high performance of native libraries. The basic rule of Gluten’s design is that we would reuse spark’s whole control flow and as many JVM code as possible but offload the compute-intensive data processing part to native code. Here is what Gluten does: . | Transform Spark’s whole stage physical plan to Substrait plan and send to native | Offload performance-critical data processing to native library | Define clear JNI interfaces for native libraries | Switch available native backends easily | Reuse Spark’s distributed control flow | Manage data sharing between JVM and native | Extensible to support more native accelerators | . ",
     "url": "/#12-glutens-solution",
     
     "relUrl": "/#12-glutens-solution"
-  },"137": {
+  },"138": {
     "doc": "Home",
     "title": "1.3 Target User",
     "content": "Gluten’s target user is anyone who wants to accelerate SparkSQL fundamentally. As a plugin to Spark, Gluten doesn’t require any change for dataframe API or SQL query, but only requires user to make correct configuration. See Gluten configuration properties here. ",
     "url": "/#13-target-user",
     
     "relUrl": "/#13-target-user"
-  },"138": {
+  },"139": {
     "doc": "Home",
     "title": "1.4 References",
     "content": "You can click below links for more related information. | Gluten Intro Video at Data AI Summit 2022 | Gluten Intro Article at Medium.com | Gluten Intro Article at Kyligence.io(in Chinese) | Velox Intro from Meta | . ",
     "url": "/#14-references",
     
     "relUrl": "/#14-references"
-  },"139": {
+  },"140": {
     "doc": "Home",
     "title": "2 Architecture",
     "content": "The overview chart is like below. Substrait provides a well-defined cross-language specification for data compute operations (see more details here). Spark physical plan is transformed to Substrait plan. Then Substrait plan is passed to native through JNI call. On native side, the native operator chain will be built out and offloaded to native engine. Gluten will return Columnar Batch to Spark and Spark Columnar API (since Spark-3.0) will be used at execution time. Gluten uses Apache Arrow data format as its basic data format, so the returned data to Spark JVM is ArrowColumnarBatch. Currently, Gluten only supports Clickhouse backend &amp; Velox backend. Velox is a C++ database acceleration library which provides reusable, extensible and high-performance data processing components. More details can be found from https://github.com/facebookincubator/velox/. Gluten can also be extended to support more backends. There are several key components in Gluten: . | Query Plan Conversion: converts Spark’s physical plan to Substrait plan. | Unified Memory Management: controls native memory allocation. | Columnar Shuffle: shuffles Gluten columnar data. The shuffle service still reuses the one in Spark core. A kind of columnar exchange operator is implemented to support Gluten columnar data format. | Fallback Mechanism: supports falling back to Vanilla spark for unsupported operators. Gluten ColumnarToRow (C2R) and RowToColumnar (R2C) will convert Gluten columnar data and Spark’s internal row data if needed. Both C2R and R2C are implemented in native code as well | Metrics: collected from Gluten native engine to help identify bugs, performance bottlenecks, etc. The metrics are displayed in Spark UI. | Shim Layer: supports multiple Spark versions. We plan to only support Spark’s latest 2 or 3 releases. Currently, Spark-3.2, Spark-3.3 &amp; Spark-3.4 (experimental) are supported. | . ",
     "url": "/#2-architecture",
     
     "relUrl": "/#2-architecture"
-  },"140": {
+  },"141": {
     "doc": "Home",
     "title": "Home",
     "content": " ",
     "url": "/",
     
     "relUrl": "/"
-  },"141": {
+  },"142": {
     "doc": "Gluten Release",
     "title": "Latest release for velox backend",
     "content": ". | Gluten-1.1.0 (Nov. 30 2023) | . ",
     "url": "/release.html#latest-release-for-velox-backend",
     
     "relUrl": "/release.html#latest-release-for-velox-backend"
-  },"142": {
+  },"143": {
     "doc": "Gluten Release",
     "title": "Archived releases",
     "content": ". | Gluten-1.0.0 (Jul. 13 2023) | Gluten-0.5.0 (Apr. 7 2023). | . ",
     "url": "/release.html#archived-releases",
     
     "relUrl": "/release.html#archived-releases"
-  },"143": {
+  },"144": {
     "doc": "Gluten Release",
     "title": "Gluten Release",
     "content": "Gluten is a plugin for Apache Spark to double SparkSQL’s performance. ",
     "url": "/release.html",
     
     "relUrl": "/release.html"
-  },"144": {
+  },"145": {
     "doc": "Velox Function Development",
     "title": "Developer Guide for Implementing Spark Built-in SQL Functions in Velox",
     "content": "In velox, two folders prestosql &amp; sparksql are holding most sql functions, respective for presto and spark. Gluten will ask velox to firstly register prestosql functions, then sparksql functions. So if prestosql and sparksql share same signature for a function, the sparksql function will overwrite the corresponding prestosql function. If the required function is lacking in both folders (exceptions are some common functions defined outside, like cast), we need to implement the missing function in sparksql folder. It is possible that a prestosql function has some semantic difference with the corresponding spark function, even though they share the same name and function signature. If so, we also need to do an implementation in sparksql folder, generally based on the original impl. for prestosql. There are a few spark functions that can behave differently for some special cases, depending on ANSI on or off. Currently, gluten does NOT support ANSI mode. So only ANSI off needs to be considered in implementing spark built-in functions in velox. Take BitwiseAndFunction as example: . template &lt;typename T&gt; struct BitwiseAndFunction { template &lt;typename TInput&gt; // For void return type, it indicates null result will never be obtained for non-null input. // For bool return type, it indicates null result can be obtained for non-null input (false for null). FOLLY_ALWAYS_INLINE void call(TInput&amp; result, TInput a, TInput b) { result = a &amp; b; } }; . It is templated, as well as the call function, to allow multiple types. In the above impl., the result will be null for null input. Please use callNullable if you need different behavior for null input, e.g., get a non-null result for null input. Also see callNullFree in velox document. It is used for fast evaluation in the case that any input has null. The below code will register the implemented function for all kinds of integer types. The specified name bitwise_and will be actually used in calling this function. registerBinaryIntegral&lt;BitwiseAndFunction&gt;({prefix + \"bitwise_and\"}); . Functions for complex types have similar implementations. See ArrayAverageFunction in velox/functions/prestosql/ArrayFunctions.h. Reference: . Velox’s official developer guide: . | velox/docs/develop/scalar-functions.rst | velox/examples/SimpleFunctions.cpp | . ",
     "url": "/developers/velox-function-development-guide.html#developer-guide-for-implementing-spark-built-in-sql-functions-in-velox",
     
     "relUrl": "/developers/velox-function-development-guide.html#developer-guide-for-implementing-spark-built-in-sql-functions-in-velox"
-  },"145": {
+  },"146": {
     "doc": "Velox Function Development",
     "title": "Velox Function Development",
     "content": " ",
