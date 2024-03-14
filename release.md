@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Gluten Release
-nav_order: 11
+nav_order: 4
 ---
 
 [Gluten](https://github.com/oap-project/gluten) is a plugin for Apache Spark to double SparkSQL's performance.
