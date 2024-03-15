@@ -20,7 +20,7 @@ github:
     issues: false
     projects: false
     wiki: false
-  ghp_branch: asf-site
+  ghp_branch: main
   ghp_path: /
   labels:
     - sql
