@@ -5,8 +5,6 @@ nav_order: 5
 ---
 # Contact Us
 
-Gluten was initiated by Intel and Kyligence in 2022. Several companies such as Intel, Kyligence, BIGO, Meituan and others, are actively participating in the development of Gluten.
-
 *<b>This plugin is still under active development now, and doesn't have a stable release. Welcome to evaluate it. If you encounter any issues or have any suggestions, please submit to our issue list. We'd love to hear your feedback</b>*
 
 Apache has meticulously set up dedicated mailing lists for every project, underscoring the pivotal role of these platforms in fostering communication within the Apache community.
