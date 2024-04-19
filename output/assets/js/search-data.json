@@ -939,7 +939,7 @@
   },"134": {
     "doc": "Home",
     "title": "Overview",
-    "content": "Gluten: Plugin to Double SparkSQL’s Performance. ",
+    "content": "Apache Gluten(incubating) is a middle layer responsible for offloading JVM-based SQL engines’ execution to native engines. ",
     "url": "/#overview",
     
     "relUrl": "/#overview"
