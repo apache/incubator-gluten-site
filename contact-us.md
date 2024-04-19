@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Contact Us
-nav_order: 5
+nav_order: 6
 ---
 # Contact Us
 
