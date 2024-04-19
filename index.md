@@ -6,7 +6,7 @@ permalink: /
 description: This site serves as a collection of documentation about the Gluten, a plugin to Double SparkSQL's Performance
 ---
 # Overview
-Gluten: Plugin to Double SparkSQL's Performance.
+Apache Gluten(incubating) is a middle layer responsible for offloading JVM-based SQL engines' execution to native engines.
 
 # 1 Introduction
 
