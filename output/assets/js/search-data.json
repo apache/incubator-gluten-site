@@ -517,524 +517,545 @@
     
     "relUrl": "/developers/HowTo.html"
   },"74": {
+    "doc": "How To Release",
+    "title": "How to Release",
+    "content": "This section outlines the steps for releasing Apache Gluten (incubating) according to the Apache release guidelines. All projects under the Apache umbrella must adhere to the Apache Release Policy. This guide is designed to assist you in comprehending the policy and navigating the process of releasing projects at Apache. ",
+    "url": "/developers/HowToRelease.html#how-to-release",
+    
+    "relUrl": "/developers/HowToRelease.html#how-to-release"
+  },"75": {
+    "doc": "How To Release",
+    "title": "Release Process",
+    "content": ". | Prepare the release artifacts. | Upload the release artifacts to the SVN repository. | Verify the release artifacts. | Initiate a release vote. | Announce the results and the release. | . Prepare the release artifacts. | Create a branch from the target git repository. | Tag a RC and draft the release notes. | Build and Sign the release artifacts (including source archives, binaries, …etc). | Generate checksums for the artifacts. | . How to Sign the release artifacts. | Create a GPG key . | Add the GPG key to the KEYS file . | Sign the release artifacts with the GPG key. | . # create a GPG key, after executing this command, select the first one RSA 和 RSA $ gpg --full-generate-key # list the GPG keys $ gpg --keyid-format SHORT --list-keys # upload the GPG key to the key server, xxx is the GPG key id # eg: pub rsa4096/4C21E346 2024-05-06 [SC], 4C21E346 is the GPG key id; $ gpg --keyserver keyserver.ubuntu.com --send-key xxx # append the GPG key to the KEYS file the svn repository # [IMPORTANT] Don't replace the KEYS file, just append the GPG key to the KEYS file. $ svn co https://dist.apache.org/repos/dist/release/incubator/answer/ $ (gpg --list-sigs xxx@apache.org &amp;&amp; gpg --export --armor xxx@apache.org) &gt;&gt; KEYS $ svn ci -m \"add gpg key\" # sign the release artifacts, xxxx is xxx@apache.org $ for i in *.tar.gz; do echo $i; gpg --local-user xxxx --armor --output $i.asc --detach-sig $i ; done . How to Generate checksums for the release artifacts. # create the checksums $ for i in *.tar.gz; do echo $i; sha512sum $i &gt; $i.sha512 ; done . Upload the release artifacts to the SVN repository. | Create a project directory in the SVN repository (1st time only). https://dist.apache.org/repos/dist/dev/incubator/gluten/ . | Create a directory for the release artifacts in the SVN repository. https://dist.apache.org/repos/dist/dev/incubator/gluten/{release-version} release-version format: apache-gluten-#.#.#-rc# . | Upload the release artifacts to the SVN repository. $ svn co https://dist.apache.org/repos/dist/dev/incubator/gluten/ $ cp /path/to/release/artifacts/* ./{release-version}/ $ svn add ./{release-version}/* $ svn commit -m \"add Apache Answer release artifacts for {release-version}\" . | After the upload, please visit the link https://dist.apache.org/repos/dist/dev/incubator/gluten/{release-version} to verify if the file upload is successful or not. The upload release artifacts should be include * apache-gluten-#.#.#-incubating-src.tar.gz * apache-gluten-#.#.#-incubating-src.tar.gz.asc * apache-gluten-#.#.#-incubating-src.tar.gz.sha512 . | . Verify the release artifacts. Please follow below steps to verify the release artifacts. | Check if the Download links are valid. | Check if the checksums and GPG signatures are valid. | Check if the release artifacts name is qualified and match with the current release. | Check if LICENSE and NOTICE files are correct. | Check if the License Headers are included in all files if necessary. | No unlicensed compiled archives bundled in source archive. | . How to Verify the Signatures . Please follow below steps to verify the signatures. # download KEYS $ curl https://dist.apache.org/repos/dist/release/incubator/gluten/KEYS &gt; KEYS # import KEYS and trust the key, please replace the email address with the one you want to trust. $ gpg --import KEYS $ gpg --edit-key xxx@apache.org gpg&gt; trust gpg&gt; 5 gpg&gt; y gpg&gt; quit # enter the directory where the release artifacts are located $ cd /path/to/release/artifacts # verify the signature $ for i in *.tar.gz; do echo $i; gpg --verify $i.asc $i ; done # if you see 'Good signature' in the output, it means the signature is valid. How to Verify the checksums . Please follow below steps to verify the checksums . # verify the checksums $ for i in *.tar.gz; do echo $i; sha512sum --check $i.sha512; done . Initiate a release vote. | Email a vote request to dev@gluten.apache.org, requiring at least 3 PPMC +1s. | Allow 72 hours or until enough votes are collected. | Share the vote outcome on the dev list. | If successful, request a vote on general@incubator.apache.org, needing 3 PMC +1s. | Wait 72 hours or for sufficient votes. | Announce the results on the general list. | . Vote Email Template . [VOTE] Release Apache Gluten (Incubating) {release-version} Hello, This is a call for vote to release Apache Gluten (Incubating) version {release-version}. The vote thread: https://lists.apache.org/thread/{id} Vote Result: https://lists.apache.org/thread/{id} The release candidates: https://dist.apache.org/repos/dist/dev/incubator/gluten/{release-version}/ Release notes: https://github.com/apache/incubator-gluten/releases/tag/{release-version} Git tag for the release: https://github.com/apache/incubator-gluten/releases/tag/{release-version} Git commit id for the release: https://github.com/apache/incubator-gluten/commit/{id} Keys to verify the Release Candidate: https://downloads.apache.org/incubator/gluten/KEYS The vote will be open for at least 72 hours or until the necessary number of votes are reached. Please vote accordingly: [ ] +1 approve [ ] +0 no opinion [ ] -1 disapprove with the reason Checklist for reference: [ ] Download links are valid. [ ] Checksums and PGP signatures are valid. [ ] Source code distributions have correct names matching the current release. [ ] LICENSE and NOTICE files are correct for each Apache Answer repo. [ ] All files have license headers if necessary. [ ] No unlicensed compiled archives bundled in source archive. To compile from the source, please refer to: https://github.com/apache/incubator-gluten#building-from-source Thanks, &lt;YOUR NAME&gt; . Announce the results and the release. Announce Email Template . Hello everyone, The Apache Gluten (Incubating) {release-version} has been released! Apache Gluten is a Q&amp;A platform software for teams at any scale. Whether it's a community forum, help center, or knowledge management platform, you can always count on Apache Answer. Download Links: https://downloads.apache.org/incubator/gluten/ Release Notes: https://github.com/apache/incubator-gluten/releases/tag/{release-version} Website: https://gluten.apache.org/ Resources: - Issue: https://github.com/apache/incubator-gluten/issues - Mailing list: dev@gluten.apache.org Thanks, &lt;YOUR NAME&gt; . ",
+    "url": "/developers/HowToRelease.html#release-process",
+    
+    "relUrl": "/developers/HowToRelease.html#release-process"
+  },"76": {
+    "doc": "How To Release",
+    "title": "How To Release",
+    "content": " ",
+    "url": "/developers/HowToRelease.html",
+    
+    "relUrl": "/developers/HowToRelease.html"
+  },"77": {
     "doc": "Micro Benchmarks for Velox Backend",
     "title": "Generate Micro Benchmarks for Velox Backend",
     "content": "This document explains how to use the existing micro benchmark template in Gluten Cpp. A micro benchmark for Velox backend is provided in Gluten Cpp to simulate the execution of a first or middle stage in Spark. It serves as a more convenient alternative to debug in Gluten Cpp comparing with directly debugging in a Spark job. Developers can use it to create their own workloads, debug in native process, profile the hotspot and do optimizations. To simulate a first stage, you need to dump the Substrait plan and input split info into two JSON files. The input URIs of the splits should be exising file locations, which can be either local or HDFS paths. To simulate a middle stage, in addition to the JSON file, you also need to save the input data of this stage into Parquet files. The benchmark will load the data into Arrow format, then add Arrow2Velox to feed the data into Velox pipeline to reproduce the reducer stage. Shuffle exchange is not included. Please refer to the sections below to learn how to dump the Substrait plan and create the input data files. ",
     "url": "/developers/MicroBenchmarks.html#generate-micro-benchmarks-for-velox-backend",
     
     "relUrl": "/developers/MicroBenchmarks.html#generate-micro-benchmarks-for-velox-backend"
-  },"75": {
+  },"78": {
     "doc": "Micro Benchmarks for Velox Backend",
     "title": "Try the example",
     "content": "To run a micro benchmark, user should provide one file that contains the Substrait plan in JSON format, and optional one or more input data files in parquet format. The commands below help to generate example input files: . cd /path/to/gluten/ ./dev/buildbundle-veloxbe.sh --build_tests=ON --build_benchmarks=ON # Run test to generate input data files. If you are using spark 3.3, replace -Pspark-3.2 with -Pspark-3.3 mvn test -Pspark-3.2 -Pbackends-velox -Prss -pl backends-velox -am \\ -DtagsToInclude=\"io.glutenproject.tags.GenerateExample\" -Dtest=none -DfailIfNoTests=false -Darrow.version=11.0.0-gluten -Dexec.skip . The generated example files are placed in gluten/backends-velox: . $ tree gluten/backends-velox/generated-native-benchmark/ gluten/backends-velox/generated-native-benchmark/ ├── example.json ├── example_lineitem │ ├── part-00000-3ec19189-d20e-4240-85ae-88631d46b612-c000.snappy.parquet │ └── _SUCCESS └── example_orders ├── part-00000-1e66fb98-4dd6-47a6-8679-8625dbc437ee-c000.snappy.parquet └── _SUCCESS . Run micro benchmark with the generated files as input. You need to specify the absolute path to the input files: . cd /path/to/gluten/cpp/build/velox/benchmarks ./generic_benchmark \\ --plan /home/sparkuser/github/oap-project/gluten/backends-velox/generated-native-benchmark/example.json \\ --data /home/sparkuser/github/oap-project/gluten/backends-velox/generated-native-benchmark/example_orders/part-00000-1e66fb98-4dd6-47a6-8679-8625dbc437ee-c000.snappy.parquet,\\ /home/sparkuser/github/oap-project/gluten/backends-velox/generated-native-benchmark/example_lineitem/part-00000-3ec19189-d20e-4240-85ae-88631d46b612-c000.snappy.parquet \\ --threads 1 --iterations 1 --noprint-result --benchmark_filter=InputFromBatchStream . The output should be like: . 2022-11-18T16:49:56+08:00 Running ./generic_benchmark Run on (192 X 3800 MHz CPU s) CPU Caches: L1 Data 48 KiB (x96) L1 Instruction 32 KiB (x96) L2 Unified 2048 KiB (x96) L3 Unified 99840 KiB (x2) Load Average: 0.28, 1.17, 1.59 ***WARNING*** CPU scaling is enabled, the benchmark real time measurements may be noisy and will incur extra overhead. -- Project[expressions: (n3_0:BIGINT, ROW[\"n1_0\"]), (n3_1:VARCHAR, ROW[\"n1_1\"])] -&gt; n3_0:BIGINT, n3_1:VARCHAR Output: 535 rows (65.81KB, 1 batches), Cpu time: 36.33us, Blocked wall time: 0ns, Peak memory: 1.00MB, Memory allocations: 3, Threads: 1 queuedWallNanos sum: 2.00us, count: 2, min: 0ns, max: 2.00us -- HashJoin[RIGHT SEMI (FILTER) n0_0=n1_0] -&gt; n1_0:BIGINT, n1_1:VARCHAR Output: 535 rows (65.81KB, 1 batches), Cpu time: 191.56us, Blocked wall time: 0ns, Peak memory: 2.00MB, Memory allocations: 8 HashBuild: Input: 582 rows (16.45KB, 1 batches), Output: 0 rows (0B, 0 batches), Cpu time: 1.84us, Blocked wall time: 0ns, Peak memory: 1.00MB, Memory allocations: 3, Threads: 1 distinctKey0 sum: 583, count: 1, min: 583, max: 583 queuedWallNanos sum: 0ns, count: 1, min: 0ns, max: 0ns rangeKey0 sum: 59748, count: 1, min: 59748, max: 59748 HashProbe: Input: 37897 rows (296.07KB, 1 batches), Output: 535 rows (65.81KB, 1 batches), Cpu time: 189.71us, Blocked wall time: 0ns, Peak memory: 1.00MB, Memory allocations: 5, Threads: 1 queuedWallNanos sum: 0ns, count: 1, min: 0ns, max: 0ns -- ArrowStream[] -&gt; n0_0:BIGINT Input: 0 rows (0B, 0 batches), Output: 37897 rows (296.07KB, 1 batches), Cpu time: 1.29ms, Blocked wall time: 0ns, Peak memory: 0B, Memory allocations: 0, Threads: 1 -- ArrowStream[] -&gt; n1_0:BIGINT, n1_1:VARCHAR Input: 0 rows (0B, 0 batches), Output: 582 rows (16.45KB, 1 batches), Cpu time: 894.22us, Blocked wall time: 0ns, Peak memory: 0B, Memory allocations: 0, Threads: 1 ----------------------------------------------------------------------------------------------------------------------------- Benchmark Time CPU Iterations UserCounters... ----------------------------------------------------------------------------------------------------------------------------- InputFromBatchVector/iterations:1/process_time/real_time/threads:1 41304520 ns 23740340 ns 1 collect_batch_time=34.7812M elapsed_time=41.3113M . ",
     "url": "/developers/MicroBenchmarks.html#try-the-example",
     
     "relUrl": "/developers/MicroBenchmarks.html#try-the-example"
-  },"76": {
+  },"79": {
     "doc": "Micro Benchmarks for Velox Backend",
     "title": "Generate Substrait plan and input for any query",
     "content": "First, build Gluten with --build_benchmarks=ON. cd /path/to/gluten/ ./dev/buildbundle-veloxbe.sh --build_benchmarks=ON # For debugging purpose, rebuild Gluten with build type `Debug`./dev/buildbundle-veloxbe.sh --build_benchmarks=ON --build_type=Debug . First, get the Stage Id from spark UI for the stage you want to simulate. And then re-run the query with below configurations to dump the inputs to micro benchmark. | Parameters | Description | Recommend Setting | . | spark.gluten.sql.benchmark_task.stageId | Spark task stage id | target stage id | . | spark.gluten.sql.benchmark_task.partitionId | Spark task partition id, default value -1 means all the partition of this stage | 0 | . | spark.gluten.sql.benchmark_task.taskId | If not specify partition id, use spark task attempt id, default value -1 means all the partition of this stage | target task attemp id | . | spark.gluten.saveDir | Directory to save the inputs to micro benchmark, should exist and be empty. | /path/to/saveDir | . Check the files in spark.gluten.saveDir. If the simulated stage is a first stage, you will get 3 types of dumped file: . | Configuration file: INI formatted, file name conf_[stageId]_[partitionId].ini. Contains the configurations to init Velox backend and runtime session. | Plan file: JSON formatted, file name plan_[stageId]_[partitionId].json. Contains the substrait plan to the stage, without input file splits. | Split file: JSON formatted, file name split_[stageId]_[partitionId]_[splitIndex].json. There can be more than one split file in a first stage task. Contains the substrait plan piece to the input file splits. | . Run benchmark. By default, the result will be printed to stdout. You can use --noprint-result to suppress this output. Sample command: . cd /path/to/gluten/cpp/build/velox/benchmarks ./generic_benchmark \\ --conf /absolute_path/to/conf_[stageId]_[partitionId].ini \\ --plan /absolute_path/to/plan_[stageId]_[partitionId].json \\ --split /absolut_path/to/split_[stageId]_[partitionId]_0.parquet,/absolut_path/to/split_[stageId]_[partitionId]_1.parquet \\ --threads 1 --noprint-result . If the simulated stage is a middle stage, you will get 3 types of dumped file: . | Configuration file: INI formatted, file name conf_[stageId]_[partitionId].ini. Contains the configurations to init Velox backend and runtime session. | Plan file: JSON formatted, file name plan_[stageId]_[partitionId].json. Contains the substrait plan to the stage. | Data file: Parquet formatted, file name data_[stageId]_[partitionId]_[iteratorIndex].json. There can be more than one input data file in a middle stage task. The input data files of a middle stage will be loaded as iterators to serve as the inputs for the pipeline: | . \"localFiles\": { \"items\": [ { \"uriFile\": \"iterator:0\" } ] } . Sample command: . cd /path/to/gluten/cpp/build/velox/benchmarks ./generic_benchmark \\ --conf /absolute_path/to/conf_[stageId]_[partitionId].ini \\ --plan /absolute_path/to/plan_[stageId]_[partitionId].json \\ --data /absolut_path/to/data_[stageId]_[partitionId]_0.parquet,/absolut_path/to/data_[stageId]_[partitionId]_1.parquet \\ --threads 1 --noprint-result . For some complex queries, stageId may cannot represent the Substrait plan input, please get the taskId from spark UI, and get your target parquet from saveDir. In this example, only one partition input with partition id 2, taskId is 36, iterator length is 2. cd /path/to/gluten/cpp/build/velox/benchmarks ./generic_benchmark \\ --plan /absolute_path/to/complex_plan.json \\ --data /absolute_path/to/data_36_2_0.parquet,/absolute_path/to/data_36_2_1.parquet \\ --threads 1 --noprint-result . ",
     "url": "/developers/MicroBenchmarks.html#generate-substrait-plan-and-input-for-any-query",
     
     "relUrl": "/developers/MicroBenchmarks.html#generate-substrait-plan-and-input-for-any-query"
-  },"77": {
+  },"80": {
     "doc": "Micro Benchmarks for Velox Backend",
     "title": "Save ouput to parquet to analyze",
     "content": "You can save the output to a parquet file to analyze. cd /path/to/gluten/cpp/build/velox/benchmarks ./generic_benchmark \\ --plan /absolute_path/to/plan.json \\ --data /absolute_path/to/data.parquet --threads 1 --noprint-result --write-file=/absolute_path/to/result.parquet . ",
     "url": "/developers/MicroBenchmarks.html#save-ouput-to-parquet-to-analyze",
     
     "relUrl": "/developers/MicroBenchmarks.html#save-ouput-to-parquet-to-analyze"
-  },"78": {
+  },"81": {
     "doc": "Micro Benchmarks for Velox Backend",
     "title": "Add shuffle write process",
     "content": "You can add the shuffle write process at the end of this stage. Note that this will ignore the --write-file option. cd /path/to/gluten/cpp/build/velox/benchmarks ./generic_benchmark \\ --plan /absolute_path/to/plan.json \\ --split /absolute_path/to/split.json \\ --threads 1 --noprint-result --with-shuffle . By default, the compression codec for shuffle outputs is LZ4. You can switch to other codecs by adding one of the following argument flags to the command: . | –zstd: ZSTD codec, compression level 1 | –qat-gzip: QAT GZIP codec, compression level 1 | –qat-zstd: QAT ZSTD codec, compression level 1 | –iaa-gzip: IAA GZIP codec, compression level 1 | . Note using QAT or IAA codec requires Gluten cpp is built with these features. Please check the corresponding section in Velox document first for how to setup, build and enable these features in Gluten. For QAT support, please check Intel® QuickAssist Technology (QAT) support. For IAA support, please check Intel® In-memory Analytics Accelerator (IAA/IAX) support . ",
     "url": "/developers/MicroBenchmarks.html#add-shuffle-write-process",
     
     "relUrl": "/developers/MicroBenchmarks.html#add-shuffle-write-process"
-  },"79": {
+  },"82": {
     "doc": "Micro Benchmarks for Velox Backend",
     "title": "Simulate Spark with multiple processes and threads",
     "content": "You can use below command to launch several processes and threads to simulate parallel execution on Spark. Each thread in the same process will be pinned to the core number starting from --cpu. Suppose running on a baremetal machine with 48C, 2-socket, HT-on, launching below command will utilize all vcores. processes=24 # Same value of spark.executor.instances threads=8 # Same value of spark.executor.cores for ((i=0; i&lt;${processes}; i++)); do ./generic_benchmark --plan /path/to/plan.json --split /path/to/split.json --noprint-result --threads $threads --cpu $((i*threads)) &amp; done . If you want to add the shuffle write process, you can specify multiple direcotries by setting environment variable GLUTEN_SPARK_LOCAL_DIRS to a comma-separated string for shuffle write to spread the I/O pressure to multiple disks. mkdir -p {/data1,/data2,/data3}/tmp # Make sure each directory has been already created. export GLUTEN_SPARK_LOCAL_DIRS=/data1/tmp,/data2/tmp,/data3/tmp processes=24 # Same value of spark.executor.instances threads=8 # Same value of spark.executor.cores for ((i=0; i&lt;${processes}; i++)); do ./generic_benchmark --plan /path/to/plan.json --split /path/to/split.json --noprint-result --with-shuffle --threads $threads --cpu $((i*threads)) &amp; done . Run Examples . We also provide some example inputs in cpp/velox/benchmarks/data. E.g. generic_q5/q5_first_stage_0.json simulates a first-stage in TPCH Q5, which has the the most heaviest table scan. You can follow below steps to run this example. | Open generic_q5/q5_first_stage_0.json with file editor. Search for \"uriFile\": \"LINEITEM\" and replace LINEITEM with the URI to one partition file in lineitem. In the next line, replace the number in \"length\": \"...\" with the actual file length. Suppose you are using the provided small TPCH table in cpp/velox/benchmarks/data/tpch_sf10m, the replaced JSON should be like: | . { \"items\": [ { \"uriFile\": \"file:///path/to/gluten/cpp/velox/benchmarks/data/tpch_sf10m/lineitem/part-00000-6c374e0a-7d76-401b-8458-a8e31f8ab704-c000.snappy.parquet\", \"length\": \"1863237\", \"parquet\": {} } ] } . | Launch multiple processes and multiple threads. Set GLUTEN_SPARK_LOCAL_DIRS and add –with-shuffle to the command. | . mkdir -p {/data1,/data2,/data3}/tmp # Make sure each directory has been already created. export GLUTEN_SPARK_LOCAL_DIRS=/data1/tmp,/data2/tmp,/data3/tmp processes=24 # Same value of spark.executor.instances threads=8 # Same value of spark.executor.cores for ((i=0; i&lt;${processes}; i++)); do ./generic_benchmark --plan /path/to/gluten/cpp/velox/benchmarks/data/generic_q5/q5_first_stage_0.json --split /path/to/gluten/cpp/velox/benchmarks/data/generic_q5/q5_first_stage_0_split.json --noprint-result --with-shuffle --threads $threads --cpu $((i*threads)) &amp; done &gt;stdout.log 2&gt;stderr.log . You can find the “elapsed_time” and other metrics in stdout.log. In below output, the “elapsed_time” is ~10.75s. If you run TPCH Q5 with Gluten on Spark, a single task in the same Spark stage should take about the same time. ------------------------------------------------------------------------------------------------------------------ Benchmark Time CPU Iterations UserCounters... ------------------------------------------------------------------------------------------------------------------ SkipInput/iterations:1/process_time/real_time/threads:8 1317255379 ns 10061941861 ns 8 collect_batch_time=0 elapsed_time=10.7563G shuffle_compress_time=4.19964G shuffle_spill_time=0 shuffle_split_time=0 shuffle_write_time=1.91651G . ",
     "url": "/developers/MicroBenchmarks.html#simulate-spark-with-multiple-processes-and-threads",
     
     "relUrl": "/developers/MicroBenchmarks.html#simulate-spark-with-multiple-processes-and-threads"
-  },"80": {
+  },"83": {
     "doc": "Micro Benchmarks for Velox Backend",
     "title": "Micro Benchmarks for Velox Backend",
     "content": " ",
     "url": "/developers/MicroBenchmarks.html",
     
     "relUrl": "/developers/MicroBenchmarks.html"
-  },"81": {
+  },"84": {
     "doc": "New To Gluten",
     "title": "Environment",
     "content": "Now gluten supports Ubuntu20.04, Ubuntu22.04, centos8, centos7 and macOS. ",
     "url": "/developers/NewToGluten.html#environment",
     
     "relUrl": "/developers/NewToGluten.html#environment"
-  },"82": {
+  },"85": {
     "doc": "New To Gluten",
     "title": "Openjdk8",
     "content": "Environment setting . For root user, the environment variables file is /etc/profile, it will make effect for all the users. For other user, you can set in ~/.bashrc. Guide for ubuntu . The default JDK version in ubuntu is java11, we need to set to java8. apt install openjdk-8-jdk update-alternatives --config java java -version . --config java to config java executable path, javac and other commands can also use this command to config. For some other uses, we suggest to set JAVA_HOME. export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64/ JRE_HOME=$JAVA_HOME/jre export CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar # pay attention to $PATH double quote export PATH=\"$PATH:$JAVA_HOME/bin\" . Must set PATH with double quote in ubuntu. ",
     "url": "/developers/NewToGluten.html#openjdk8",
     
     "relUrl": "/developers/NewToGluten.html#openjdk8"
-  },"83": {
+  },"86": {
     "doc": "New To Gluten",
     "title": "Maven 3.6.3 or above",
     "content": "Maven Dowload Page And then set the environment setting. ",
     "url": "/developers/NewToGluten.html#maven-363-or-above",
     
     "relUrl": "/developers/NewToGluten.html#maven-363-or-above"
-  },"84": {
+  },"87": {
     "doc": "New To Gluten",
     "title": "GCC 9.4 or above",
     "content": " ",
     "url": "/developers/NewToGluten.html#gcc-94-or-above",
     
     "relUrl": "/developers/NewToGluten.html#gcc-94-or-above"
-  },"85": {
+  },"88": {
     "doc": "New To Gluten",
     "title": "Compile gluten using debug mode",
     "content": "If you want to just debug java/scala code, there is no need to compile cpp code with debug mode. You can just refer to build-gluten-with-velox-backend. If you need to debug cpp code, please compile the backend code and gluten cpp code with debug mode. ## compile velox backend with benchmark and tests to debug gluten_home/dev/builddeps-veloxbe.sh --build_tests=ON --build_benchmarks=ON --build_type=Debug . If you need to debug the tests in /gluten-ut, You need to compile java code with `-P spark-ut`. ",
     "url": "/developers/NewToGluten.html#compile-gluten-using-debug-mode",
     
     "relUrl": "/developers/NewToGluten.html#compile-gluten-using-debug-mode"
-  },"86": {
+  },"89": {
     "doc": "New To Gluten",
     "title": "Java/scala code development with Intellij",
     "content": " ",
     "url": "/developers/NewToGluten.html#javascala-code-development-with-intellij",
     
     "relUrl": "/developers/NewToGluten.html#javascala-code-development-with-intellij"
-  },"87": {
+  },"90": {
     "doc": "New To Gluten",
     "title": "Linux intellij local debug",
     "content": "Install the linux intellij version, and debug code locally. | Ask your linux maintainer to install the desktop, and then restart the server. | If you use Moba-XTerm to connect linux server, you don’t need to install x11 server, If not (e.g. putty), please follow this guide: X11 Forwarding: Setup Instructions for Linux and Mac . | Download intellij linux community version to linux server | Start Idea, bash &lt;idea_dir&gt;/idea.sh | . Notes: Sometimes, your desktop may stop accidently, left idea running. root@xx2:~bash idea-IC-221.5787.30/bin/idea.sh Already running root@xx2:~ps ux | grep intellij root@xx2:kill -9 &lt;pid&gt; . And then restart idea. ",
     "url": "/developers/NewToGluten.html#linux-intellij-local-debug",
     
     "relUrl": "/developers/NewToGluten.html#linux-intellij-local-debug"
-  },"88": {
+  },"91": {
     "doc": "New To Gluten",
     "title": "Windows/Mac intellij remote debug",
     "content": "If you have Ultimate intellij, you can try to debug remotely. ",
     "url": "/developers/NewToGluten.html#windowsmac-intellij-remote-debug",
     
     "relUrl": "/developers/NewToGluten.html#windowsmac-intellij-remote-debug"
-  },"89": {
+  },"92": {
     "doc": "New To Gluten",
     "title": "Set up gluten project",
     "content": ". | Make sure you have compiled gluten. | Load the gluten by File-&gt;Open, select &lt;gluten_home/pom.xml&gt;. | Activate your profiles such as , and Reload Maven Project, you will find all your need modules have been activated. | Create breakpoint and debug as you wish, maybe you can try CTRL+N to find TestOperator to start your test. | . ",
     "url": "/developers/NewToGluten.html#set-up-gluten-project",
     
     "relUrl": "/developers/NewToGluten.html#set-up-gluten-project"
-  },"90": {
+  },"93": {
     "doc": "New To Gluten",
     "title": "Java/Scala code style",
     "content": "Intellij IDE supports importing settings for Java/Scala code style. You can import intellij-codestyle.xml to your IDE. See Intellij guide. To generate a fix for Java/Scala code style, you can run one or more of the below commands according to the code modules involved in your PR. For Velox backend: . mvn spotless:apply -Pbackends-velox -Prss -Pspark-3.2 -Pspark-ut -DskipTests mvn spotless:apply -Pbackends-velox -Prss -Pspark-3.3 -Pspark-ut -DskipTests . For Clickhouse backend: . mvn spotless:apply -Pbackends-clickhouse -Pspark-3.2 -Pspark-ut -DskipTests mvn spotless:apply -Pbackends-clickhouse -Pspark-3.3 -Pspark-ut -DskipTests . ",
     "url": "/developers/NewToGluten.html#javascala-code-style",
     
     "relUrl": "/developers/NewToGluten.html#javascala-code-style"
-  },"91": {
+  },"94": {
     "doc": "New To Gluten",
     "title": "CPP code development with Visual Studio Code",
     "content": "This guide is for remote debug. We will connect the remote linux server by SSH. Download the windows vscode software The important leftside bar is: . | Explorer (Project structure) | Search | Run and Debug | Extensions (Install C/C++ Extension Pack, Remote Development, GitLens at least, C++ Test Mate is also suggested) | Remote Explorer (Connect linux server by ssh command, click +, then input ssh user@10.1.7.003) | Manage (Settings) | . Input your password in the above pop-up window, it will take a few minutes to install linux vscode server in remote machine folder ~/.vscode-server If download failed, delete this folder and try again. ",
     "url": "/developers/NewToGluten.html#cpp-code-development-with-visual-studio-code",
     
     "relUrl": "/developers/NewToGluten.html#cpp-code-development-with-visual-studio-code"
-  },"92": {
+  },"95": {
     "doc": "New To Gluten",
     "title": "Usage",
     "content": "Set up project . File-&gt;Open Folder // select gluten folder Select cpp/CmakeList.txt as command prompt Select gcc version as command prompt . Settings . VSCode support 2 ways to set user setting. | Manage-&gt;Command Palette(Open settings.json, search by Preferences: Open Settings (JSON)) | Manage-&gt;Settings (Common setting) | . Build by vscode . VSCode will try to compile the debug version in /build. And we need to compile velox debug mode before, if you have compiled velox release mode, you just need to do. # Build the velox debug version in &lt;velox_home&gt;/_build/debug make debug EXTRA_CMAKE_FLAGS=\"-DVELOX_ENABLE_PARQUET=ON -DENABLE_HDFS=ON -DVELOX_BUILD_TESTING=OFF -DVELOX_ENABLE_DUCKDB=ON -DVELOX_BUILD_TEST_UTILS=ON\" . Then gluten will link velox debug library. Just click build in bottom bar, you will get intellisense search and link. Debug . The default compile command does not enable test and benchmark, so we cannot get any executable file Open the file in &lt;gluten_home&gt;/.vscode/settings.json (create if not exists) . { \"cmake.configureArgs\": [ \"-DBUILD_BENCHMARKS=ON\", \"-DBUILD_TESTS=ON\" ], \"C_Cpp.default.configurationProvider\": \"ms-vscode.cmake-tools\" } . Then we can get some executables, take velox_shuffle_writer_test as example . Click Run and Debug to create launch.json in &lt;gluten_home&gt;/.vscode/launch.json Click Add Configuration in the top of launch.json, select gdb launch or attach to exists program launch.json example . { // Use IntelliSense to learn about possible attributes. // Hover to view descriptions of existing attributes. // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387 \"version\": \"0.2.0\", \"configurations\": [ { \"name\": \"velox shuffle writer test\", \"type\": \"cppdbg\", \"request\": \"launch\", \"program\": \"/mnt/DP_disk1/code/gluten/cpp/build/velox/tests/velox_shuffle_writer_test\", \"args\": [\"--gtest_filter=*TestSinglePartPartitioner*\"], \"stopAtEntry\": false, \"cwd\": \"${fileDirname}\", \"environment\": [], \"externalConsole\": false, \"MIMode\": \"gdb\", \"setupCommands\": [ { \"description\": \"Enable pretty-printing for gdb\", \"text\": \"-enable-pretty-printing\", \"ignoreFailures\": true }, { \"description\": \"Set Disassembly Flavor to Intel\", \"text\": \"-gdb-set disassembly-flavor intel\", \"ignoreFailures\": true } ] }, { \"name\": \"benchmark test\", \"type\": \"cppdbg\", \"request\": \"launch\", \"program\": \"/mnt/DP_disk1/code/gluten/cpp/velox/benchmarks/./generic_benchmark\", \"args\": [\"/mnt/DP_disk1/code/gluten/cpp/velox/benchmarks/query.json\", \"--threads=1\"], \"stopAtEntry\": false, \"cwd\": \"${fileDirname}\", \"environment\": [], \"externalConsole\": false, \"MIMode\": \"gdb\", \"setupCommands\": [ { \"description\": \"Enable pretty-printing for gdb\", \"text\": \"-enable-pretty-printing\", \"ignoreFailures\": true }, { \"description\": \"Set Disassembly Flavor to Intel\", \"text\": \"-gdb-set disassembly-flavor intel\", \"ignoreFailures\": true } ] } ] } . Change name, program, args to yours . Then you can create breakpoint and debug in Run and Debug section. Velox debug . For some velox tests such as ParquetReaderTest, tests need to read the parquet file in &lt;velox_home&gt;/velox/dwio/parquet/tests/examples, you should let the screen on ParquetReaderTest.cpp, then click Start Debuging, otherwise you will raise No such file or directory exception . ",
     "url": "/developers/NewToGluten.html#usage",
     
     "relUrl": "/developers/NewToGluten.html#usage"
-  },"93": {
+  },"96": {
     "doc": "New To Gluten",
     "title": "Usefule notes",
     "content": "Upgrade vscode . No need to upgrade vscode version, if upgraded, will download linux server again, switch update mode to off Search update in Manage-&gt;Settings to turn off update mode . Colour setting . \"workbench.colorTheme\": \"Quiet Light\", \"files.autoSave\": \"afterDelay\", \"workbench.colorCustomizations\": { \"editor.wordHighlightBackground\": \"#063ef7\", // \"editor.selectionBackground\": \"#d1d1c6\", // \"tab.activeBackground\": \"#b8b9988c\", \"editor.selectionHighlightBackground\": \"#c5293e\" }, . Clang format . Now gluten uses clang-format 12 to format source files. apt-get install clang-format-12 . Set config in settings.json . \"clang-format.executable\": \"clang-format-12\", \"editor.formatOnSave\": true, . If exists multiple clang-format version, formatOnSave may not take effect, specify the default formatter Search default formatter in Settings, select Clang-Format. If your formatOnSave still make no effect, you can use shortcut SHIFT+ALT+F to format one file mannually. ",
     "url": "/developers/NewToGluten.html#usefule-notes",
     
     "relUrl": "/developers/NewToGluten.html#usefule-notes"
-  },"94": {
+  },"97": {
     "doc": "New To Gluten",
     "title": "Debug cpp code with coredump",
     "content": "mkdir -p /mnt/DP_disk1/core sysctl -w kernel.core_pattern=/mnt/DP_disk1/core/core-%e-%p-%t cat /proc/sys/kernel/core_pattern # set the core file to unlimited size echo \"ulimit -c unlimited\" &gt;&gt; ~/.bashrc # then you will get the core file at `/mnt/DP_disk1/core` when the program crashes # gdb -c corefile # gdb &lt;gluten_home&gt;/cpp/build/releases/libgluten.so 'core-Executor task l-2000883-1671542526' . ‘core-Executor task l-2000883-1671542526’ is the generated core file name. (gdb) bt (gdb) f7 (gdb) set print pretty on (gdb) p *this . | Get the backtrace | Switch to 7th stack | Print the variable in a more readable way | Print the variable fields | . Sometimes you only get the cpp exception message, you can generate core dump file by the following code: . char* p = nullptr; *p = 'a'; . or by the following commands: . | gcore &lt;pid&gt; | kill -s SIGSEGV &lt;pid&gt; | . ",
     "url": "/developers/NewToGluten.html#debug-cpp-code-with-coredump",
     
     "relUrl": "/developers/NewToGluten.html#debug-cpp-code-with-coredump"
-  },"95": {
+  },"98": {
     "doc": "New To Gluten",
     "title": "Debug cpp with gdb",
     "content": "You can use gdb to debug tests and benchmarks. And also you can debug jni call. Place the following code to your debug path. pid_t pid = getpid(); printf(\"----------------------------------pid: %lun\", pid); sleep(10); . You can also get the pid by java command or grep java program when executing unit test. jps 1375551 ScalaTestRunner ps ux | grep TestOperator . Execute gdb command to debug: . gdb attach &lt;pid&gt; . gdb attach 1375551 wait to attach.... (gdb) b &lt;velox_home&gt;/velox/substrait/SubstraitToVeloxPlan.cpp:577 (gdb) c . ",
     "url": "/developers/NewToGluten.html#debug-cpp-with-gdb",
     
     "relUrl": "/developers/NewToGluten.html#debug-cpp-with-gdb"
-  },"96": {
+  },"99": {
     "doc": "New To Gluten",
     "title": "Run TPC-H and TPC-DS",
     "content": "We supply &lt;gluten_home&gt;/tools/gluten-it to execute these queries Refer to velox_be.yml . ",
     "url": "/developers/NewToGluten.html#run-tpc-h-and-tpc-ds",
     
     "relUrl": "/developers/NewToGluten.html#run-tpc-h-and-tpc-ds"
-  },"97": {
+  },"100": {
     "doc": "New To Gluten",
     "title": "Run gluten+velox on clean machine",
     "content": "We can run gluten + velox on clean machine by one command (supported OS: Ubuntu20.04/22.04, Centos 7/8, etc.). spark-shell --name run_gluten \\ --master yarn --deploy-mode client \\ --conf spark.plugins=io.glutenproject.GlutenPlugin \\ --conf spark.memory.offHeap.enabled=true \\ --conf spark.memory.offHeap.size=20g \\ --jars https://github.com/oap-project/gluten/releases/download/v1.0.0/gluten-velox-bundle-spark3.2_2.12-ubuntu_20.04_x86_64-1.0.0.jar \\ --conf spark.shuffle.manager=org.apache.spark.shuffle.sort.ColumnarShuffleManager . ",
     "url": "/developers/NewToGluten.html#run-glutenvelox-on-clean-machine",
     
     "relUrl": "/developers/NewToGluten.html#run-glutenvelox-on-clean-machine"
-  },"98": {
+  },"101": {
     "doc": "New To Gluten",
     "title": "New To Gluten",
     "content": "Help users to debug and test with gluten. For intel internal developer, you could refer to internal wiki New Employee Guide to get more information such as proxy settings, Gluten has cpp code and java/scala code, we can use some useful IDE to read and debug. ",
     "url": "/developers/NewToGluten.html",
     
     "relUrl": "/developers/NewToGluten.html"
-  },"99": {
+  },"102": {
     "doc": "Substrait Modifications",
     "title": "Substrait Modifications in Gluten",
     "content": "Substrait is a project aiming to create a well-defined, cross-language specification for data compute operations. Since it is still under active development, there are some lacking representations for Gluten needed computing operations. At the same time, some existing representations need to be modified a bit to satisfy the needs of computing. In Gluten, the base version of Substrait is v0.23.0. This page records all the Gluten changes to Substrait proto files for reference. It is preferred to upstream these changes to Substrait, but for those cannot be upstreamed, alternatives like AdvancedExtension could be considered. ",
     "url": "/developers/SubstraitModifications.html#substrait-modifications-in-gluten",
     
     "relUrl": "/developers/SubstraitModifications.html#substrait-modifications-in-gluten"
-  },"100": {
+  },"103": {
     "doc": "Substrait Modifications",
     "title": "Modifications to algebra.proto",
     "content": ". | Added JsonReadOptions and TextReadOptions in FileOrFiles(#1584). | Changed join type JOIN_TYPE_SEMI to JOIN_TYPE_LEFT_SEMI and JOIN_TYPE_RIGHT_SEMI(#408). | Added WindowRel, added column_name and window_type in WindowFunction, changed Unbounded in WindowFunction into Unbounded_Preceding and Unbounded_Following, and added WindowType(#485). | Added output_schema in RelRoot(#1901). | Added ExpandRel(#1361). | Added GenerateRel(#574). | Added PartitionColumn in LocalFiles(#2405). | Added WriteRel (#3690). | . ",
     "url": "/developers/SubstraitModifications.html#modifications-to-algebraproto",
     
     "relUrl": "/developers/SubstraitModifications.html#modifications-to-algebraproto"
-  },"101": {
+  },"104": {
     "doc": "Substrait Modifications",
     "title": "Modifications to type.proto",
     "content": ". | Added Nothing in Type(#791). | Added names in Struct(#1878). | Added PartitionColumns in NamedStruct(#320). | Remove PartitionColumns and add column_types in NamedStruct(#2405). | . ",
     "url": "/developers/SubstraitModifications.html#modifications-to-typeproto",
     
     "relUrl": "/developers/SubstraitModifications.html#modifications-to-typeproto"
-  },"102": {
+  },"105": {
     "doc": "Substrait Modifications",
     "title": "Substrait Modifications",
     "content": " ",
     "url": "/developers/SubstraitModifications.html",
     
     "relUrl": "/developers/SubstraitModifications.html"
-  },"103": {
+  },"106": {
     "doc": "Velox Backend",
     "title": "Gluten Velox Backend Documents",
     "content": " ",
     "url": "/docs/velox/#gluten-velox-backend-documents",
     
     "relUrl": "/docs/velox/#gluten-velox-backend-documents"
-  },"104": {
+  },"107": {
     "doc": "Velox Backend",
     "title": "Velox Backend",
     "content": " ",
     "url": "/docs/velox/",
     
     "relUrl": "/docs/velox/"
-  },"105": {
+  },"108": {
     "doc": "Build Parameters for Velox Backend",
     "title": "Build Parameters",
     "content": "Native build parameters for buildbundle-veloxbe.sh or builddeps-veloxbe.sh . Please set them via --, e.g. --build_type=Release. | Parameters | Description | Default | . | build_type | Build type for Velox &amp; gluten cpp, CMAKE_BUILD_TYPE. | Release | . | build_tests | Build gluten cpp tests. | OFF | . | build_examples | Build udf example. | OFF | . | build_benchmarks | Build gluten cpp benchmarks. | OFF | . | build_jemalloc | Build with jemalloc. | ON | . | build_protobuf | Build protobuf lib. | ON | . | enable_qat | Enable QAT for shuffle data de/compression. | OFF | . | enable_iaa | Enable IAA for shuffle data de/compression. | OFF | . | enable_hbm | Enable HBM allocator. | OFF | . | enable_s3 | Build with S3 support. | OFF | . | enable_gcs | Build with GCs support. | OFF | . | enable_hdfs | Build with HDFS support. | OFF | . | enable_abfs | Build with ABFS support. | OFF | . | enable_ep_cache | Enable caching for external project build (Velox). | OFF | . | enable_vcpkg | Enable vcpkg for static build. | OFF | . | run_setup_script | Run setup script to install Velox dependencies. | ON | . | velox_repo | Specify your own Velox repo to build. | ”” | . | velox_branch | Specify your own Velox branch to build. | ”” | . | velox_home | Specify your own Velox source path to build. | ”” | . | build_velox_tests | Build Velox tests. | OFF | . | build_velox_benchmarks | Build Velox benchmarks (velox_tests and connectors will be disabled if ON) | OFF | . | compile_arrow_java | Compile arrow java for gluten build to use to fix invalid pointer issues. | OFF | . Velox build parameters for build_velox.sh . Please set them via --, e.g., --velox_home=/YOUR/PATH. | Parameters | Description | Default | . | velox_home | Specify Velox source path to build. | GLUTEN_SRC/ep/build-velox/build/velox_ep | . | build_type | Velox build type, i.e., CMAKE_BUILD_TYPE. | Release | . | enable_s3 | Build Velox with S3 support. | OFF | . | enable_gcs | Build Velox with GCS support. | OFF | . | enable_hdfs | Build Velox with HDFS support. | OFF | . | enable_abfs | Build Velox with ABFS support. | OFF | . | run_setup_script | Run setup script to install Velox dependencies before build. | ON | . | enable_ep_cache | Enable and reuse cache of Velox build. | OFF | . | build_test_utils | Build Velox with cmake arg -DVELOX_BUILD_TEST_UTILS=ON if ON. | OFF | . | build_tests | Build Velox test. | OFF | . | build_benchmarks | Build Velox benchmarks. | OFF | . | compile_arrow_java | Build arrow java for gluten build to use to fix invalid pointer issues. | OFF | . Maven build parameters . The below parameters can be set via -P for mvn. | Parameters | Description | Default state | . | backends-velox | Build Gluten Velox backend. | disabled | . | backends-clickhouse | Build Gluten ClickHouse backend. | disabled | . | rss | Build Gluten with Remote Shuffle Service, only applicable for Velox backend. | disabled | . | delta | Build Gluten with Delta Lake support. | disabled | . | iceberg | Build Gluten with Iceberg support. | disabled | . | spark-3.2 | Build Gluten for Spark 3.2. | enabled | . | spark-3.3 | Build Gluten for Spark 3.3. | disabled | . | spark-3.4 | Build Gluten for Spark 3.4. | disabled | . ",
     "url": "/docs/velox/build_parameters#build-parameters",
     
     "relUrl": "/docs/velox/build_parameters#build-parameters"
-  },"106": {
+  },"109": {
     "doc": "Build Parameters for Velox Backend",
     "title": "Gluten Jar for Deployment",
     "content": "The gluten jar built out is under GLUTEN_SRC/package/target/. It’s name pattern is gluten-&lt;backend_type&gt;-bundle-spark&lt;spark.bundle.version&gt;_&lt;scala.binary.version&gt;-&lt;os.detected.release&gt;_&lt;os.detected.release.version&gt;-&lt;project.version&gt;.jar. | Spark Version | spark.bundle.version | scala.binary.version | . | 3.2.2 | 3.2 | 2.12 | . | 3.3.1 | 3.3 | 2.12 | . | 3.4.2 | 3.4 | 2.12 | . ",
     "url": "/docs/velox/build_parameters#gluten-jar-for-deployment",
     
     "relUrl": "/docs/velox/build_parameters#gluten-jar-for-deployment"
-  },"107": {
+  },"110": {
     "doc": "Build Parameters for Velox Backend",
     "title": "Build Parameters for Velox Backend",
     "content": " ",
     "url": "/docs/velox/build_parameters",
     
     "relUrl": "/docs/velox/build_parameters"
-  },"108": {
+  },"111": {
     "doc": "Using GCS with Gluten",
     "title": "Working with GCS",
     "content": " ",
     "url": "/docs/velox/gcs#working-with-gcs",
     
     "relUrl": "/docs/velox/gcs#working-with-gcs"
-  },"109": {
+  },"112": {
     "doc": "Using GCS with Gluten",
     "title": "Installing the gcloud CLI",
     "content": "To access GCS Objects using Gluten and Velox, first you have to [download an install the gcloud CLI] (https://cloud.google.com/sdk/docs/install). ",
     "url": "/docs/velox/gcs#installing-the-gcloud-cli",
     
     "relUrl": "/docs/velox/gcs#installing-the-gcloud-cli"
-  },"110": {
+  },"113": {
     "doc": "Using GCS with Gluten",
     "title": "Configuring GCS using a user account",
     "content": "This is recommended for regular users, follow the instructions to authorize a user account. After these steps, no specific configuration is required for Gluten, since the authorization was handled entirely by the gcloud tool. ",
     "url": "/docs/velox/gcs#configuring-gcs-using-a-user-account",
     
     "relUrl": "/docs/velox/gcs#configuring-gcs-using-a-user-account"
-  },"111": {
+  },"114": {
     "doc": "Using GCS with Gluten",
     "title": "Configuring GCS using a credential file",
     "content": "For workloads that need to be fully automated, manually authorizing can be problematic. For such cases it is better to use a json file with the credentials. This is described in the [instructions to configure a service account]https://cloud.google.com/sdk/docs/authorizing#service-account. Such json file with the credetials can be passed to Gluten: . spark.hadoop.fs.gs.auth.type SERVICE_ACCOUNT_JSON_KEYFILE spark.hadoop.fs.gs.auth.service.account.json.keyfile // path to the json file with the credentials. ",
     "url": "/docs/velox/gcs#configuring-gcs-using-a-credential-file",
     
     "relUrl": "/docs/velox/gcs#configuring-gcs-using-a-credential-file"
-  },"112": {
+  },"115": {
     "doc": "Using GCS with Gluten",
     "title": "Configuring GCS endpoints",
     "content": "For cases when a GCS mock is used, an optional endpoint can be provided: . spark.hadoop.fs.gs.storage.root.url // url to the mock gcs service including starting with http or https . ",
     "url": "/docs/velox/gcs#configuring-gcs-endpoints",
     
     "relUrl": "/docs/velox/gcs#configuring-gcs-endpoints"
-  },"113": {
+  },"116": {
     "doc": "Using GCS with Gluten",
     "title": "Using GCS with Gluten",
     "content": "Object stores offered by CSPs such as GCS are important for users of Gluten to store their data. This doc will discuss all details of configs, and use cases around using Gluten with object stores. In order to use a GCS endpoint as your data source, please ensure you are using the following GCS configs in your spark-defaults.conf. If you’re experiencing any issues authenticating to GCS with additional auth mechanisms, please reach out to us using the ‘Issues’ tab. ",
     "url": "/docs/velox/gcs",
     
     "relUrl": "/docs/velox/gcs"
-  },"114": {
+  },"117": {
     "doc": "Using S3 with Gluten",
     "title": "Working with S3",
     "content": " ",
     "url": "/docs/velox/s3#working-with-s3",
     
     "relUrl": "/docs/velox/s3#working-with-s3"
-  },"115": {
+  },"118": {
     "doc": "Using S3 with Gluten",
     "title": "Configuring S3 endpoint",
     "content": "S3 provides the endpoint based method to access the files, here’s the example configuration. Users may need to modify some values based on real setup. spark.hadoop.fs.s3a.impl org.apache.hadoop.fs.s3a.S3AFileSystem spark.hadoop.fs.s3a.aws.credentials.provider org.apache.hadoop.fs.s3a.SimpleAWSCredentialsProvider spark.hadoop.fs.s3a.access.key XXXXXXXXX spark.hadoop.fs.s3a.secret.key XXXXXXXXX spark.hadoop.fs.s3a.endpoint https://s3.us-west-1.amazonaws.com spark.hadoop.fs.s3a.connection.ssl.enabled true spark.hadoop.fs.s3a.path.style.access false . ",
     "url": "/docs/velox/s3#configuring-s3-endpoint",
     
     "relUrl": "/docs/velox/s3#configuring-s3-endpoint"
-  },"116": {
+  },"119": {
     "doc": "Using S3 with Gluten",
     "title": "Configuring S3 instance credentials",
     "content": "S3 also provides other methods for accessing, you can also use instance credentials by setting the following config . spark.hadoop.fs.s3a.use.instance.credentials true . Note that in this case, “spark.hadoop.fs.s3a.endpoint” won’t take affect as Gluten will use the endpoint set during instance creation. ",
     "url": "/docs/velox/s3#configuring-s3-instance-credentials",
     
     "relUrl": "/docs/velox/s3#configuring-s3-instance-credentials"
-  },"117": {
+  },"120": {
     "doc": "Using S3 with Gluten",
     "title": "Configuring S3 IAM roles",
     "content": "You can also use iam role credentials by setting the following configurations. Instance credentials have higher priority than iam credentials. spark.hadoop.fs.s3a.iam.role xxxx spark.hadoop.fs.s3a.iam.role.session.name xxxx . Note that spark.hadoop.fs.s3a.iam.role.session.name is optional. ",
     "url": "/docs/velox/s3#configuring-s3-iam-roles",
     
     "relUrl": "/docs/velox/s3#configuring-s3-iam-roles"
-  },"118": {
+  },"121": {
     "doc": "Using S3 with Gluten",
     "title": "Other authentatication methods are not supported yet",
     "content": ". | AWS temporary credential | . ",
     "url": "/docs/velox/s3#other-authentatication-methods-are-not-supported-yet",
     
     "relUrl": "/docs/velox/s3#other-authentatication-methods-are-not-supported-yet"
-  },"119": {
+  },"122": {
     "doc": "Using S3 with Gluten",
     "title": "Log granularity of AWS C++ SDK in velox",
     "content": "You can change log granularity of AWS C++ SDK by setting the spark.gluten.velox.awsSdkLogLevel configuration. The Allowed values are: . | OFF | FATAL | ERROR | WARN | INFO | DEBUG | TRACE | . ",
     "url": "/docs/velox/s3#log-granularity-of-aws-c-sdk-in-velox",
     
     "relUrl": "/docs/velox/s3#log-granularity-of-aws-c-sdk-in-velox"
-  },"120": {
+  },"123": {
     "doc": "Using S3 with Gluten",
     "title": "Local Caching support",
     "content": "Velox supports a local cache when reading data from HDFS/S3. The feature is very useful if remote storage is slow, e.g., reading from a public S3 bucket and stronger performance is desired. With this feature, Velox can asynchronously cache the data on local disk when reading from remote storage, and the future reading requests on already cached blocks will be serviced from local cache files. To enable the local caching feature, below configurations are required: . spark.gluten.sql.columnar.backend.velox.cacheEnabled // enable or disable velox cache, default false. spark.gluten.sql.columnar.backend.velox.memCacheSize // the total size of in-mem cache, default is 128MB. spark.gluten.sql.columnar.backend.velox.ssdCachePath // the folder to store the cache files, default is \"/tmp\". spark.gluten.sql.columnar.backend.velox.ssdCacheSize // the total size of the SSD cache, default is 128MB. Velox will do in-mem cache only if this value is 0. spark.gluten.sql.columnar.backend.velox.ssdCacheShards // the shards of the SSD cache, default is 1. spark.gluten.sql.columnar.backend.velox.ssdCacheIOThreads // the IO threads for cache promoting, default is 1. Velox will try to do \"read-ahead\" if this value is bigger than 1 spark.gluten.sql.columnar.backend.velox.ssdODirect // enable or disable O_DIRECT on cache write, default false. It’s recommended to mount SSDs to the cache path to get the best performance of local caching. On the start up of Spark context, the cache files will be allocated under “spark.gluten.sql.columnar.backend.velox.cachePath”, with UUID based suffix, e.g. “/tmp/cache.13e8ab65-3af4-46ac-8d28-ff99b2a9ec9b0”. Gluten is not able to reuse older caches for now, and the old cache files are left there after Spark context shutdown. ",
     "url": "/docs/velox/s3#local-caching-support",
     
     "relUrl": "/docs/velox/s3#local-caching-support"
-  },"121": {
+  },"124": {
     "doc": "Using S3 with Gluten",
     "title": "Using S3 with Gluten",
     "content": "Object stores offered by CSPs such as AWS S3 are important for users of Gluten to store their data. This doc will discuss all details of configs, and use cases around using Gluten with object stores. In order to use an S3 endpoint as your data source, please ensure you are using the following S3 configs in your spark-defaults.conf. If you’re experiencing any issues authenticating to S3 with additional auth mechanisms, please reach out to us using the ‘Issues’ tab. ",
     "url": "/docs/velox/s3",
     
     "relUrl": "/docs/velox/s3"
-  },"122": {
+  },"125": {
     "doc": "About",
     "title": "About",
     "content": "This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at jekyllrb.com . You can find the source code for Minima at GitHub: jekyll / minima . You can find the source code for Jekyll at GitHub: jekyll / jekyll . ",
     "url": "/about/",
     
     "relUrl": "/about/"
-  },"123": {
+  },"126": {
     "doc": "Apache Software Foundation",
     "title": "Apache Software Foundation",
     "content": "Apache Software Foundation(ASF) . License . Event . Sponsorship . Thanks . Security . Privacy . ",
     "url": "/asf/",
     
     "relUrl": "/asf/"
-  },"124": {
+  },"127": {
     "doc": "Contact Us",
     "title": "Contact Us",
     "content": "This plugin is still under active development now, and doesn’t have a stable release. Welcome to evaluate it. If you encounter any issues or have any suggestions, please submit to our issue list. We’d love to hear your feedback . Apache has meticulously set up dedicated mailing lists for every project, underscoring the pivotal role of these platforms in fostering communication within the Apache community. Mailing lists serve as the backbone for numerous aspects of community operation and maintenance. They facilitate technical discussions, idea sharing, project Q&amp;A, decision-making on new features or changes, release voting, and more. Any topic relevant to the project can be discussed, making mailing lists the primary platform for community engagement and collaboration. By subscribing to this mailing list, you’ll receive timely updates on the latest Linkis community developments, enabling you to stay ahead and engaged with the community’s progress. | Mailing List | Description | Subscribe | Unsubscribe | . | dev@gluten.apache.org | Community Activity | subscribe | unsubscribe | . | commits@gluten.apache.org | Code Repository Activity | subscribe | unsubscribe | . ",
     "url": "/contact-us.html",
     
     "relUrl": "/contact-us.html"
-  },"125": {
+  },"128": {
     "doc": "Contact Us",
     "title": "How to subscribe Gluten community",
     "content": "To subscribe to the dev@gluten.apache.org mailing list as an example, please follow these steps: . | Send a blank email to dev-subscribe@gluten.apache.org | Check your inbox for an email titled confirm subscribe to dev@gluten.apache.org If not received within a reasonable time, ensure it’s not blocked by your email provider. If not blocked and no reply is received after a while, repeat step 1 | Reply directly to the confirmation email without altering the subject or adding content. | Await an email titled WELCOME to dev@linkis.apache.org | Upon receiving the welcome email, you’re successfully subscribed. To engage in discussions, email dev@gluten.apache.org, which will reach all subscribers. | . To unsubscribe to the dev@gluten.apache.org mailing list as an example, please follow these steps: . | Send a blank email to dev-unsubscribe@gluten.apache.org | Check your inbox for an email titled confirm unsubscribe from dev@gluten.apache.org | Reply directly to the confirmation email without altering the subject or adding content. | Await an email titled GOODBYE from dev@gluten.apache.org | Unsubsscribe success | . ",
     "url": "/contact-us.html#how-to-subscribe-gluten-community",
     
     "relUrl": "/contact-us.html#how-to-subscribe-gluten-community"
-  },"126": {
+  },"129": {
     "doc": "Contact Us",
     "title": "Issues and Discussions",
     "content": "We use github to track bugs, feature requests, and answer questions. File an issue for a bug or feature request. ",
     "url": "/contact-us.html#issues-and-discussions",
     
     "relUrl": "/contact-us.html#issues-and-discussions"
-  },"127": {
+  },"130": {
     "doc": "Contributing to Gluten",
     "title": "How to become a committer",
     "content": "To initiate your contributions to Gluten, understand the contribution process—any individual can submit patches, documentation, and examples to the project. The PMC routinely incorporates fresh committers from the pool of active contributors, assessing their contributions to Gluten. The criteria for new committers encompass: . | The Scope of Contribution: To expand contributions beyond pull requests, individuals can engage in various activities including reviewing other pull requests, addressing bugs and documentation, triaging issues, responding to community inquiries, enhancing usability, minimizing technical debt, supporting continuous integration (CI), validating releases, troubleshooting in unique environments, and more. | Sustaining High-Quality Contributions: Committers must demonstrate an ongoing commitment to Gluten through substantial contributions across diverse project areas, including assuming leadership in at least one critical component. These contributions should uphold consistent quality standards and endure over an extended period, typically follow below rules: | 3+ months with light activity and involvement | 2+ months with medium activity and involvement | 1+ month with solid activity and involvement . | Cultivating Community Growth: This statement emphasizes the importance of active engagement and positive behavior within the community by committers. It highlights the role of committers in fostering a supportive environment, providing guidance to newcomers, and contributing to consensus-driven discussions, all essential elements of a thriving community. The reference to the Code of Conduct and the Apache Way underscores the commitment to shared values and collaborative decision-making processes | . The PMC of Apache projects appoints new members who must fulfill the PMC responsibilities outlined in Apache Guidance. These duties encompass voting on releases, upholding Apache project trademarks, handling legal and licensing matters, and ensuring compliance with project mechanics. Additionally, the PMC selectively includes committers who demonstrate comprehension and aid in executing these tasks. you can reach out to one of the PMC members or the dev@gluten.apache.org mailing list. ",
     "url": "/contributing.html#how-to-become-a-committer",
     
     "relUrl": "/contributing.html#how-to-become-a-committer"
-  },"128": {
+  },"131": {
     "doc": "Contributing to Gluten",
     "title": "Contributing to Gluten",
     "content": " ",
     "url": "/contributing.html",
     
     "relUrl": "/contributing.html"
-  },"129": {
+  },"132": {
     "doc": "Docker script for CentOS 7",
     "title": "Docker script for CentOS 7",
     "content": "Here is a docker script we verified to build Gluten+Velox backend on CentOS 7: . Run on host as root user: . docker pull centos:7 docker run -itd --name gluten centos:7 /bin/bash docker attach gluten . Run in docker: . yum -y install epel-release centos-release-scl yum -y install \\ git \\ dnf \\ cmake3 \\ devtoolset-9 \\ java-1.8.0-openjdk \\ java-1.8.0-openjdk-devel \\ ninja-build \\ wget \\ sudo # gluten need maven version &gt;=3.6.3 wget https://downloads.apache.org/maven/maven-3/3.8.8/binaries/apache-maven-3.8.8-bin.tar.gz tar -xvf apache-maven-3.8.8-bin.tar.gz mv apache-maven-3.8.8 /usr/lib/maven export MAVEN_HOME=/usr/lib/maven export PATH=${PATH}:${MAVEN_HOME}/bin # cmake 3.x is required ln -s /usr/bin/cmake3 /usr/local/bin/cmake # enable gcc 9 . /opt/rh/devtoolset-9/enable || exit 1 export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk export PATH=$JAVA_HOME/bin:$PATH git clone https://github.com/oap-project/gluten.git cd gluten # To access HDFS or S3, you need to add the parameters `--enable_hdfs=ON` and `--enable_s3=ON` # If you have the same error with issue-3283, you need to add the parameter `--compile_arrow_java=ON` ./dev/buildbundle-veloxbe.sh . ",
     "url": "/developers/docker_centos7.html",
     
     "relUrl": "/developers/docker_centos7.html"
-  },"130": {
+  },"133": {
     "doc": "Docker script for CentOS 8",
     "title": "Docker script for CentOS 8",
     "content": "Here is a docker script we verified to build Gluten+Velox backend on Centos8: . Run on host as root user: . docker pull centos:8 docker run -itd --name gluten centos:8 /bin/bash docker attach gluten . Run in docker: . #update mirror sed -i -e \"s|mirrorlist=|#mirrorlist=|g\" /etc/yum.repos.d/CentOS-* sed -i -e \"s|#baseurl=http://mirror.centos.org|baseurl=http://vault.centos.org|g\" /etc/yum.repos.d/CentOS-* dnf install -y epel-release sudo yum install -y dnf-plugins-core yum config-manager --set-enabled powertools dnf --enablerepo=powertools install -y ninja-build dnf --enablerepo=powertools install -y libdwarf-devel dnf install -y --setopt=install_weak_deps=False ccache gcc-toolset-9 git wget which libevent-devel \\ openssl-devel re2-devel libzstd-devel lz4-devel double-conversion-devel \\ curl-devel cmake libicu-devel source /opt/rh/gcc-toolset-9/enable || exit 1 yum install -y java-1.8.0-openjdk-devel patch export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk export PATH=$JAVA_HOME/bin:$PATH #gluten need maven version &gt;=3.6.3 wget https://downloads.apache.org/maven/maven-3/3.8.8/binaries/apache-maven-3.8.8-bin.tar.gz tar -xvf apache-maven-3.8.8-bin.tar.gz mv apache-maven-3.8.8 /usr/lib/maven export MAVEN_HOME=/usr/lib/maven export PATH=${PATH}:${MAVEN_HOME}/bin git clone https://github.com/oap-project/gluten.git cd gluten # To access HDFS or S3, you need to add the parameters `--enable_hdfs=ON` and `--enable_s3=ON` ./dev/buildbundle-veloxbe.sh . ",
     "url": "/developers/docker_centos8.html",
     
     "relUrl": "/developers/docker_centos8.html"
-  },"131": {
+  },"134": {
     "doc": "Docker script for Ubuntu 22.04/20.04",
     "title": "Docker script for Ubuntu 22.04/20.04",
     "content": "To the first build, it’s suggested to build Gluten in a clean docker image. Otherwise it’s easy to run into library version conflict issues. Here is a docker script we verified to build Gluten+Velox backend on Ubuntu22.04/20.04: . Run on host as root user: . docker pull ubuntu:22.04 docker run -itd --network host --name gluten ubuntu:22.04 /bin/bash docker attach gluten . Run in docker: . apt-get update #install gcc and libraries to build arrow apt install software-properties-common apt install maven build-essential cmake libssl-dev libre2-dev libcurl4-openssl-dev clang lldb lld libz-dev git ninja-build uuid-dev autoconf-archive curl zip unzip tar pkg-config bison libtool flex vim #velox script needs sudo to install dependency libraries apt install sudo # make sure jemalloc is uninstalled, jemalloc will be build in vcpkg, which conflicts with the default jemalloc in system apt purge libjemalloc-dev libjemalloc2 librust-jemalloc-sys-dev #make sure jdk8 is used. New version of jdk is not supported apt install -y openjdk-8-jdk apt install -y default-jdk export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64 export PATH=$JAVA_HOME/bin:$PATH #manually install tzdata to avoid the interactive timezone config ln -fs /usr/share/zoneinfo/America/New_York /etc/localtime DEBIAN_FRONTEND=noninteractive apt-get install -y tzdata dpkg --configure -a #setup proxy on necessary #export http_proxy=xxxx #export https_proxy=xxxx #clone gluten git clone https://github.com/oap-project/gluten.git cd gluten/ #config maven proxy #mkdir ~/.m2/ #vim ~/.m2/settings.xml # the script download velox &amp; arrow and compile all dependency library automatically # To access HDFS or S3, you need to add the parameters `--enable_hdfs=ON` and `--enable_s3=ON` # It's suggested to build using static link, enabled by `--enable_vcpkg=ON` # For developer, it's suggested to enable Debug info, by --build_type=RelWithDebInfo. Note RelWithDebInfo uses -o2, release uses -o3 ./dev/buildbundle-veloxbe.sh --enable_vcpkg=ON --build_type=RelWithDebInfo . ",
     "url": "/developers/docker_ubuntu22.04.html",
     
     "relUrl": "/developers/docker_ubuntu22.04.html"
-  },"132": {
+  },"135": {
     "doc": "Developers",
     "title": "Gluten Developers",
     "content": "This document provides a developer overview of the project and covers the following topics: . ",
     "url": "/developers/#gluten-developers",
     
     "relUrl": "/developers/#gluten-developers"
-  },"133": {
+  },"136": {
     "doc": "Developers",
     "title": "Developers",
     "content": " ",
     "url": "/developers/",
     
     "relUrl": "/developers/"
-  },"134": {
+  },"137": {
     "doc": "Documentation",
     "title": "Gluten Documents by version",
     "content": " ",
     "url": "/docs/#gluten-documents-by-version",
     
     "relUrl": "/docs/#gluten-documents-by-version"
-  },"135": {
+  },"138": {
     "doc": "Documentation",
     "title": "Documentation",
     "content": " ",
     "url": "/docs/",
     
     "relUrl": "/docs/"
-  },"136": {
+  },"139": {
     "doc": "Home",
     "title": "Overview",
     "content": "Apache Gluten(incubating) is a middle layer responsible for offloading JVM-based SQL engines’ execution to native engines. ",
     "url": "/#overview",
     
     "relUrl": "/#overview"
-  },"137": {
+  },"140": {
     "doc": "Home",
     "title": "1 Introduction",
     "content": " ",
     "url": "/#1-introduction",
     
     "relUrl": "/#1-introduction"
-  },"138": {
+  },"141": {
     "doc": "Home",
     "title": "1.1 Problem Statement",
     "content": "Apache Spark is a stable, mature project that has been developed for many years. It is one of the best frameworks to scale out for processing petabyte-scale datasets. However, the Spark community has had to address performance challenges that require various optimizations over time. As a key optimization in Spark 2.0, Whole Stage Code Generation is introduced to replace Volcano Model, which achieves 2x speedup. Henceforth, most optimizations are at query plan level. Single operator’s performance almost stops growing. On the other side, SQL engines have been researched for many years. There are a few libraries like Clickhouse, Arrow and Velox, etc. By using features like native implementation, columnar data format and vectorized data processing, these libraries can outperform Spark’s JVM based SQL engine. However, these libraries only support single node execution. ",
     "url": "/#11-problem-statement",
     
     "relUrl": "/#11-problem-statement"
-  },"139": {
+  },"142": {
     "doc": "Home",
     "title": "1.2 Gluten’s Solution",
     "content": "“Gluten” is Latin for glue. The main goal of Gluten project is to “glue” native libraries with SparkSQL. Thus, we can benefit from high scalability of Spark SQL framework and high performance of native libraries. The basic rule of Gluten’s design is that we would reuse spark’s whole control flow and as many JVM code as possible but offload the compute-intensive data processing part to native code. Here is what Gluten does: . | Transform Spark’s whole stage physical plan to Substrait plan and send to native | Offload performance-critical data processing to native library | Define clear JNI interfaces for native libraries | Switch available native backends easily | Reuse Spark’s distributed control flow | Manage data sharing between JVM and native | Extensible to support more native accelerators | . ",
     "url": "/#12-glutens-solution",
     
     "relUrl": "/#12-glutens-solution"
-  },"140": {
+  },"143": {
     "doc": "Home",
     "title": "1.3 Target User",
     "content": "Gluten’s target user is anyone who wants to accelerate SparkSQL fundamentally. As a plugin to Spark, Gluten doesn’t require any change for dataframe API or SQL query, but only requires user to make correct configuration. See Gluten configuration properties here. ",
     "url": "/#13-target-user",
     
     "relUrl": "/#13-target-user"
-  },"141": {
+  },"144": {
     "doc": "Home",
     "title": "1.4 References",
     "content": "You can click below links for more related information. | Gluten Intro Video at Data AI Summit 2022 | Gluten Intro Article at Medium.com | Gluten Intro Article at Kyligence.io(in Chinese) | Velox Intro from Meta | . ",
     "url": "/#14-references",
     
     "relUrl": "/#14-references"
-  },"142": {
+  },"145": {
     "doc": "Home",
     "title": "2 Architecture",
     "content": "The overview chart is like below. Substrait provides a well-defined cross-language specification for data compute operations (see more details here). Spark physical plan is transformed to Substrait plan. Then Substrait plan is passed to native through JNI call. On native side, the native operator chain will be built out and offloaded to native engine. Gluten will return Columnar Batch to Spark and Spark Columnar API (since Spark-3.0) will be used at execution time. Gluten uses Apache Arrow data format as its basic data format, so the returned data to Spark JVM is ArrowColumnarBatch. Currently, Gluten only supports Clickhouse backend &amp; Velox backend. Velox is a C++ database acceleration library which provides reusable, extensible and high-performance data processing components. More details can be found from https://github.com/facebookincubator/velox/. Gluten can also be extended to support more backends. There are several key components in Gluten: . | Query Plan Conversion: converts Spark’s physical plan to Substrait plan. | Unified Memory Management: controls native memory allocation. | Columnar Shuffle: shuffles Gluten columnar data. The shuffle service still reuses the one in Spark core. A kind of columnar exchange operator is implemented to support Gluten columnar data format. | Fallback Mechanism: supports falling back to Vanilla spark for unsupported operators. Gluten ColumnarToRow (C2R) and RowToColumnar (R2C) will convert Gluten columnar data and Spark’s internal row data if needed. Both C2R and R2C are implemented in native code as well | Metrics: collected from Gluten native engine to help identify bugs, performance bottlenecks, etc. The metrics are displayed in Spark UI. | Shim Layer: supports multiple Spark versions. We plan to only support Spark’s latest 2 or 3 releases. Currently, Spark-3.2, Spark-3.3 &amp; Spark-3.4 (experimental) are supported. | . ",
     "url": "/#2-architecture",
     
     "relUrl": "/#2-architecture"
-  },"143": {
+  },"146": {
     "doc": "Home",
     "title": "Home",
     "content": " ",
     "url": "/",
     
     "relUrl": "/"
-  },"144": {
+  },"147": {
     "doc": "Gluten Release",
     "title": "Latest release for velox backend",
     "content": ". | Gluten-1.1.1 (Mar. 2 2024, non-Apache release) | . ",
     "url": "/release.html#latest-release-for-velox-backend",
     
     "relUrl": "/release.html#latest-release-for-velox-backend"
-  },"145": {
+  },"148": {
     "doc": "Gluten Release",
     "title": "Archived releases",
     "content": ". | Gluten-1.1.0 (Nov. 30 2023, non-Apache release) | Gluten-1.0.0 (Jul. 13 2023, non-Apache release) | Gluten-0.5.0 (Apr. 7 2023, non-Apache release) | . ",
     "url": "/release.html#archived-releases",
     
     "relUrl": "/release.html#archived-releases"
-  },"146": {
+  },"149": {
     "doc": "Gluten Release",
     "title": "Gluten Release",
     "content": "Gluten is a plugin for Apache Spark to double SparkSQL’s performance. ",
     "url": "/release.html",
     
     "relUrl": "/release.html"
-  },"147": {
+  },"150": {
     "doc": "Velox Function Development",
     "title": "Developer Guide for Implementing Spark Built-in SQL Functions in Velox",
     "content": "In velox, two folders prestosql &amp; sparksql are holding most sql functions, respective for presto and spark. Gluten will ask velox to firstly register prestosql functions, then sparksql functions. So if prestosql and sparksql share same signature for a function, the sparksql function will overwrite the corresponding prestosql function. If the required function is lacking in both folders (exceptions are some common functions defined outside, like cast), we need to implement the missing function in sparksql folder. It is possible that a prestosql function has some semantic difference with the corresponding spark function, even though they share the same name and function signature. If so, we also need to do an implementation in sparksql folder, generally based on the original impl. for prestosql. There are a few spark functions that can behave differently for some special cases, depending on ANSI on or off. Currently, gluten does NOT support ANSI mode. So only ANSI off needs to be considered in implementing spark built-in functions in velox. Take BitwiseAndFunction as example: . template &lt;typename T&gt; struct BitwiseAndFunction { template &lt;typename TInput&gt; // For void return type, it indicates null result will never be obtained for non-null input. // For bool return type, it indicates null result can be obtained for non-null input (false for null). FOLLY_ALWAYS_INLINE void call(TInput&amp; result, TInput a, TInput b) { result = a &amp; b; } }; . It is templated, as well as the call function, to allow multiple types. In the above impl., the result will be null for null input. Please use callNullable if you need different behavior for null input, e.g., get a non-null result for null input. Also see callNullFree in velox document. It is used for fast evaluation in the case that any input has null. The below code will register the implemented function for all kinds of integer types. The specified name bitwise_and will be actually used in calling this function. registerBinaryIntegral&lt;BitwiseAndFunction&gt;({prefix + \"bitwise_and\"}); . Functions for complex types have similar implementations. See ArrayAverageFunction in velox/functions/prestosql/ArrayFunctions.h. Reference: . Velox’s official developer guide: . | velox/docs/develop/scalar-functions.rst | velox/examples/SimpleFunctions.cpp | . ",
     "url": "/developers/velox-function-development-guide.html#developer-guide-for-implementing-spark-built-in-sql-functions-in-velox",
     
     "relUrl": "/developers/velox-function-development-guide.html#developer-guide-for-implementing-spark-built-in-sql-functions-in-velox"
-  },"148": {
+  },"151": {
     "doc": "Velox Function Development",
     "title": "Velox Function Development",
     "content": " ",
