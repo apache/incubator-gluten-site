@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Contributing to Gluten
-nav_order: 5
+nav_order: 6
 ---
 
 ## How to become a committer
