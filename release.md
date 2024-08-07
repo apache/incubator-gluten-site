@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Gluten Release
-nav_order: 4
+nav_order: 5
 ---
 
 [Gluten](https://github.com/apache/incubator-gluten) is a plugin for Apache Spark to double SparkSQL's performance.
