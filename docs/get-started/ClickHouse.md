@@ -1,10 +1,10 @@
 ---
 layout: page
-title: Getting Started with ClickHouse Backend
-nav_order: 1
-parent: ClickHouse Backend
-grand_parent: Documentation
-permalink: /docs/clickhouse/getting-started
+title: Getting start with ClickHouse Backend
+nav_order: 2
+parent: Getting-Started
+grand_parent: Documentations
+permalink: /docs/getting-started/clickhouse-backend/
 ---
 ## ClickHouse Backend
 
@@ -45,7 +45,7 @@ You need to install the following software manually:
 
 Then, get Gluten code:
 ```
-    git clone https://github.com/oap-project/gluten.git
+    git clone https://github.com/apache/incubator-gluten.git
 ```
 
 #### Setup ClickHouse backend development environment
@@ -107,8 +107,8 @@ Otherwise, do:
 In case you don't want a develop environment, you can use the following command to compile ClickHouse backend directly:
 
 ```
-git clone https://github.com/oap-project/gluten.git
-cd gluten
+git clone https://github.com/apache/incubator-gluten.git
+cd incubator-gluten
 bash ./ep/build-clickhouse/src/build_clickhouse.sh
 ```
 
@@ -124,8 +124,8 @@ The prerequisites are the same as the one mentioned above. Compile Gluten with C
 - for Spark 3.2.2<span id="deploy-spark-322"></span>
 
 ```
-    git clone https://github.com/oap-project/gluten.git
-    cd gluten/
+    git clone https://github.com/apache/incubator-gluten.git
+    cd incubator-gluten/
     export MAVEN_OPTS="-Xmx8g -XX:ReservedCodeCacheSize=2g"
     mvn clean install -Pbackends-clickhouse -Phadoop-2.7.4 -Pspark-3.2 -Dhadoop.version=2.8.5 -DskipTests -Dcheckstyle.skip
     ls -al backends-clickhouse/target/gluten-XXXXX-spark-3.2-jar-with-dependencies.jar
@@ -134,8 +134,8 @@ The prerequisites are the same as the one mentioned above. Compile Gluten with C
 - for Spark 3.3.1
 
 ```
-    git clone https://github.com/oap-project/gluten.git
-    cd gluten/
+    git clone https://github.com/apache/incubator-gluten.git
+    cd incubator-gluten/
     export MAVEN_OPTS="-Xmx8g -XX:ReservedCodeCacheSize=2g"
     mvn clean install -Pbackends-clickhouse -Phadoop-2.7.4 -Pspark-3.3 -Dhadoop.version=2.8.5 -DskipTests -Dcheckstyle.skip
     ls -al backends-clickhouse/target/gluten-XXXXX-spark-3.3-jar-with-dependencies.jar
@@ -192,7 +192,7 @@ cd spark-3.2.2-bin-hadoop2.7
   --conf spark.sql.columnVector.offheap.enabled=true \
   --conf spark.memory.offHeap.enabled=true \
   --conf spark.memory.offHeap.size=6442450944 \
-  --conf spark.plugins=io.glutenproject.GlutenPlugin \
+  --conf spark.plugins=org.apache.gluten.GlutenPlugin \
   --conf spark.gluten.sql.columnar.columnarToRow=true \
   --conf spark.executorEnv.LD_PRELOAD=/path_to_clickhouse_library/libch.so\
   --conf spark.gluten.sql.columnar.libpath=/path_to_clickhouse_library/libch.so \
@@ -373,7 +373,7 @@ cd spark-3.2.2-bin-hadoop2.7
   --conf spark.sql.columnVector.offheap.enabled=true \
   --conf spark.memory.offHeap.enabled=true \
   --conf spark.memory.offHeap.size=6442450944 \
-  --conf spark.plugins=io.glutenproject.GlutenPlugin \
+  --conf spark.plugins=org.apache.gluten.GlutenPlugin \
   --conf spark.gluten.sql.columnar.columnarToRow=true \
   --conf spark.executorEnv.LD_PRELOAD=/path_to_clickhouse_library/libch.so\
   --conf spark.gluten.sql.columnar.libpath=/path_to_clickhouse_library/libch.so \
@@ -456,7 +456,7 @@ $spark_cmd \
   --conf spark.gluten.sql.columnar.forceShuffledHashJoin=true \
   --conf spark.gluten.sql.columnar.backend.ch.runtime_config.hdfs.libhdfs3_conf=$hdfs_conf \
   --conf spark.gluten.sql.columnar.backend.ch.runtime_config.logger.level=debug \
-  --conf spark.plugins=io.glutenproject.GlutenPlugin \
+  --conf spark.plugins=org.apache.gluten.GlutenPlugin \
   --conf spark.executorEnv.LD_PRELOAD=$LD_PRELOAD \
   --conf spark.hadoop.input.connect.timeout=600000 \
   --conf spark.hadoop.input.read.timeout=600000 \
@@ -565,7 +565,7 @@ cd spark-3.2.2-bin-hadoop2.7
   --conf spark.memory.offHeap.size=42949672960 \
   --conf spark.serializer=org.apache.spark.serializer.JavaSerializer \
   --conf spark.sql.sources.ignoreDataLocality=true \
-  --conf spark.plugins=io.glutenproject.GlutenPlugin \
+  --conf spark.plugins=org.apache.gluten.GlutenPlugin \
   --conf spark.gluten.sql.columnar.columnarToRow=true \
   --conf spark.gluten.sql.columnar.libpath=/path_to_clickhouse_library/libch.so \
   --conf spark.gluten.sql.columnar.iterator=true \
@@ -631,19 +631,26 @@ public read-only account：gluten/hN2xX3uQ4m
 
 ### Celeborn support
 
-Gluten with clickhouse backend has not yet supportted [Celeborn](https://github.com/apache/incubator-celeborn) natively as remote shuffle service using columar shuffle. However, you can still use Celeborn with row shuffle, which means a ColumarBatch will be converted to a row during shuffle.
-Below introduction is used to enable this feature:
+Gluten with clickhouse backend supports [Celeborn](https://github.com/apache/celeborn) as remote shuffle service. Currently, the supported Celeborn versions are `0.3.x`, `0.4.x` and `0.5.0`.
 
-First refer to this URL(https://github.com/apache/incubator-celeborn) to setup a celeborn cluster.
+Below introduction is used to enable this feature.
+
+First refer to this URL(https://github.com/apache/celeborn) to setup a celeborn cluster.
+
+When compiling the Gluten Java module, it's required to enable `celeborn` profile, as follows:
+
+```
+mvn clean package -Pbackends-clickhouse -Pspark-3.3 -Pceleborn -DskipTests
+```
 
 Then add the Spark Celeborn Client packages to your Spark application's classpath(usually add them into `$SPARK_HOME/jars`).
 
-- Celeborn: celeborn-client-spark-3-shaded_2.12-0.3.0-incubating.jar
+- Celeborn: celeborn-client-spark-3-shaded_2.12-[celebornVersion].jar
 
-Currently to use Celeborn following configurations are required in `spark-defaults.conf`
+Currently to use Gluten following configurations are required in `spark-defaults.conf`
 
 ```
-spark.shuffle.manager org.apache.spark.shuffle.celeborn.SparkShuffleManager
+spark.shuffle.manager org.apache.spark.shuffle.gluten.celeborn.CelebornShuffleManager
 
 # celeborn master
 spark.celeborn.master.endpoints clb-master:9097
@@ -668,25 +675,8 @@ spark.sql.adaptive.localShuffleReader.enabled false
 spark.celeborn.storage.hdfs.dir hdfs://<namenode>/celeborn
 
 # If you want to use dynamic resource allocation,
-# please refer to this URL (https://github.com/apache/incubator-celeborn/tree/main/assets/spark-patch) to apply the patch into your own Spark.
+# please refer to this URL (https://github.com/apache/celeborn/tree/main/assets/spark-patch) to apply the patch into your own Spark.
 spark.dynamicAllocation.enabled false
-```
-
-#### Celeborn Columnar Shuffle Support
-The native Celeborn support can be enabled by the following configuration
-```
-spark.shuffle.manager=org.apache.spark.shuffle.gluten.celeborn.CelebornShuffleManager
-```
-
-quickly start a celeborn cluster
-```shell
-wget https://dlcdn.apache.org/incubator/celeborn/celeborn-0.3.0-incubating/apache-celeborn-0.3.0-incubating-bin.tgz && \
-tar -zxvf apache-celeborn-0.3.0-incubating-bin.tgz && \
-mv apache-celeborn-0.3.0-incubating-bin/conf/celeborn-defaults.conf.template apache-celeborn-0.3.0-incubating-bin/conf/celeborn-defaults.conf && \
-mv apache-celeborn-0.3.0-incubating-bin/conf/log4j2.xml.template apache-celeborn-0.3.0-incubating-bin/conf/log4j2.xml && \
-mkdir /opt/hadoop && chmod 777 /opt/hadoop && \
-echo -e "celeborn.worker.flusher.threads 4\nceleborn.worker.storage.dirs /tmp\nceleborn.worker.monitor.disk.enabled false" > apache-celeborn-0.3.0-incubating-bin/conf/celeborn-defaults.conf && \
-bash apache-celeborn-0.3.0-incubating-bin/sbin/start-master.sh && bash apache-celeborn-0.3.0-incubating-bin/sbin/start-worker.sh
 ```
 
 ### Columnar shuffle mode

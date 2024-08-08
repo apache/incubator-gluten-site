@@ -3,6 +3,8 @@ layout: page
 title: CPP Code Style
 nav_order: 4
 parent: Developers
+grand_parent: Documentations
+permalink: /docs/developers/cpp-code-style/
 ---
 # Gluten CPP Core Guidelines
 
