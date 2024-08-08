@@ -1,10 +1,10 @@
 ---
 layout: page
 title: Using GCS with Gluten
-nav_order: 4
-parent: Velox Backend
-grand_parent: Documentation
-permalink: /docs/velox/gcs
+nav_order: 5
+parent: Getting-Started
+grand_parent: Documentations
+permalink: /docs/getting-started/gcs/
 ---
 Object stores offered by CSPs such as GCS are important for users of Gluten to store their data. This doc will discuss all details of configs, and use cases around using Gluten with object stores. In order to use a GCS endpoint as your data source, please ensure you are using the following GCS configs in your spark-defaults.conf. If you're experiencing any issues authenticating to GCS with additional auth mechanisms, please reach out to us using the 'Issues' tab.
 
@@ -38,4 +38,18 @@ spark.hadoop.fs.gs.auth.service.account.json.keyfile // path to the json file wi
 For cases when a GCS mock is used, an optional endpoint can be provided:
 ```sh
 spark.hadoop.fs.gs.storage.root.url  // url to the mock gcs service including starting with http or https
+```
+
+## Configuring GCS max retry count
+
+For cases when a transient server error is detected, GCS can be configured to keep retrying until a number of transient error is detected.
+```sh
+spark.hadoop.fs.gs.http.max.retry // number of times to keep retrying unless a non-transient error is detected
+```
+
+## Configuring GCS max retry time
+
+For cases when a transient server error is detected, GCS can be configured to keep retrying until the retry loop exceeds a prescribed duration.
+```sh
+spark.hadoop.fs.gs.http.max.retry-time // a string representing the time keep retring (10s, 1m, etc).
 ```

@@ -3,6 +3,8 @@ layout: page
 title: Micro Benchmarks for Velox Backend
 nav_order: 3
 parent: Developers
+grand_parent: Documentations
+permalink: /docs/developers/microbenchmarks/
 ---
 
 # Generate Micro Benchmarks for Velox Backend

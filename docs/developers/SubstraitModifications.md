@@ -3,6 +3,8 @@ layout: page
 title: Substrait Modifications
 nav_order: 9
 parent: Developers
+grand_parent: Documentations
+permalink: /docs/developers/substrait/
 ---
 # Substrait Modifications in Gluten
 

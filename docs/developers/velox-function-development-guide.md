@@ -3,6 +3,8 @@ layout: page
 title: Velox Function Development
 nav_order: 5
 parent: Developers
+grand_parent: Documentations
+permalink: /docs/developers/velox-function-dev/
 ---
 # Developer Guide for Implementing Spark Built-in SQL Functions in Velox
 

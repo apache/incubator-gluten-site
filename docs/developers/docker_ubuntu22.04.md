@@ -3,6 +3,8 @@ layout: page
 title: Docker script for Ubuntu 22.04/20.04
 nav_order: 6
 parent: Developers
+grand_parent: Documentations
+permalink: /docs/developers/docker-ubuntu/
 ---
 
 To the first build, it's suggested to build Gluten in a clean docker image. Otherwise it's easy to run into library version conflict issues.

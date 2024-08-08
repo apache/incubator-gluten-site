@@ -1,8 +1,10 @@
 ---
 layout: page
 title: New To Gluten
-nav_order: 1
+nav_order: 2
 parent: Developers
+grand_parent: Documentations
+permalink: /docs/developers/new-to/
 ---
 Help users to debug and test with gluten.
 
