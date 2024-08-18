@@ -44,14 +44,14 @@ To debug C++, you have to generate the example files, the example files consist 
 You can generate the example files by the following steps:
 
 1. build Velox and Gluten CPP
-```
+```bash
 gluten_home/dev/builddeps-veloxbe.sh --build_tests=ON --build_benchmarks=ON --build_type=Debug
 ```
 - Compiling with `--build_type=Debug` is good for debugging.
 - The executable file `generic_benchmark` will be generated under the directory of `gluten_home/cpp/build/velox/benchmarks/`.
 
 2. build Gluten and generate the example files
-```
+```bash
 cd gluten_home
 mvn clean package -Pspark-3.2 -Pbackends-velox -Prss
 mvn test -Pspark-3.2 -Pbackends-velox -Prss -pl backends-velox -am -DtagsToInclude="io.glutenproject.tags.GenerateExample" -Dtest=none -DfailIfNoTests=false -Darrow.version=11.0.0-gluten -Dexec.skip
@@ -72,7 +72,7 @@ gluten_home/backends-velox/generated-native-benchmark/
 ```
 
 3. now, run benchmarks with GDB
-```
+```bash
 cd gluten_home/cpp/build/velox/benchmarks/
 gdb generic_benchmark
 ```
@@ -91,7 +91,7 @@ gdb generic_benchmark
   will be used as default.
 - You can also edit the file `example.json` to custom the Substrait plan or specify the inputs files placed in the other directory.
 
-6. get more detail information about benchmarks from [MicroBenchmarks](./MicroBenchmarks.md)
+6. get more detail information about benchmarks from [MicroBenchmarks](https://gluten.apache.org/docs/developers/microbenchmarks/#generate-micro-benchmarks-for-velox-backend)
 
 ## 2 How to debug plan validation process
 Gluten will validate generated plan before execute it, and validation usually happens in native side, so we provide a utility to help debug validation process in native side.
@@ -105,7 +105,7 @@ wait to add
 
 ## 4 How to debug with core-dump
 wait to complete
-```
+```bash
 cd the_directory_of_core_file_generated
 gdb gluten_home/cpp/build/releases/libgluten.so 'core-Executor task l-2000883-1671542526'
 
@@ -117,7 +117,7 @@ gdb gluten_home/cpp/build/releases/libgluten.so 'core-Executor task l-2000883-16
 Now, both Parquet and DWRF format files are supported, related scripts and files are under the directory of `gluten_home/backends-velox/workload/tpch`.
 The file `README.md` under `gluten_home/backends-velox/workload/tpch` offers some useful help but it's still not enough and exact.
 
-One way of run TPC-H test is to run velox-be by workflow, you can refer to [velox_be.yml](https://github.com/oap-project/gluten/blob/main/.github/workflows/velox_be.yml#L90)
+One way of run TPC-H test is to run velox with docker by workflow, you can refer to [velox_docker.yml](https://github.com/apache/incubator-gluten/blob/main/.github/workflows/velox_docker.yml)
 
 Here will explain how to run TPC-H on Velox backend with the Parquet file format.
 1. First step, prepare the datasets, you have two choices.
@@ -128,15 +128,15 @@ Here will explain how to run TPC-H on Velox backend with the Parquet file format
 2. Second step, run TPC-H on Velox backend testing.
   - Modify `gluten_home/backends-velox/workload/tpch/run_tpch/tpch_parquet.scala`.
     - set `var parquet_file_path` to correct directory. If using the small dataset directly in the step one, then modify it as below
-    ```
+    ```scala
     var parquet_file_path = "gluten_home/backends-velox/src/test/resources/tpch-data-parquet-velox"
     ```
     - set `var gluten_root` to correct directory. If `gluten_home` is the directory of `/home/gluten`, then modify it as below
-    ```
+    ```scala
     var gluten_root = "/home/gluten"
     ```
   - Modify `gluten_home/backends-velox/workload/tpch/run_tpch/tpch_parquet.sh`.
-    - Set `GLUTEN_JAR` correctly. Please refer to the section of [Build Gluten with Velox Backend](../get-started/Velox.md/#2-build-gluten-with-velox-backend)
+    - Set `GLUTEN_JAR` correctly. Please refer to the section of [Build Gluten with Velox Backend](http://gluten.apache.org/docs/getting-started/velox-backend/#build-gluten-with-velox-backend)
     - Set `SPARK_HOME` correctly.
     - Set the memory configurations appropriately.
   - Execute `tpch_parquet.sh` using the below command.

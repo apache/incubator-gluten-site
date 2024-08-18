@@ -258,15 +258,15 @@ done
 
 ### Run Examples
 
-We also provide some example inputs in [cpp/velox/benchmarks/data](../../cpp/velox/benchmarks/data).
-E.g. [generic_q5/q5_first_stage_0.json](../../cpp/velox/benchmarks/data/generic_q5/q5_first_stage_0.json) simulates a
+We also provide some example inputs in [cpp/velox/benchmarks/data](https://github.com/apache/incubator-gluten/tree/branch-1.1.1/cpp/velox/benchmarks/data).
+E.g. [generic_q5/q5_first_stage_0.json](https://github.com/apache/incubator-gluten/blob/branch-1.1.1/cpp/velox/benchmarks/data/generic_q5/q5_first_stage_0.json) simulates a
 first-stage in TPCH Q5, which has the the most heaviest table scan. You can follow below steps to run this example.
 
-1. Open [generic_q5/q5_first_stage_0.json](../../cpp/velox/benchmarks/data/generic_q5/q5_first_stage_0_split.json) with
+1. Open [generic_q5/q5_first_stage_0.json](https://github.com/apache/incubator-gluten/blob/branch-1.1.1/cpp/velox/benchmarks/data/generic_q5/q5_first_stage_0_split.json) with
    file editor. Search for `"uriFile": "LINEITEM"` and replace `LINEITEM` with the URI to one partition file in
    lineitem. In the next line, replace the number in `"length": "..."` with the actual file length. Suppose you are
    using the provided small TPCH table
-   in [cpp/velox/benchmarks/data/tpch_sf10m](../../cpp/velox/benchmarks/data/tpch_sf10m), the replaced JSON should be
+   in [cpp/velox/benchmarks/data/tpch_sf10m](https://github.com/apache/incubator-gluten/tree/branch-1.1.1/cpp/velox/benchmarks/data/tpch_sf10m), the replaced JSON should be
    like:
 
 ```

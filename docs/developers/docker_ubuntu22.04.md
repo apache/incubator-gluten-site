@@ -11,14 +11,14 @@ To the first build, it's suggested to build Gluten in a clean docker image. Othe
 Here is a docker script we verified to build Gluten+Velox backend on Ubuntu22.04/20.04:
 
 Run on host as root user:
-```
+```bash
 docker pull ubuntu:22.04
 docker run -itd --network host --name gluten ubuntu:22.04 /bin/bash
 docker attach gluten
 ```
 
 Run in docker:
-```
+```bash
 apt-get update
 
 #install gcc and libraries to build arrow

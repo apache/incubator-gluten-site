@@ -1,10 +1,10 @@
 ---
 layout: page
 title: Contributing to Gluten
-nav_order: 6
+nav_order: 7
 ---
 
-## How to become a committer
+# How to become a committer
 
 To initiate your contributions to Gluten, understand the contribution process—any individual can submit patches, documentation, and examples to the project.
 

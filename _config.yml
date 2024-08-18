@@ -40,7 +40,7 @@ plugins:
   - jekyll-readme-index          # GitHub Pages
   - jekyll-relative-links        # GitHub Pages
 
-logo: "/images/gluten-logo-blue.png"
+logo: "/assets/images/gluten-logo-blue.png"
 
 # Exclude from processing.
 # The following items will not be processed, by default.
@@ -120,7 +120,7 @@ heading_anchors: true
 #    hide_icon: false # set to true to hide the external link icon - defaults to false
 #    opens_in_new_tab: false # set to true to open this link in a new tab - defaults to false
 
-color_scheme: dark
+color_scheme: light
 
 # Footer content
 # appears at the bottom of every page's main content

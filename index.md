@@ -36,15 +36,12 @@ The basic rule of Gluten's design is that we would reuse spark's whole control f
 ## 1.3 Target User
 
 Gluten's target user is anyone who wants to accelerate SparkSQL fundamentally. As a plugin to Spark, Gluten doesn't require any change for dataframe API or SQL query, but only requires user to make correct configuration.
-See Gluten configuration properties [here](https://github.com/apache/incubator-gluten-site/blob/main/docs/VeloxBuildGuide.md).
+See Gluten configuration properties [here](https://gluten.apache.org/docs/configuration/).
 
 ## 1.4 References
 
 You can click below links for more related information.
-- [Gluten Intro Video at Data AI Summit 2022](https://www.youtube.com/watch?v=0Q6gHT_N-1U)
-- [Gluten Intro Article at Medium.com](https://medium.com/intel-analytics-software/accelerate-spark-sql-queries-with-gluten-9000b65d1b4e)
-- [Gluten Intro Article at Kyligence.io(in Chinese)](https://cn.kyligence.io/blog/gluten-spark/)
-- [Velox Intro from Meta](https://engineering.fb.com/2023/03/09/open-source/velox-open-source-execution-engine/)
+- [Gluten References](https://gluten.apache.org/references/)
 
 # 2 Architecture
 

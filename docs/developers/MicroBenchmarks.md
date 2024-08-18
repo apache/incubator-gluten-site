@@ -217,12 +217,12 @@ following argument flags to the command:
 - --iaa-gzip: IAA GZIP codec, compression level 1
 
 Note using QAT or IAA codec requires Gluten cpp is built with these features.
-Please check the corresponding section in [Velox document](../get-started/Velox.md) first for how to setup, build and
+Please check the corresponding section in [Velox document](http://gluten.apache.org/docs/getting-started/velox-backend/) first for how to setup, build and
 enable these features in Gluten.
 For QAT support, please
-check [Intel® QuickAssist Technology (QAT) support](../get-started/Velox.md#intel-quickassist-technology-qat-support).
+check [Intel® QuickAssist Technology (QAT) support](http://gluten.apache.org/docs/getting-started/velox-backend/#intel-quickassist-technology-qat-support).
 For IAA support, please
-check [Intel® In-memory Analytics Accelerator (IAA/IAX) support](../get-started/Velox.md#intel-in-memory-analytics-accelerator-iaaiax-support)
+check [Intel® In-memory Analytics Accelerator (IAA/IAX) support](http://gluten.apache.org/docs/getting-started/velox-backend/#intel-in-memory-analytics-accelerator-iaaiax-support)
 
 ## Simulate Spark with multiple processes and threads
 
@@ -258,18 +258,18 @@ done
 
 ### Run Examples
 
-We also provide some example inputs in [cpp/velox/benchmarks/data](../../cpp/velox/benchmarks/data).
-E.g. [generic_q5/q5_first_stage_0.json](../../cpp/velox/benchmarks/data/generic_q5/q5_first_stage_0.json) simulates a
+We also provide some example inputs in [cpp/velox/benchmarks/data](https://github.com/apache/incubator-gluten/tree/main/cpp/velox/benchmarks/data).
+E.g. [generic_q5/q5_first_stage_0.json](https://github.com/apache/incubator-gluten/tree/main/cpp/velox/benchmarks/data/generic_q5/q5_first_stage_0.json) simulates a
 first-stage in TPCH Q5, which has the the most heaviest table scan. You can follow below steps to run this example.
 
-1. Open [generic_q5/q5_first_stage_0.json](../../cpp/velox/benchmarks/data/generic_q5/q5_first_stage_0_split.json) with
+1. Open [generic_q5/q5_first_stage_0.json](https://github.com/apache/incubator-gluten/tree/main/cpp/velox/benchmarks/data/generic_q5/q5_first_stage_0_split.json) with
    file editor. Search for `"uriFile": "LINEITEM"` and replace `LINEITEM` with the URI to one partition file in
    lineitem. In the next line, replace the number in `"length": "..."` with the actual file length. Suppose you are
    using the provided small TPCH table
-   in [cpp/velox/benchmarks/data/tpch_sf10m](../../cpp/velox/benchmarks/data/tpch_sf10m), the replaced JSON should be
+   in [cpp/velox/benchmarks/data/tpch_sf10m](https://github.com/apache/incubator-gluten/tree/main/cpp/velox/benchmarks/data/tpch_sf10m), the replaced JSON should be
    like:
 
-```
+```json
 {
     "items": [
         {
@@ -283,7 +283,7 @@ first-stage in TPCH Q5, which has the the most heaviest table scan. You can foll
 
 2. Launch multiple processes and multiple threads. Set `GLUTEN_SPARK_LOCAL_DIRS` and add --with-shuffle to the command.
 
-```
+```bash
 mkdir -p {/data1,/data2,/data3}/tmp # Make sure each directory has been already created.
 export GLUTEN_SPARK_LOCAL_DIRS=/data1/tmp,/data2/tmp,/data3/tmp
 
@@ -298,11 +298,11 @@ done >stdout.log 2>stderr.log
 You can find the "elapsed_time" and other metrics in stdout.log. In below output, the "elapsed_time" is ~10.75s. If you
 run TPCH Q5 with Gluten on Spark, a single task in the same Spark stage should take about the same time.
 
-```
+```bash
 ------------------------------------------------------------------------------------------------------------------
 Benchmark                                                        Time             CPU   Iterations UserCounters...
 ------------------------------------------------------------------------------------------------------------------
 SkipInput/iterations:1/process_time/real_time/threads:8 1317255379 ns   10061941861 ns            8 collect_batch_time=0 elapsed_time=10.7563G shuffle_compress_time=4.19964G shuffle_spill_time=0 shuffle_split_time=0 shuffle_write_time=1.91651G
 ```
 
-![TPCH-Q5-first-stage](../image/TPCH-q5-first-stage.png)
+![TPCH-Q5-first-stage](/assets/images/TPCH-q5-first-stage.png)

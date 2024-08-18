@@ -9,7 +9,7 @@ permalink: /docs/getting-started/localcache/
 
 Velox supports a local cache when reading data from HDFS/S3/ABFS. With this feature, Velox can asynchronously cache the data on local disk when reading from remote storage and future read requests on previously cached blocks will be serviced from local cache files. To enable the local caching feature, the following configurations are required:
 
-```
+```shell
 spark.gluten.sql.columnar.backend.velox.cacheEnabled      // enable or disable velox cache, default false.
 spark.gluten.sql.columnar.backend.velox.memCacheSize      // the total size of in-mem cache, default is 128MB.
 spark.gluten.sql.columnar.backend.velox.ssdCachePath      // the folder to store the cache files, default is "/tmp".

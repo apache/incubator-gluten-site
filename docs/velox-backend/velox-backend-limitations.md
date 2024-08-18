@@ -1,11 +1,13 @@
 ---
 layout: page
 title: Limitations
-nav_order: 1
+nav_order: 2
 parent: Velox Backend
 grand_parent: Documentations
 permalink: /docs/velox-backend/limitations/
 ---
+
+# Velox Backend Limitations
 This document describes the limitations of velox backend by listing some known cases where exception will be thrown, gluten behaves incompatibly with spark, or certain plan's execution
 must fall back to vanilla spark, etc.
 

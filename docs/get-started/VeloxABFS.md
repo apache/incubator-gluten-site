@@ -14,7 +14,7 @@ ABFS is an important data store for big data users. This doc discusses config de
 
 To configure access to your storage account, replace <storage-account> with the name of your account. This property aligns with Spark configurations. By setting this config multiple times using different storage account names, you can access multiple ABFS accounts.
 
-```sh
+```shell
 spark.hadoop.fs.azure.account.key.<storage-account>.dfs.core.windows.net  XXXXXXXXX
 ```
 

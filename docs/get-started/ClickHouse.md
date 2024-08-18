@@ -15,7 +15,7 @@ We port ClickHouse ( based on version **23.1** ) as a library, called 'libch.so'
 
 The architecture of the ClickHouse backend is shown below:
 
-![ClickHouse-Backend-Architecture](../image/ClickHouse/ClickHouse-Backend-Architecture.png)
+![ClickHouse-Backend-Architecture](/assets/images/ClickHouse/ClickHouse-Backend-Architecture.png)
 
 1. On Spark driver, Spark uses Gluten SparkPlugin to transform the physical plan to the Substrait plan, and then pass the Substrait plan to ClickHouse backend through JNI call on executors.
 2. Based on Spark DataSource V2 interface, implementing a ClickHouse Catalog to support operating the ClickHouse tables, and then using Delta to save some metadata about ClickHouse like the MergeTree parts information, and also provide ACID transactions.
@@ -55,7 +55,7 @@ If you don't care about development environment, you can skip this part.
 Otherwise, do:
 
 1. clone Kyligence/ClickHouse repo
-    ```
+    ```bash
     cd /to/some/place/
     git clone --recursive --shallow-submodules -b clickhouse_backend https://github.com/Kyligence/ClickHouse.git
     ```
@@ -78,26 +78,26 @@ Otherwise, do:
     - Open ClickHouse repo
     - Choose File -> Settings -> Build, Execution, Deployment -> Toolchains, and then choose Bundled CMake, clang-16 as C Compiler, clang++-16 as C++ Compiler:
 
-        ![ClickHouse-CLion-Toolchains](../image/ClickHouse/CLion-Configuration-1.png)
+        ![ClickHouse-CLion-Toolchains](/assets/images/ClickHouse/CLion-Configuration-1.png)
 
     - Choose File -> Settings -> Build, Execution, Deployment -> CMake:
 
-        ![ClickHouse-CLion-Toolchains](../image/ClickHouse/CLion-Configuration-2.png)
+        ![ClickHouse-CLion-Toolchains](/assets/images/ClickHouse/CLion-Configuration-2.png)
 
         And then add these options into CMake options:
-        ```
+        ```shell
         -DENABLE_PROTOBUF=ON -DENABLE_TESTS=OFF -DENABLE_JEMALLOC=ON -DENABLE_MULTITARGET_CODE=ON -DENABLE_EXTERN_LOCAL_ENGINE=ON
         ```
     - Build 'ch' target on ClickHouse Project with Debug mode or Release mode:
 
-       ![ClickHouse-CLion-Toolchains](../image/ClickHouse/CLion-Configuration-3.png)
+       ![ClickHouse-CLion-Toolchains](/assets/images/ClickHouse/CLion-Configuration-3.png)
 
       If it builds with Release mode successfully, there is a library file called 'libch.so' in path '${CH_SOURCE_DIR}/cmake-build-release/utils/extern-local-engine/'.
    
       If it builds with Debug mode successfully, there is a library file called 'libchd.so' in path '${CH_SOURCE_DIR}/cmake-build-debug/utils/extern-local-engine/'.
 
 4. (Option 2) Use command line
-    ```
+    ```shell
     cmake --build ${GLUTEN_SOURCE}/cpp-ch/build_ch --target build_ch
    ```
    If it builds successfully, there is a library file called 'libch.so' in path '${GLUTEN_SOURCE}/cpp-ch/build/utils/extern-local-engine/'.
@@ -106,7 +106,7 @@ Otherwise, do:
 
 In case you don't want a develop environment, you can use the following command to compile ClickHouse backend directly:
 
-```
+```bash
 git clone https://github.com/apache/incubator-gluten.git
 cd incubator-gluten
 bash ./ep/build-clickhouse/src/build_clickhouse.sh
@@ -123,7 +123,7 @@ The prerequisites are the same as the one mentioned above. Compile Gluten with C
 
 - for Spark 3.2.2<span id="deploy-spark-322"></span>
 
-```
+```bash
     git clone https://github.com/apache/incubator-gluten.git
     cd incubator-gluten/
     export MAVEN_OPTS="-Xmx8g -XX:ReservedCodeCacheSize=2g"
@@ -133,7 +133,7 @@ The prerequisites are the same as the one mentioned above. Compile Gluten with C
 
 - for Spark 3.3.1
 
-```
+```bash
     git clone https://github.com/apache/incubator-gluten.git
     cd incubator-gluten/
     export MAVEN_OPTS="-Xmx8g -XX:ReservedCodeCacheSize=2g"
@@ -147,7 +147,7 @@ The prerequisites are the same as the one mentioned above. Compile Gluten with C
 
 - for Spark 3.2.2
 
-```
+```bash
 tar zxf spark-3.2.2-bin-hadoop2.7.tgz
 cd spark-3.2.2-bin-hadoop2.7
 rm -f jars/protobuf-java-2.5.0.jar
@@ -160,7 +160,7 @@ cp gluten-XXXXX-spark-3.2-jar-with-dependencies.jar jars/
 
 - for Spark 3.3.1
 
-```
+```bash
 tar zxf spark-3.3.1-bin-hadoop2.7.tgz
 cd spark-3.3.1-bin-hadoop2.7
 rm -f jars/protobuf-java-2.5.0.jar
@@ -174,7 +174,7 @@ cp gluten-XXXXX-spark-3.3-jar-with-dependencies.jar jars/
 #### Query local data
 
 ##### Start Spark Thriftserver on local
-```
+```bash
 cd spark-3.2.2-bin-hadoop2.7
 ./sbin/start-thriftserver.sh \
   --master local[3] \
@@ -218,7 +218,7 @@ bin/beeline -u jdbc:hive2://localhost:10000/ -n root
 
 Currently, the feature of writing ClickHouse MergeTree parts by Spark is developing, so you need to use command 'clickhouse-local' to generate MergeTree parts data manually. We provide a python script to call the command 'clickhouse-local' to convert parquet data to MergeTree parts:
 
-```
+```bash
 
 #install ClickHouse community version
 sudo apt-get install -y apt-transport-https ca-certificates dirmngr
@@ -236,7 +236,7 @@ python3 /path_to_clickhouse_backend_src/utils/local-engine/tool/parquet_to_merge
 
 - Create a TPC-H lineitem table using ClickHouse DataSource
 
-```
+```sql
     DROP TABLE IF EXISTS lineitem;
     CREATE TABLE IF NOT EXISTS lineitem (
      l_orderkey      bigint,
@@ -263,7 +263,7 @@ python3 /path_to_clickhouse_backend_src/utils/local-engine/tool/parquet_to_merge
 
 - TPC-H Q6 test
 
-```
+```sql
     SELECT
         sum(l_extendedprice * l_discount) AS revenue
     FROM
@@ -279,7 +279,7 @@ python3 /path_to_clickhouse_backend_src/utils/local-engine/tool/parquet_to_merge
 
     The DAG is shown on Spark UI as below:
 
-    ![ClickHouse-CLion-Toolchains](../image/ClickHouse/Gluten-ClickHouse-Backend-Q6-DAG.png)
+    ![ClickHouse-CLion-Toolchains](/assets/images/ClickHouse/Gluten-ClickHouse-Backend-Q6-DAG.png)
 
 ##### Query local Parquet files
 
@@ -493,7 +493,7 @@ This benchmark is tested on AWS EC2 cluster, there are 7 EC2 instances:
 
 - Deploy gluten-core-XXXXX-jar-with-dependencies.jar
 
-```
+```bash
     #deploy 'gluten-core-XXXXX-jar-with-dependencies.jar' to every node, and then
     cp gluten-core-XXXXX-jar-with-dependencies.jar /path_to_spark/jars/
 ```
@@ -507,7 +507,7 @@ This benchmark is tested on AWS EC2 cluster, there are 7 EC2 instances:
 
 - JuiceFS uses Redis to save metadata, install redis firstly:
 
-```
+```bash
     wget https://download.redis.io/releases/redis-6.0.14.tar.gz
     sudo apt install build-essential
     tar -zxvf redis-6.0.14.tar.gz
@@ -525,7 +525,7 @@ This benchmark is tested on AWS EC2 cluster, there are 7 EC2 instances:
 
   Please refer to [The-JuiceFS-Command-Reference](https://juicefs.com/docs/community/command_reference)
 
-```
+```bash
     wget https://github.com/juicedata/juicefs/releases/download/v0.17.5/juicefs-0.17.5-linux-amd64.tar.gz
     tar -zxvf juicefs-0.17.5-linux-amd64.tar.gz
 
@@ -544,7 +544,7 @@ Please refer to [Data-preparation](#data-preparation) to generate MergeTree part
 
 #### Run Spark Thriftserver
 
-```
+```bash
 cd spark-3.2.2-bin-hadoop2.7
 ./sbin/start-thriftserver.sh \
   --master spark://master-ip:7070 --deploy-mode client \
@@ -585,7 +585,7 @@ cd spark-3.2.2-bin-hadoop2.7
 
 - Create a lineitem table using clickhouse datasource
 
-```
+```sql
     DROP TABLE IF EXISTS lineitem;
     CREATE TABLE IF NOT EXISTS lineitem (
      l_orderkey      bigint,
@@ -639,7 +639,7 @@ First refer to this URL(https://github.com/apache/celeborn) to setup a celeborn 
 
 When compiling the Gluten Java module, it's required to enable `celeborn` profile, as follows:
 
-```
+```bash
 mvn clean package -Pbackends-clickhouse -Pspark-3.3 -Pceleborn -DskipTests
 ```
 
@@ -649,7 +649,7 @@ Then add the Spark Celeborn Client packages to your Spark application's classpat
 
 Currently to use Gluten following configurations are required in `spark-defaults.conf`
 
-```
+```shell
 spark.shuffle.manager org.apache.spark.shuffle.gluten.celeborn.CelebornShuffleManager
 
 # celeborn master
