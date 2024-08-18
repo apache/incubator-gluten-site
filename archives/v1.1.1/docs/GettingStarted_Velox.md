@@ -379,7 +379,7 @@ The following steps demonstrate how to set up a UDF library project:
 
   - The interface functions are mapping to marcos in [Udf.h](../../cpp/velox/udf/Udf.h). Here's an example of how to implement these functions:
 
-  ```
+  ```cpp
   // Filename MyUDF.cpp
 
   #include <velox/expression/VectorFunction.h>
@@ -415,7 +415,7 @@ The following steps demonstrate how to set up a UDF library project:
 ## Building the UDF library
 
 To build the UDF library, users need to compile the C++ code and link to `libvelox.so`. It's recommended to create a CMakeLists.txt for the project. Here's an example:
-```
+```cpp
 project(myudf)
 
 set(CMAKE_CXX_STANDARD 17)
@@ -465,16 +465,16 @@ You can also specify the local or HDFS URIs to the UDF libraries or archives. Lo
 We provided an Velox UDF example file [MyUDF.cpp](../../cpp/velox/udf/examples/MyUDF.cpp). After building gluten cpp, you can find the example library at /path/to/gluten/cpp/build/velox/udf/examples/libmyudf.so
 
 Start spark-shell or spark-sql with below configuration 
-```
+```shell
 --files /path/to/gluten/cpp/build/velox/udf/examples/libmyudf.so
 --conf spark.gluten.sql.columnar.backend.velox.udfLibraryPaths=libmyudf.so
 ```
 Run query. The functions `myudf1` and `myudf2` increment the input value by a constant of 5
-```
+```sql
 select myudf1(1), myudf2(100L)
 ```
 The output from spark-shell will be like
-```
+```sql
 +----------------+------------------+
 |udfexpression(1)|udfexpression(100)|
 +----------------+------------------+
@@ -629,14 +629,14 @@ There is 8 QAT acceleration device(s) in the system:
 
 3. Extra Gluten configurations are required when starting Spark application
 
-```
+```shell
 --conf spark.gluten.sql.columnar.shuffle.codec=gzip # Valid options are gzip and zstd
 --conf spark.gluten.sql.columnar.shuffle.codecBackend=qat
 ```
 
 4. You can use below command to check whether QAT is working normally at run-time. The value of fw_counters should continue to increase during shuffle. 
 
-```
+```shell
 while :; do cat /sys/kernel/debug/qat_4xxx_0000:6b:00.0/fw_counters; sleep 1; done
 ```
 
@@ -697,7 +697,7 @@ sudo ls -l /dev/iax
 ```
 
 The output should be like:
-```
+```bash
 total 0
 crw-rw---- 1 root iaa 509, 0 Apr  5 18:54 wq1.0
 crw-rw---- 1 root iaa 509, 5 Apr  5 18:54 wq11.0
@@ -711,7 +711,7 @@ crw-rw---- 1 root iaa 509, 4 Apr  5 18:54 wq9.0
 
 2. Extra Gluten configurations are required when starting Spark application
 
-```
+```bash
 --conf spark.gluten.sql.columnar.shuffle.codec=gzip
 --conf spark.gluten.sql.columnar.shuffle.codecBackend=iaa
 ```
@@ -746,7 +746,7 @@ Some other versions of TPC-DS queries are also provided, but are **not** recomme
 Submit test script from spark-shell. You can find the scala code to [Run TPC-H](../../tools/workload/tpch/run_tpch/tpch_parquet.scala) as an example. Please remember to modify
 the location of TPC-H files as well as TPC-H queries before you run the testing.
 
-```
+```scala
 var parquet_file_path = "/PATH/TO/TPCH_PARQUET_PATH"
 var gluten_root = "/PATH/TO/GLUTEN"
 ```
@@ -777,7 +777,7 @@ Refer to [Gluten configuration](../Configuration.md) for more details.
 ## Result
 *wholestagetransformer* indicates that the offload works.
 
-![TPC-H Q6](../image/TPC-H_Q6_DAG.png)
+![TPC-H Q6](/assets/images/TPC-H_Q6_DAG.png)
 
 ## Performance
 
@@ -811,7 +811,7 @@ Developers can register `SparkListener` to handle these two Gluten events.
 
 Gluten provides a tab based on Spark UI, named `Gluten SQL / DataFrame`
 
-![Gluten-UI](../image/gluten-ui.png)
+![Gluten-UI](/assets/images/gluten-ui.png)
 
 This tab contains two parts:
 
@@ -906,7 +906,7 @@ ashProbe: Input: 9 rows (864B, 3 batches), Output: 27 rows (3.56KB, 3 batches), 
 
 Gluten provides a helper class to get the fallback summary from a Spark Dataset. 
 
-```
+```scala
 import org.apache.spark.sql.execution.GlutenImplicits._
 val df = spark.sql("SELECT * FROM t")
 df.fallbackSummary

@@ -6,7 +6,7 @@ parent: Velox Backend
 grand_parent: Documentations
 permalink: /docs/velox-backend/troubleshooting/
 ---
-## Troubleshooting
+# Velox Backend Troubleshooting
 
 ### Fatal error after native exception is thrown
 

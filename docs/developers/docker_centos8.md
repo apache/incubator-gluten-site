@@ -9,14 +9,14 @@ permalink: /docs/developers/docker-centos8/
 Here is a docker script we verified to build Gluten+Velox backend on Centos8:
 
 Run on host as root user:
-```
+```bash
 docker pull centos:8
 docker run -itd --name gluten centos:8 /bin/bash
 docker attach gluten
 ```
 
 Run in docker:
-```
+```bash
 #update mirror
 sed -i -e "s|mirrorlist=|#mirrorlist=|g" /etc/yum.repos.d/CentOS-*
 sed -i -e "s|#baseurl=http://mirror.centos.org|baseurl=http://vault.centos.org|g" /etc/yum.repos.d/CentOS-*

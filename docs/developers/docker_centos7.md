@@ -9,14 +9,14 @@ permalink: /docs/developers/docker-centos7/
 Here is a docker script we verified to build Gluten+Velox backend on CentOS 7:
 
 Run on host as root user:
-```
+```bash
 docker pull centos:7
 docker run -itd --name gluten centos:7 /bin/bash
 docker attach gluten
 ```
 
 Run in docker:
-```
+```bash
 yum -y install epel-release centos-release-scl
 yum -y install \
     git \

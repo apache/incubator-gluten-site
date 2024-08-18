@@ -55,7 +55,7 @@ And then set the environment setting.
 # Compile gluten using debug mode
 
 If you want to just debug java/scala code, there is no need to compile cpp code with debug mode.
-You can just refer to [build-gluten-with-velox-backend](../get-started/Velox.md#2-build-gluten-with-velox-backend).
+You can just refer to [build-gluten-with-velox-backend](https://localhost:4000/docs/getting-started/velox-backend/#build-gluten-with-velox-backend).
 
 If you need to debug cpp code, please compile the backend code and gluten cpp code with debug mode.
 
@@ -103,18 +103,18 @@ If you have Ultimate intellij, you can try to debug remotely.
 
 ## Java/Scala code style
 
-Intellij IDE supports importing settings for Java/Scala code style. You can import [intellij-codestyle.xml](../../dev/intellij-codestyle.xml) to your IDE.
+Intellij IDE supports importing settings for Java/Scala code style. You can import [intellij-codestyle.xml](https://github.com/apache/incubator-gluten/blob/main/dev/intellij-codestyle.xml) to your IDE.
 See [Intellij guide](https://www.jetbrains.com/help/idea/configuring-code-style.html#import-code-style).
 
 To generate a fix for Java/Scala code style, you can run one or more of the below commands according to the code modules involved in your PR.
 
 For Velox backend:
-```
+```bash
 mvn spotless:apply -Pbackends-velox -Prss -Pspark-3.2 -Pspark-ut -DskipTests
 mvn spotless:apply -Pbackends-velox -Prss -Pspark-3.3 -Pspark-ut -DskipTests
 ```
 For Clickhouse backend:
-```
+```bash
 mvn spotless:apply -Pbackends-clickhouse -Pspark-3.2 -Pspark-ut -DskipTests
 mvn spotless:apply -Pbackends-clickhouse -Pspark-3.3 -Pspark-ut -DskipTests
 ```
@@ -362,12 +362,12 @@ wait to attach....
 # Run TPC-H and TPC-DS
 
 We supply `<gluten_home>/tools/gluten-it` to execute these queries
-Refer to [velox_be.yml](https://github.com/oap-project/gluten/blob/main/.github/workflows/velox_be.yml)
+Refer to [velox_docker.yml](https://github.com/apache/incubator-gluten/blob/main/.github/workflows/velox_docker.yml)
 
 # Run gluten+velox on clean machine
 
 We can run gluten + velox on clean machine by one command (supported OS: Ubuntu20.04/22.04, Centos 7/8, etc.).
-```
+```bash
 spark-shell --name run_gluten \
  --master yarn --deploy-mode client \
  --conf spark.plugins=io.glutenproject.GlutenPlugin \

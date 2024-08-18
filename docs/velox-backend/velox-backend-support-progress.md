@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Supported Operators & Functions
-nav_order: 2
+nav_order: 1
 parent: Velox Backend
 grand_parent: Documentations
 permalink: /docs/velox-backend/support/

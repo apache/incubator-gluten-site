@@ -53,7 +53,7 @@ git clone https://github.com/apache/incubator-gluten.git
 # Build Gluten with Velox Backend
 
 It's recommended to use buildbundle-veloxbe.sh to build gluten in one script.
-[Gluten build guide](./build-guide.md) listed the parameters and their default value of build command for your reference.
+[Gluten build guide](build-guide.md) listed the parameters and their default value of build command for your reference.
 
 **For x86_64 build**
 
@@ -135,7 +135,7 @@ HDFS uris (hdfs://host:port) will be extracted from a valid hdfs file path to in
 libhdfs3 need a configuration file and [example here](https://github.com/apache/hawq/blob/e9d43144f7e947e071bba48871af9da354d177d0/src/backend/utils/misc/etc/hdfs-client.xml), this file is a bit different from hdfs-site.xml and core-site.xml.
 Download that example config file to local and do some needed modifications to support HA or else, then set env variable like below to use it, or upload it to HDFS to use, more details [here](https://github.com/apache/hawq/blob/e9d43144f7e947e071bba48871af9da354d177d0/depends/libhdfs3/src/client/Hdfs.cpp#L171-L189).
 
-```
+```shell
 // Spark local mode
 export LIBHDFS3_CONF="/path/to/hdfs-client.xml"
 
@@ -151,14 +151,14 @@ One typical deployment on Spark/HDFS cluster is to enable [short-circuit reading
 
 By default libhdfs3 does not set the default hdfs domain socket path to support HDFS short-circuit read. If this feature is required in HDFS setup, users may need to setup the domain socket path correctly by patching the libhdfs3 source code or by setting the correct config environment. In Gluten the short-circuit domain socket path is set to "/var/lib/hadoop-hdfs/dn_socket" in [build_velox.sh](https://github.com/apache/incubator-gluten/blob/main/ep/build-velox/src/build_velox.sh) So we need to make sure the folder existed and user has write access as below script.
 
-```
+```bash
 sudo mkdir -p /var/lib/hadoop-hdfs/
 sudo chown <sparkuser>:<sparkuser> /var/lib/hadoop-hdfs/
 ```
 
 You also need to add configuration to the "hdfs-site.xml" as below:
 
-```
+```xml
 <property>
   <name>dfs.client.read.shortcircuit</name>
   <value>true</value>
@@ -175,7 +175,7 @@ Here are two steps to enable kerberos.
 
 - Make sure the hdfs-client.xml contains
 
-```
+```xml
 <property>
   <name>hadoop.security.authentication</name>
   <value>kerberos</value>
@@ -184,7 +184,7 @@ Here are two steps to enable kerberos.
 
 - Specify the environment variable [KRB5CCNAME](https://github.com/apache/hawq/blob/e9d43144f7e947e071bba48871af9da354d177d0/depends/libhdfs3/src/client/FileSystem.cpp#L56) and upload the kerberos ticket cache file
 
-```
+```shell
 --conf spark.executorEnv.KRB5CCNAME=krb5cc_0000  --files /tmp/krb5cc_0000
 ```
 
@@ -195,7 +195,7 @@ The ticket cache file can be found by `klist`.
 Velox supports ABFS with the open source [Azure SDK for C++](https://github.com/Azure/azure-sdk-for-cpp) and Gluten uses the Velox ABFS connector to connect with ABFS.
 The build option for ABFS (enable_abfs) must be set to enable this feature as listed below.
 
-```
+```bash
 cd /path/to/gluten
 ./dev/buildbundle-veloxbe.sh --enable_abfs=ON
 ```
@@ -208,7 +208,7 @@ Please refer [Velox ABFS](VeloxABFS.md) part for more detailed configurations.
 Velox supports S3 with the open source [AWS C++ SDK](https://github.com/aws/aws-sdk-cpp) and Gluten uses Velox S3 connector to connect with S3.
 A new build option for S3(enable_s3) is added. Below command is used to enable this feature
 
-```
+```bash
 cd /path/to/gluten
 ./dev/buildbundle-veloxbe.sh --enable_s3=ON
 ```
@@ -225,7 +225,7 @@ First refer to this URL(https://github.com/apache/celeborn) to setup a celeborn 
 
 When compiling the Gluten Java module, it's required to enable `celeborn` profile, as follows:
 
-```
+```bash
 mvn clean package -Pbackends-velox -Pspark-3.3 -Pceleborn -DskipTests
 ```
 
@@ -236,7 +236,7 @@ Then add the Gluten and Spark Celeborn Client packages to your Spark application
 
 Currently to use Gluten following configurations are required in `spark-defaults.conf`
 
-```
+```shell
 spark.shuffle.manager org.apache.spark.shuffle.gluten.celeborn.CelebornShuffleManager
 
 # celeborn master
@@ -274,7 +274,7 @@ First refer to this URL(https://uniffle.apache.org/docs/intro) to get start with
 
 When compiling the Gluten Java module, it's required to enable `uniffle` profile, as follows:
 
-```
+```bash
 mvn clean package -Pbackends-velox -Pspark-3.3 -Puniffle -DskipTests
 ```
 
@@ -285,7 +285,7 @@ Then add the Uniffle and Spark Celeborn Client packages to your Spark applicatio
 
 Currently to use Gluten following configurations are required in `spark-defaults.conf`
 
-```
+```shell
 spark.shuffle.manager org.apache.spark.shuffle.gluten.uniffle.UniffleShuffleManager
 # uniffle coordinator address
 spark.rss.coordinator.quorum ip:port
@@ -308,7 +308,7 @@ Gluten with velox backend supports [DeltaLake](https://delta.io/) table.
 
 First of all, compile gluten-delta module by a `delta` profile, as follows:
 
-```
+```bash
 mvn clean package -Pbackends-velox -Pspark-3.3 -Pdelta -DskipTests
 ```
 
@@ -328,7 +328,7 @@ Gluten with velox backend supports [Iceberg](https://iceberg.apache.org/) table.
 
 First of all, compile gluten-iceberg module by a `iceberg` profile, as follows:
 
-```
+```bash
 mvn clean package -Pbackends-velox -Pspark-3.3 -Piceberg -DskipTests
 ```
 
@@ -344,7 +344,7 @@ Spark3.3 has 387 functions in total. ~240 are commonly used. To get the support 
 
 To identify what can be offloaded in a query and detailed fallback reasons, user can follow below steps to retrieve corresponding logs.
 
-```
+```shell
 1) Enable Gluten by proper [configuration](https://github.com/apache/incubator-gluten/blob/main/docs/Configuration.md).
 
 2) Disable Spark AQE to trigger plan validation in Gluten

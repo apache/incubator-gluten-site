@@ -3,6 +3,8 @@ layout: page
 title: How To Release
 nav_order: 10
 parent: Developers
+grand_parent: Documentations
+permalink: /docs/developers/how-to-release/
 ---
 # How to Release
 
@@ -42,7 +44,7 @@ All projects under the Apache umbrella must adhere to the [Apache Release Policy
 
 3. Sign the release artifacts with the GPG key.
 
-```
+```bash
 # create a GPG key, after executing this command, select the first one RSA 和 RSA
 $ gpg --full-generate-key
 
@@ -66,7 +68,7 @@ $ for i in *.tar.gz; do echo $i; gpg --local-user xxxx --armor --output $i.asc -
 
 #### How to Generate checksums for the release artifacts.
 
-```
+```bash
 # create the checksums
 $ for i in *.tar.gz; do echo $i; sha512sum  $i > $i.sha512 ; done
 ```
@@ -82,7 +84,7 @@ $ for i in *.tar.gz; do echo $i; sha512sum  $i > $i.sha512 ; done
 release-version format: apache-gluten-#.#.#-rc#
 
 3. Upload the release artifacts to the SVN repository.
-```
+```bash
 $ svn co https://dist.apache.org/repos/dist/dev/incubator/gluten/
 $ cp /path/to/release/artifacts/* ./{release-version}/
 $ svn add ./{release-version}/*
@@ -91,7 +93,7 @@ $ svn commit -m "add Apache Answer release artifacts for {release-version}"
 
 4. After the upload, please visit the link `https://dist.apache.org/repos/dist/dev/incubator/gluten/{release-version}` to verify if the file upload is successful or not.
 The upload release artifacts should be include
-```
+```bash
 * apache-gluten-#.#.#-incubating-src.tar.gz
 * apache-gluten-#.#.#-incubating-src.tar.gz.asc
 * apache-gluten-#.#.#-incubating-src.tar.gz.sha512
@@ -119,7 +121,7 @@ Please follow below steps to verify the release artifacts.
 
 Please follow below steps to verify the signatures.
 
-```
+```bash
 # download KEYS
 $ curl https://dist.apache.org/repos/dist/release/incubator/gluten/KEYS > KEYS
 
@@ -144,7 +146,7 @@ $ for i in *.tar.gz; do echo $i; gpg --verify $i.asc $i ; done
 #### How to Verify the checksums
 
 Please follow below steps to verify the checksums
-```
+```bash
 # verify the checksums
 $ for i in *.tar.gz; do echo $i; sha512sum --check  $i.sha512; done
 ```
