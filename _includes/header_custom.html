@@ -1,0 +1,63 @@
+<style>
+/* Style The Dropdown Button */
+.dropbtn {
+  background-color: #0000ff80;
+  color: white;
+  padding: 22px;
+  width: 100%;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 14px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+  background-color: #0000ff;
+}
+</style>
+
+<!-- Collect the nav links, forms, and other content for toggling -->
+<div class="dropdown" id="apache-navbar" style="float:left;">
+  <button class="dropbtn">ASF</button>
+  <div class="dropdown-content">
+    <a class="dropdown-item" href="https://www.apache.org/">Foundation</a>
+    <a class="dropdown-item" href="https://www.apache.org/events/current-event.html">Event</a>
+    <a class="dropdown-item" href="https://www.apache.org/licenses/">License</a>
+    <a class="dropdown-item" href="https://www.apache.org/foundation/sponsorship.html">Sponsorship</a>
+    <a class="dropdown-item" href="https://www.apache.org/security/">Security</a>
+    <a class="dropdown-item" href="https://privacy.apache.org/policies/privacy-policy-public.html">Privacy</a>
+    <a class="dropdown-item" href="https://www.apache.org/foundation/thanks.html">Thanks</a>
+  </div>
+</div><!-- /.navbar-collapse -->
