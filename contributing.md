@@ -2,6 +2,7 @@
 layout: page
 title: Contributing to Gluten
 nav_order: 7
+permalink: /contributing/
 ---
 
 # How to become a committer
