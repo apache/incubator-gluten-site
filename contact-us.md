@@ -2,6 +2,7 @@
 layout: page
 title: Contact Us
 nav_order: 9
+permalink: /contact/
 ---
 # Contact Us
 
