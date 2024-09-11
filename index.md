@@ -162,7 +162,7 @@ The TPCDS-like result (tested in Mar. 2024) shows an overall speedup of 3.02x an
 
 Notices & Disclaimers
 
-Performance varies by use, configuration and other factors. Learn more on the Performance Index site. Performance results are based on testing as of dates shown in configurations and may not reflect all publicly available updates.  See backup for configuration details.  No product or component can be absolutely secure. Your costs and results may vary. Intel technologies may require enabled hardware, software or service activation. © Intel Corporation.  Intel, the Intel logo, and other Intel marks are trademarks of Intel Corporation or its subsidiaries.  Other names and brands may be claimed as the property of others.
+Performance varies by use, configuration and other factors. Learn more on the [Performance Index site](https://edc.intel.com/content/www/us/en/products/performance/benchmarks/overview/). Performance results are based on testing as of dates shown in configurations and may not reflect all publicly available updates.  See backup for configuration details.  No product or component can be absolutely secure. Your costs and results may vary. Intel technologies may require enabled hardware, software or service activation. 
 
 ## Gluten + ClickHouse backend Performance
 
@@ -174,6 +174,6 @@ The below testing environment: a 8-nodes AWS cluster with 1TB data; Spark-3.1.1 
 # Thanks to our contributors
 
 <a href="https://github.com/apache/incubator-gluten/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=apache/incubator-gluten&columns=25" />
+  <img src="/assets/images/gluten_contributors.svg" />
 </a>
 
