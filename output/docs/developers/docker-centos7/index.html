@@ -3,7 +3,7 @@ docker run <span class="nt">-itd</span> <span class="nt">--name</span> gluten ce
 docker attach gluten
 </code></pre></div></div> <p>Run in docker:</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>yum <span class="nt">-y</span> <span class="nb">install </span>epel-release centos-release-scl
 yum <span class="nt">-y</span> <span class="nb">install</span> <span class="se">\</span>
-    git <span class="se">\</span>
+    git236 <span class="se">\</span>
     dnf <span class="se">\</span>
     cmake3 <span class="se">\</span>
     devtoolset-9 <span class="se">\</span>
@@ -11,6 +11,15 @@ yum <span class="nt">-y</span> <span class="nb">install</span> <span class="se">
     java-1.8.0-openjdk-devel <span class="se">\</span>
     ninja-build <span class="se">\</span>
     wget <span class="se">\</span>
+    autoconf <span class="se">\</span>
+    autoconf-archive <span class="se">\</span>
+    automake <span class="se">\</span>
+    perl-IPC-Cmd <span class="se">\</span>
+    libicu-devel <span class="se">\</span>
+    bison <span class="se">\</span>
+    libtool <span class="se">\</span>
+    patch <span class="se">\</span>
+    flex <span class="se">\</span>
     <span class="nb">sudo</span>
 
 <span class="c"># gluten need maven version &gt;=3.6.3</span>
