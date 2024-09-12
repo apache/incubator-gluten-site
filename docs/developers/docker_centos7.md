@@ -19,7 +19,7 @@ Run in docker:
 ```bash
 yum -y install epel-release centos-release-scl
 yum -y install \
-    git \
+    git236 \
     dnf \
     cmake3 \
     devtoolset-9 \
@@ -27,6 +27,15 @@ yum -y install \
     java-1.8.0-openjdk-devel \
     ninja-build \
     wget \
+    autoconf \
+    autoconf-archive \
+    automake \
+    perl-IPC-Cmd \
+    libicu-devel \
+    bison \
+    libtool \
+    patch \
+    flex \
     sudo
 
 # gluten need maven version >=3.6.3
