@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Contributing to Gluten
-nav_order: 8
+nav_order: 9
 permalink: /contributing/
 ---
 
