@@ -46,8 +46,11 @@ dpkg --configure -a
 #export http_proxy=xxxx
 #export https_proxy=xxxx
 
+#setup arrow thrift url if cannot download it
+#export ARROW_THRIFT_URL=https://archive.apache.org/dist/thrift/0.16.0/thrift-0.16.0.tar.gz 
+
 #clone gluten
-git clone https://github.com/oap-project/gluten.git
+git clone https://github.com/apache/incubator-gluten.git gluten
 cd gluten/
 
 #config maven proxy
