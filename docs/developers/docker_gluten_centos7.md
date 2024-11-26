@@ -20,10 +20,6 @@ Run in docker:
 git clone https://github.com/apache/incubator-gluten.git gluten
 cd gluten
 
-# To access HDFS or S3, you need to add the parameters `--enable_hdfs=ON` and `--enable_s3=ON`
-# If you have the same error with issue-3283, you need to add the parameter `--compile_arrow_java=ON`
-./dev/buildbundle-veloxbe.sh
-
-# You can also build with custom profile and properties
+bash dev/ci-velox-buildstatic-centos-7.sh
 mvn clean install -Pspark-3.5 -Dhadoop.version=3.3.3 -Pbackends-velox -Pceleborn -Puniffle -DskipTests -Dmaven.source.skip
 ```
