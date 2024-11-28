@@ -19,7 +19,7 @@ For more information on Apache Gluten (incubating), including related articles a
 |Velox in Intel|Intel|Jun. 2023|[Link](https://www.youtube.com/watch?v=yZ8F1vWqFXw&ab_channel=PrestoFoundation)|
 |Gluten + Celeborn(in Chinese)|Intel|Jul. 2023|[Link](https://blog.csdn.net/weixin_45906054/article/details/131651065)|
 |Gluten: Modernizing Java-based Query Engines|Intel|Sept. 2023|[Link](https://ceur-ws.org/Vol-3462/CDMS8.pdf)|
-|Apache Spark with Native Engine|BigO|Nov. 2023|[Link](https://blog.csdn.net/m0_70952941/article/details/134396816)|
+|Apache Spark with Native Engine|BIGO|Nov. 2023|[Link](https://mp.weixin.qq.com/s/8d7CwoGGbrK5_mkIZuf1eg)|
 |BONC's BEH with Gluten and AVX512|BONC|Nov. 2023|[Link](https://www.intel.cn/content/www/cn/zh/artificial-intelligence/analytics/bonc-big-data-solutions-optimized-avx512-and-qat.html)|
 |Gluten: Double Spark Performance|Intel|Nov. 2023|[Link](https://www.slidestalk.com/slidestalk/71777?video)|
 |Apache Spark Native Engine(in Chinese)|Netease|Nov. 2023|[Link](https://zhuanlan.zhihu.com/p/670297787)|
