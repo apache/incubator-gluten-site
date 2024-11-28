@@ -15,7 +15,7 @@ To add yourself to the list, please email dev@gluten.apache.org with the followi
 
 | Company Name | Description | Link |
 |-------------------|--------------|-----------------|
-|BigO|Gluten and ClickHouse at BigO|[Link](https://blog.csdn.net/m0_70952941/article/details/134396816)|
+|BIGO|BIGO is a global technology company headquartered in Singapore, focusing on the development and operation of social media and live streaming platforms. It owns several well-known applications, such as Bigo Live and Likee.|[Link](https://mp.weixin.qq.com/s/8d7CwoGGbrK5_mkIZuf1eg)|
 |BONC|BONC is a high-tech software company specializing in big data, cloud computing, and other technological fields.|[Link](https://www.intel.cn/content/www/cn/zh/artificial-intelligence/analytics/bonc-big-data-solutions-optimized-avx512-and-qat.html)|
 |IBM| Gluten and Velox at IBM|[Link](https://youtu.be/npoEudB5nPo?si=hToh-acObN3miM1Q)|
 |Kyligence|Shanghai Kyligence Information Technology Co., Ltd. (Kyligence) was founded in 2016 by the original team behind Apache Kylin. The company is dedicated to developing the next-generation enterprise-level intelligent multidimensional database, aimed at simplifying multidimensional data analysis (OLAP) on data lakes for enterprises.|[Link](https://cn.kyligence.io/blog/gluten-spark/)|
