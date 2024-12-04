@@ -10,7 +10,7 @@
 
 <span class="c"># append the GPG key to the KEYS file the svn repository</span>
 <span class="c"># [IMPORTANT] Don't replace the KEYS file, just append the GPG key to the KEYS file. </span>
-<span class="nv">$ </span>svn co https://dist.apache.org/repos/dist/release/incubator/answer/
+<span class="nv">$ </span>svn co https://dist.apache.org/repos/dist/release/incubator/gluten/
 <span class="nv">$ </span><span class="o">(</span>gpg <span class="nt">--list-sigs</span> xxx@apache.org <span class="o">&amp;&amp;</span> gpg <span class="nt">--export</span> <span class="nt">--armor</span> xxx@apache.org<span class="o">)</span> <span class="o">&gt;&gt;</span> KEYS 
 <span class="nv">$ </span>svn ci <span class="nt">-m</span> <span class="s2">"add gpg key"</span> 
 
@@ -21,7 +21,7 @@
 </code></pre></div></div> <h3 id="upload-the-release-artifacts-to-the-svn-repository"> <a href="#upload-the-release-artifacts-to-the-svn-repository" class="anchor-heading" aria-labelledby="upload-the-release-artifacts-to-the-svn-repository"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Upload the release artifacts to the SVN repository. </h3> <ol> <li> <p>Create a project directory in the SVN repository (1st time only). <code class="language-plaintext highlighter-rouge">https://dist.apache.org/repos/dist/dev/incubator/gluten/</code></p> </li> <li> <p>Create a directory for the release artifacts in the SVN repository. <code class="language-plaintext highlighter-rouge">https://dist.apache.org/repos/dist/dev/incubator/gluten/{release-version}</code> release-version format: apache-gluten-#.#.#-rc#</p> </li> <li>Upload the release artifacts to the SVN repository. <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>svn co https://dist.apache.org/repos/dist/dev/incubator/gluten/
 <span class="nv">$ </span><span class="nb">cp</span> /path/to/release/artifacts/<span class="k">*</span> ./<span class="o">{</span>release-version<span class="o">}</span>/
 <span class="nv">$ </span>svn add ./<span class="o">{</span>release-version<span class="o">}</span>/<span class="k">*</span>
-<span class="nv">$ </span>svn commit <span class="nt">-m</span> <span class="s2">"add Apache Answer release artifacts for {release-version}"</span>
+<span class="nv">$ </span>svn commit <span class="nt">-m</span> <span class="s2">"add Apache Gluten release artifacts for {release-version}"</span>
 </code></pre></div> </div> </li> <li>After the upload, please visit the link <code class="language-plaintext highlighter-rouge">https://dist.apache.org/repos/dist/dev/incubator/gluten/{release-version}</code> to verify if the file upload is successful or not. The upload release artifacts should be include <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">*</span> apache-gluten-#.#.#-incubating-src.tar.gz
 <span class="k">*</span> apache-gluten-#.#.#-incubating-src.tar.gz.asc
 <span class="k">*</span> apache-gluten-#.#.#-incubating-src.tar.gz.sha512
@@ -85,7 +85,7 @@ Hello,
     [ ] Download links are valid.
     [ ] Checksums and PGP signatures are valid.
     [ ] Source code distributions have correct names matching the current release.
-    [ ] LICENSE and NOTICE files are correct for each Apache Answer repo.
+    [ ] LICENSE and NOTICE files are correct for each Apache Gluten repo.
     [ ] All files have license headers if necessary.
     [ ] No unlicensed compiled archives bundled in source archive.
 
@@ -100,7 +100,7 @@ Thanks,
 The Apache Gluten (Incubating) {release-version} has been released!
 
 Apache Gluten is a Q&amp;A platform software for teams at any scale.
-Whether it's a community forum, help center, or knowledge management platform, you can always count on Apache Answer.
+Whether it's a community forum, help center, or knowledge management platform, you can always count on Apache Gluten.
 
 Download Links: https://downloads.apache.org/incubator/gluten/
 
