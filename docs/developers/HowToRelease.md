@@ -57,7 +57,7 @@ $ gpg --keyserver keyserver.ubuntu.com --send-key xxx
 
 # append the GPG key to the KEYS file the svn repository
 # [IMPORTANT] Don't replace the KEYS file, just append the GPG key to the KEYS file. 
-$ svn co https://dist.apache.org/repos/dist/release/incubator/answer/
+$ svn co https://dist.apache.org/repos/dist/release/incubator/gluten/
 $ (gpg --list-sigs xxx@apache.org && gpg --export --armor xxx@apache.org) >> KEYS 
 $ svn ci -m "add gpg key" 
 
@@ -88,7 +88,7 @@ release-version format: apache-gluten-#.#.#-rc#
 $ svn co https://dist.apache.org/repos/dist/dev/incubator/gluten/
 $ cp /path/to/release/artifacts/* ./{release-version}/
 $ svn add ./{release-version}/*
-$ svn commit -m "add Apache Answer release artifacts for {release-version}"
+$ svn commit -m "add Apache Gluten release artifacts for {release-version}"
 ```
 
 4. After the upload, please visit the link `https://dist.apache.org/repos/dist/dev/incubator/gluten/{release-version}` to verify if the file upload is successful or not.
@@ -208,7 +208,7 @@ Hello,
     [ ] Download links are valid.
     [ ] Checksums and PGP signatures are valid.
     [ ] Source code distributions have correct names matching the current release.
-    [ ] LICENSE and NOTICE files are correct for each Apache Answer repo.
+    [ ] LICENSE and NOTICE files are correct for each Apache Gluten repo.
     [ ] All files have license headers if necessary.
     [ ] No unlicensed compiled archives bundled in source archive.
 
@@ -231,7 +231,7 @@ Hello everyone,
 The Apache Gluten (Incubating) {release-version} has been released!
 
 Apache Gluten is a Q&A platform software for teams at any scale.
-Whether it's a community forum, help center, or knowledge management platform, you can always count on Apache Answer.
+Whether it's a community forum, help center, or knowledge management platform, you can always count on Apache Gluten.
 
 Download Links: https://downloads.apache.org/incubator/gluten/
 
