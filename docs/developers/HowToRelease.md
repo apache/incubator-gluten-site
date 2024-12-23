@@ -220,7 +220,6 @@ Thanks,
 <YOUR NAME>
 ```
 
-
 ### Announce the results and the release.
 
 
@@ -246,4 +245,11 @@ Resources:
 Thanks,
 <YOUR NAME>
 
+```
+
+### Migrate candidate to the release Apache SVN
+
+After the vote has passed, you need to migrate the RC build release to an official release by moving the artifacts from Apache SVN's dev directory to the release directory. Please follow the steps below to upload the artifacts:
+```
+$ svn mv https://dist.apache.org/repos/dist/dev/incubator/gluten/{release-version} https://dist.apache.org/repos/dist/release/incubator/gluten/{release-version} -m "transfer packages for gluten {release-version}"
 ```
