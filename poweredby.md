@@ -18,6 +18,7 @@ Sorted by Company Name
 | Company Name | Description | Link |
 |-------------------|--------------|-----------------|
 | Alibaba | Alibaba has chosen Gluten as a part of their public cloud solution. | |
+| Baidu | Baidu has used gluten in multiple business scenarios. | |
 | Bytedance | EMR in Bytedance's Volcengine | https://www.volcengine.com/ |
 | BIGO | BIGO is a global technology company headquartered in Singapore, focusing on the development and operation of social media and live streaming platforms. It owns several well-known applications, such as Bigo Live and Likee. | [Link](https://mp.weixin.qq.com/s/8d7CwoGGbrK5_mkIZuf1eg) |
 | BONC | BONC is a high-tech software company specializing in big data, cloud computing, and other technological fields. | [Link](https://www.intel.cn/content/www/cn/zh/artificial-intelligence/analytics/bonc-big-data-solutions-optimized-avx512-and-qat.html) |
