@@ -30,4 +30,4 @@ For more information on Apache Gluten (incubating), including related articles a
 |Unlocking Data Query Performance|Pinterest|Apr. 2024|[Link](https://www.youtube.com/watch?v=pQ4bMyXXLss&list=PLJvBe8nQAEsEBSoUY0lRFVZr2_YeHYkUR&index=10&t=3s&ab_channel=VeloxCon)|
 |Native execution engine for Fabric Spark|Microsoft|May 2024|[Link](https://learn.microsoft.com/en-us/fabric/data-engineering/native-execution-engine-overview?tabs=sparksql)|
 |Best Practice of Gluten and Velox in Meituan|Meituan|Jun. 2024|[Link](https://mp.weixin.qq.com/s/VvmhQi8YMsm0P5xYoiGEZQ)|
-|EMR in Bytedance's Volcengine(in Chinese)|ByteDance|[Link](https://www.volcengine.com/docs/6491/1263264)|
+|EMR in Bytedance's Volcengine(in Chinese)|ByteDance|Dec. 2024|[Link](https://www.volcengine.com/docs/6491/1263264)|
