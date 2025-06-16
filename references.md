@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Gluten References
-nav_order: 7
+nav_order: 6
 permalink: /references/
 ---
 
