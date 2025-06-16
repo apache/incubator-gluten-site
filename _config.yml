@@ -108,6 +108,10 @@ aux_links_new_tab: true
 # Nav menu can also be selectively enabled or disabled using page variables or the minimal layout
 nav_enabled: true
 
+# Sort order for navigation links
+# nav_sort: case_insensitive # default, equivalent to nil
+nav_sort: case_sensitive # Capital letters sorted before lowercase
+
 # Heading anchor links appear on hover over h1-h6 tags in page content
 # allowing users to deep link to a particular heading on a page.
 #
@@ -116,8 +120,8 @@ heading_anchors: true
 
 # External navigation links
 #nav_external_links:
-#  - title: Foundation
-#    url: https://www.apache.org/
+#  - title: Documentations_Latest
+#    url: https://apache.github.io/incubator-gluten/
 #    hide_icon: false # set to true to hide the external link icon - defaults to false
 #    opens_in_new_tab: true # set to true to open this link in a new tab - defaults to false
 
@@ -146,3 +150,13 @@ gh_edit_repository: "https://github.com/just-the-docs/just-the-docs" # the githu
 gh_edit_branch: "main" # the branch that your docs is served from
 # gh_edit_source: docs # the source that your files originate from
 gh_edit_view_mode: "tree" # "tree" or "edit" if you want the user to jump into the editor immediately
+
+collections:
+  docs:
+    output: true
+
+just_the_docs:
+  collections:
+    docs:
+      name: Documentations
+      nav_fold: true
