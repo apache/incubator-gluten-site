@@ -32,4 +32,4 @@ For more information on Apache Gluten (incubating), including related articles a
 |Best Practice of Gluten and Velox in Meituan|Meituan|Jun. 2024|[Link](https://mp.weixin.qq.com/s/VvmhQi8YMsm0P5xYoiGEZQ)|
 |EMR in Bytedance's Volcengine(in Chinese)|ByteDance|Dec. 2024|[Link](https://www.volcengine.com/docs/6491/1263264)|
 |Gluten + ClickHouse Backend Performance Optimization Practise(in Chinese)|BIGO|Jun. 2025|[Link](https://0rt0w.hk.xet.citv.cn/sl/v900b)|
-|The R&D and Application of Gluten ClickHouse Backend at BIGO and Progress on Flink Native(in Chinese)|BIGO|May. 2025|[Link](https://www.datafuntalk.com/detail/l_682b1c45e4b0694c5ad6efec/4)|
+|The R&D and Application of Gluten ClickHouse Backend at BIGO and Progress on Flink Native(in Chinese)|BIGO|May 2025|[Link](https://www.datafuntalk.com/detail/l_682b1c45e4b0694c5ad6efec/4)|
