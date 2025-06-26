@@ -30,3 +30,4 @@ Sorted by Company Name
 | Palantir | Palantir's product implementation of native acceleration is built upon the Apache Gluten project. | [Link](https://www.palantir.com/docs/foundry/optimizing-pipelines/native-acceleration) |
 | Pinterest | Gluten and Velox at Pinterest | [Link](https://www.youtube.com/watch?v=pQ4bMyXXLss&list=PLJvBe8nQAEsEBSoUY0lRFVZr2_YeHYkUR&index=10&t=3s&ab_channel=VeloxCon) |
 | SF Express | Gluten and Velox has been used in SF Express since 2024. ||
+| Uber | Uber's Spark Data Platform has been using Gluten since 2024 to reduce compute costs and improve query efficiency. ||
