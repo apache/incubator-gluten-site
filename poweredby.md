@@ -5,7 +5,7 @@ nav_order: 8
 permalink: /poweredby/
 ---
 
-# Project and Product Name using "Gluten"
+# Project and Product Name using Apache Gluten
 
 Organizations developing products and projects for use with Apache Gluten (incubating), as well as related marketing materials, should ensure they respect the trademark of “Apache Gluten” and its logo. For comprehensive and authoritative guidance on the proper usage of ASF trademarks, please refer to the [ASF Trademarks Guidance](https://www.apache.org/foundation/marks/) and the associated [FAQ](https://www.apache.org/foundation/marks/faq/).
 
