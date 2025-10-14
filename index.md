@@ -172,6 +172,9 @@ The below testing environment: a 8-nodes AWS cluster with 1TB data; Spark-3.1.1 
 
 ![Performance](/assets/images/clickhouse_decision_support_bench1_22queries_performance.png)
 
+# 6 Security
+
+Gluten aims to provide secure software. If you discover a vulnerability, please report it promptly to [the project's PPMC](private@gluten.apache.org) or [the ASF security team](https://www.apache.org/security/). We appreciate your effort to help keep the project secure.
 
 # Thanks to our contributors
 
