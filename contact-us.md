@@ -9,7 +9,7 @@ permalink: /community/
 
 ## Team
 
-The project is mentored by several mentors during its Apache incubation process and is governed by a Podling Project Management Committee (PPMC). The project’s committers also have write access to the codebase
+The project is mentored by several mentors during its Apache incubation process and is governed by a Podling Project Management Committee (PPMC). The project’s committers also have write access to the codebase.
 
 ### Mentors
 
