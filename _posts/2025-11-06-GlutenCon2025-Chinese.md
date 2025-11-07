@@ -1,3 +1,5 @@
+<img width="400"  alt="image" src="https://github.com/user-attachments/assets/0dff7486-5f7b-4e0b-9465-30c04193a303" />
+
 # 🎉 GlutenCon 2025 首届大会正式启动！
 
 欢迎来到 Apache Gluten 社区的年度盛会 —— **GlutenCon 2025**！
