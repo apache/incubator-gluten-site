@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.3">Jekyll</generator><link href="https://gluten.apache.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://gluten.apache.org/" rel="alternate" type="text/html" /><updated>2025-11-07T01:57:19+00:00</updated><id>https://gluten.apache.org/feed.xml</id><title type="html">Apache Gluten incubating</title><subtitle>Gluten is a middle layer responsible for offloading JVM-based SQL engines' execution to native engines.</subtitle><entry><title type="html">Glutencon Zh</title><link href="https://gluten.apache.org/2025/11/06/GlutenCon-ZH.html" rel="alternate" type="text/html" title="Glutencon Zh" /><published>2025-11-06T00:00:00+00:00</published><updated>2025-11-06T00:00:00+00:00</updated><id>https://gluten.apache.org/2025/11/06/GlutenCon-ZH</id><content type="html" xml:base="https://gluten.apache.org/2025/11/06/GlutenCon-ZH.html">&lt;h1 id=&quot;-glutencon-2025-首届大会正式启动&quot;&gt;🎉 GlutenCon 2025 首届大会正式启动！&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.3">Jekyll</generator><link href="https://gluten.apache.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://gluten.apache.org/" rel="alternate" type="text/html" /><updated>2025-11-07T01:58:33+00:00</updated><id>https://gluten.apache.org/feed.xml</id><title type="html">Apache Gluten incubating</title><subtitle>Gluten is a middle layer responsible for offloading JVM-based SQL engines' execution to native engines.</subtitle><entry><title type="html">Glutencon Zh</title><link href="https://gluten.apache.org/2025/11/06/GlutenCon-ZH.html" rel="alternate" type="text/html" title="Glutencon Zh" /><published>2025-11-06T00:00:00+00:00</published><updated>2025-11-06T00:00:00+00:00</updated><id>https://gluten.apache.org/2025/11/06/GlutenCon-ZH</id><content type="html" xml:base="https://gluten.apache.org/2025/11/06/GlutenCon-ZH.html">&lt;h1 id=&quot;-glutencon-2025-首届大会正式启动&quot;&gt;🎉 GlutenCon 2025 首届大会正式启动！&lt;/h1&gt;
 
 &lt;p&gt;欢迎来到 Gluten 社区的年度盛会 —— &lt;strong&gt;GlutenCon 2025&lt;/strong&gt;！&lt;/p&gt;
 
@@ -26,6 +26,13 @@
   &lt;li&gt;&lt;strong&gt;午餐、咖啡、纪念品全包&lt;/strong&gt;（免费票）&lt;/li&gt;
 &lt;/ul&gt;
 
+&lt;h2 id=&quot;-报名&quot;&gt;📝 报名&lt;/h2&gt;
+
+&lt;p&gt;🎟 &lt;strong&gt;免费票&lt;/strong&gt;：包含午餐、茶歇、纪念品&lt;br /&gt;
+📣 &lt;strong&gt;报名方式&lt;/strong&gt;：扫描二维码报名入群&lt;/p&gt;
+
+&lt;p&gt;&lt;img width=&quot;300&quot; height=&quot;303&quot; alt=&quot;image&quot; src=&quot;https://github.com/user-attachments/assets/098a4554-1f5f-4640-b573-1bc94a134c25&quot; /&gt;&lt;/p&gt;
+
 &lt;hr /&gt;
 
 &lt;h2 id=&quot;-演讲嘉宾&quot;&gt;🗣 演讲嘉宾&lt;/h2&gt;
@@ -33,15 +40,6 @@
 &lt;ul&gt;
   &lt;li&gt;敬请期待！&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&quot;-报名与投稿&quot;&gt;📝 报名与投稿&lt;/h2&gt;
-
-&lt;p&gt;🎟 &lt;strong&gt;免费票&lt;/strong&gt;：包含午餐、茶歇、纪念品&lt;br /&gt;
-📣 &lt;strong&gt;报名方式&lt;/strong&gt;：扫描二维码报名入群&lt;/p&gt;
-
-&lt;p&gt;&lt;img width=&quot;300&quot; height=&quot;303&quot; alt=&quot;image&quot; src=&quot;https://github.com/user-attachments/assets/098a4554-1f5f-4640-b573-1bc94a134c25&quot; /&gt;&lt;/p&gt;
 
 &lt;hr /&gt;
 
