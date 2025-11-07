@@ -1,6 +1,6 @@
 # 🎉 GlutenCon 2025 首届大会正式启动！
 
-欢迎来到 Gluten 社区的年度盛会 —— **GlutenCon 2025**！
+欢迎来到 Apache Gluten 社区的年度盛会 —— **GlutenCon 2025**！
 
 📅 日期：2025 年 12 月 6 日（星期六）  
 🕘 时间：09:00 - 18:00  
@@ -11,7 +11,7 @@
 
 ## 🧭 活动简介
 
-Gluten 是一个面向数据处理加速的开源项目，致力于通过原生向量化执行、后端解耦架构和现代硬件优化，提升 Spark 等计算引擎的性能表现。
+Apache Gluten 是一个面向数据处理加速的开源项目，致力于通过原生向量化执行、后端解耦架构和现代硬件优化，提升 Spark 等计算引擎的性能表现。
 
 本次大会将汇聚来自社区、企业和学术界的技术专家，围绕 **Apache Gluten 项目进展、执行优化实践、多后端集成、开源治理** 等话题展开深入交流。
 
@@ -97,5 +97,5 @@ Gluten 是一个面向数据处理加速的开源项目，致力于通过原生�
 
 ---
 
-📌 关注 [Gluten GitHub](https://github.com/apache/incubator-gluten) 获取最新动态  
+📌 关注 [Apache Gluten GitHub](https://github.com/apache/incubator-gluten) 获取最新动态  
 📧 有任何问题欢迎联系：dev@gluten.apache.org
