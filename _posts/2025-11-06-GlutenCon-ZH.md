@@ -41,8 +41,52 @@ Gluten 是一个面向数据处理加速的开源项目，致力于通过原生�
 
 ## 📚 议题安排
 
-- 敬请期待！
-
+- 详情敬请期待！
+  
+<table>
+  <thead>
+    <tr>
+      <th width="140">时间</th>
+      <th width="900">内容</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>09:00 - 9:30</td>
+      <td>Room A</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>
+        <details>
+          <summary><strong>Opening Keynote: 字节跳动</strong></summary>
+          字节跳动
+        </details>
+      </td>
+    </tr>
+    <tr>
+      <td>9:30 - 9:50</td>
+      <td>Room A</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>
+        <details>
+          <summary><strong>Keynote：IBM</strong></summary>
+          IBM。
+        </details>
+      </td>
+    </tr>
+    <tr>
+      <td>9:50 - 10:00</td>
+      <td><b>Break</b></td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
 ---
 
 ## 🙌 加入我们
