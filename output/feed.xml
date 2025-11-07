@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.3">Jekyll</generator><link href="https://gluten.apache.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://gluten.apache.org/" rel="alternate" type="text/html" /><updated>2025-11-07T01:54:26+00:00</updated><id>https://gluten.apache.org/feed.xml</id><title type="html">Apache Gluten incubating</title><subtitle>Gluten is a middle layer responsible for offloading JVM-based SQL engines' execution to native engines.</subtitle><entry><title type="html">Glutencon Zh</title><link href="https://gluten.apache.org/2025/11/06/GlutenCon-ZH.html" rel="alternate" type="text/html" title="Glutencon Zh" /><published>2025-11-06T00:00:00+00:00</published><updated>2025-11-06T00:00:00+00:00</updated><id>https://gluten.apache.org/2025/11/06/GlutenCon-ZH</id><content type="html" xml:base="https://gluten.apache.org/2025/11/06/GlutenCon-ZH.html">&lt;h1 id=&quot;-glutencon-2025-首届大会正式启动&quot;&gt;🎉 GlutenCon 2025 首届大会正式启动！&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.3">Jekyll</generator><link href="https://gluten.apache.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://gluten.apache.org/" rel="alternate" type="text/html" /><updated>2025-11-07T01:57:19+00:00</updated><id>https://gluten.apache.org/feed.xml</id><title type="html">Apache Gluten incubating</title><subtitle>Gluten is a middle layer responsible for offloading JVM-based SQL engines' execution to native engines.</subtitle><entry><title type="html">Glutencon Zh</title><link href="https://gluten.apache.org/2025/11/06/GlutenCon-ZH.html" rel="alternate" type="text/html" title="Glutencon Zh" /><published>2025-11-06T00:00:00+00:00</published><updated>2025-11-06T00:00:00+00:00</updated><id>https://gluten.apache.org/2025/11/06/GlutenCon-ZH</id><content type="html" xml:base="https://gluten.apache.org/2025/11/06/GlutenCon-ZH.html">&lt;h1 id=&quot;-glutencon-2025-首届大会正式启动&quot;&gt;🎉 GlutenCon 2025 首届大会正式启动！&lt;/h1&gt;
 
 &lt;p&gt;欢迎来到 Gluten 社区的年度盛会 —— &lt;strong&gt;GlutenCon 2025&lt;/strong&gt;！&lt;/p&gt;
 
@@ -62,7 +62,72 @@
 &lt;hr /&gt;
 
 &lt;p&gt;📌 关注 &lt;a href=&quot;https://github.com/apache/incubator-gluten&quot;&gt;Gluten GitHub&lt;/a&gt; 获取最新动态&lt;br /&gt;
-📧 有任何问题欢迎联系：dev@gluten.apache.org&lt;/p&gt;</content><author><name></name></author><summary type="html">🎉 GlutenCon 2025 首届大会正式启动！</summary></entry><entry><title type="html">Gluten 1.2.0 Release</title><link href="https://gluten.apache.org/2024/09/03/Gluten-1.2.0-release.html" rel="alternate" type="text/html" title="Gluten 1.2.0 Release" /><published>2024-09-03T00:00:00+00:00</published><updated>2024-09-03T00:00:00+00:00</updated><id>https://gluten.apache.org/2024/09/03/Gluten-1.2.0-release</id><content type="html" xml:base="https://gluten.apache.org/2024/09/03/Gluten-1.2.0-release.html">&lt;p&gt;On Sept. 3rd 2024, I am thrilled to share that Apache Gluten (incubating) has celebrated its 1st Apache official release, version 1.2.0, featuring the following highlights.&lt;/p&gt;
+📧 有任何问题欢迎联系：dev@gluten.apache.org&lt;/p&gt;</content><author><name></name></author><summary type="html">🎉 GlutenCon 2025 首届大会正式启动！</summary></entry><entry><title type="html">Glutencon En</title><link href="https://gluten.apache.org/2025/11/06/glutencon-EN.html" rel="alternate" type="text/html" title="Glutencon En" /><published>2025-11-06T00:00:00+00:00</published><updated>2025-11-06T00:00:00+00:00</updated><id>https://gluten.apache.org/2025/11/06/glutencon-EN</id><content type="html" xml:base="https://gluten.apache.org/2025/11/06/glutencon-EN.html">&lt;h1 id=&quot;-glutencon-2025--first-annual-conference-officially-launched&quot;&gt;🎉 GlutenCon 2025 — First Annual Conference Officially Launched!&lt;/h1&gt;
+
+&lt;p&gt;Welcome to the annual gathering of the Gluten community — &lt;strong&gt;GlutenCon 2025&lt;/strong&gt;!&lt;/p&gt;
+
+&lt;p&gt;📅 Date: Saturday, December 6, 2025&lt;br /&gt;
+🕘 Time: 09:00 AM – 06:00 PM&lt;br /&gt;
+📍 Location: ByteDance Headquarters, Beijing (Building 1, Dazhongsi Plaza, No.18 Jia, North Third Ring West Road, Haidian District)&lt;br /&gt;
+🎯 Hosted by: Apache Gluten Community &amp;amp; ByteDance&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;-about-the-event&quot;&gt;🧭 About the Event&lt;/h2&gt;
+
+&lt;p&gt;Gluten is an open-source project focused on accelerating data processing. It enhances the performance of engines like Spark through native vectorized execution, decoupled backend architecture, and modern hardware optimization.&lt;/p&gt;
+
+&lt;p&gt;This conference will bring together technical experts from the community, industry, and academia to explore topics such as &lt;strong&gt;Apache Gluten project updates, execution optimization practices, multi-backend integration, and open-source governance&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;-event-highlights&quot;&gt;🌟 Event Highlights&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Apache Gluten Project Updates&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Major Announcements from ByteDance&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Technical Talks + Community Networking + Real-World Use Cases&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Free Tickets with Lunch, Coffee, and Swag Included&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;-registration&quot;&gt;📝 Registration&lt;/h2&gt;
+
+&lt;p&gt;🎟 &lt;strong&gt;Free Admission&lt;/strong&gt;: Includes lunch, refreshments, and conference swag&lt;br /&gt;
+📣 &lt;strong&gt;CFP Deadline&lt;/strong&gt;: Open now until December 1, 2025&lt;br /&gt;
+🔗 [Scan QR Code to Register]&lt;/p&gt;
+
+&lt;p&gt;&lt;img width=&quot;300&quot; height=&quot;303&quot; alt=&quot;image&quot; src=&quot;https://github.com/user-attachments/assets/098a4554-1f5f-4640-b573-1bc94a134c25&quot; /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;-speakers&quot;&gt;🗣 Speakers&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;To be announced!&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;-agenda&quot;&gt;📚 Agenda&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Coming soon!&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;-join-us&quot;&gt;🙌 Join Us&lt;/h2&gt;
+
+&lt;p&gt;Whether you’re a developer, architect, data platform engineer, or open-source enthusiast, GlutenCon welcomes your participation!&lt;/p&gt;
+
+&lt;p&gt;Let’s build an &lt;strong&gt;open, professional, and warm&lt;/strong&gt; technical gathering together!&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;📌 Follow &lt;a href=&quot;https://github.com/apache/incubator-gluten&quot;&gt;Gluten GitHub&lt;/a&gt; for updates&lt;br /&gt;
+📧 Questions? Contact us at: dev@gluten.apache.org&lt;/p&gt;</content><author><name></name></author><summary type="html">🎉 GlutenCon 2025 — First Annual Conference Officially Launched!</summary></entry><entry><title type="html">Gluten 1.2.0 Release</title><link href="https://gluten.apache.org/2024/09/03/Gluten-1.2.0-release.html" rel="alternate" type="text/html" title="Gluten 1.2.0 Release" /><published>2024-09-03T00:00:00+00:00</published><updated>2024-09-03T00:00:00+00:00</updated><id>https://gluten.apache.org/2024/09/03/Gluten-1.2.0-release</id><content type="html" xml:base="https://gluten.apache.org/2024/09/03/Gluten-1.2.0-release.html">&lt;p&gt;On Sept. 3rd 2024, I am thrilled to share that Apache Gluten (incubating) has celebrated its 1st Apache official release, version 1.2.0, featuring the following highlights.&lt;/p&gt;
 
 &lt;p&gt;What’s new in Gluten 1.2.0&lt;/p&gt;
 
