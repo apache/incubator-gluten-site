@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.3">Jekyll</generator><link href="https://gluten.apache.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://gluten.apache.org/" rel="alternate" type="text/html" /><updated>2025-11-07T01:58:33+00:00</updated><id>https://gluten.apache.org/feed.xml</id><title type="html">Apache Gluten incubating</title><subtitle>Gluten is a middle layer responsible for offloading JVM-based SQL engines' execution to native engines.</subtitle><entry><title type="html">Glutencon Zh</title><link href="https://gluten.apache.org/2025/11/06/GlutenCon-ZH.html" rel="alternate" type="text/html" title="Glutencon Zh" /><published>2025-11-06T00:00:00+00:00</published><updated>2025-11-06T00:00:00+00:00</updated><id>https://gluten.apache.org/2025/11/06/GlutenCon-ZH</id><content type="html" xml:base="https://gluten.apache.org/2025/11/06/GlutenCon-ZH.html">&lt;h1 id=&quot;-glutencon-2025-首届大会正式启动&quot;&gt;🎉 GlutenCon 2025 首届大会正式启动！&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.3">Jekyll</generator><link href="https://gluten.apache.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://gluten.apache.org/" rel="alternate" type="text/html" /><updated>2025-11-07T02:30:58+00:00</updated><id>https://gluten.apache.org/feed.xml</id><title type="html">Apache Gluten incubating</title><subtitle>Gluten is a middle layer responsible for offloading JVM-based SQL engines' execution to native engines.</subtitle><entry><title type="html">Glutencon Zh</title><link href="https://gluten.apache.org/2025/11/06/GlutenCon-ZH.html" rel="alternate" type="text/html" title="Glutencon Zh" /><published>2025-11-06T00:00:00+00:00</published><updated>2025-11-06T00:00:00+00:00</updated><id>https://gluten.apache.org/2025/11/06/GlutenCon-ZH</id><content type="html" xml:base="https://gluten.apache.org/2025/11/06/GlutenCon-ZH.html">&lt;h1 id=&quot;-glutencon-2025-首届大会正式启动&quot;&gt;🎉 GlutenCon 2025 首届大会正式启动！&lt;/h1&gt;
 
 &lt;p&gt;欢迎来到 Gluten 社区的年度盛会 —— &lt;strong&gt;GlutenCon 2025&lt;/strong&gt;！&lt;/p&gt;
 
@@ -46,9 +46,53 @@
 &lt;h2 id=&quot;-议题安排&quot;&gt;📚 议题安排&lt;/h2&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;敬请期待！&lt;/li&gt;
+  &lt;li&gt;详情敬请期待！&lt;/li&gt;
 &lt;/ul&gt;
 
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th width=&quot;140&quot;&gt;时间&lt;/th&gt;
+      &lt;th width=&quot;900&quot;&gt;内容&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;09:00 - 9:30&lt;/td&gt;
+      &lt;td&gt;Room A&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;/td&gt;
+      &lt;td&gt;
+        &lt;details&gt;
+          &lt;summary&gt;&lt;strong&gt;Opening Keynote: 字节跳动&lt;/strong&gt;&lt;/summary&gt;
+          字节跳动
+        &lt;/details&gt;
+      &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;9:30 - 9:50&lt;/td&gt;
+      &lt;td&gt;Room A&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;/td&gt;
+      &lt;td&gt;
+        &lt;details&gt;
+          &lt;summary&gt;&lt;strong&gt;Keynote：IBM&lt;/strong&gt;&lt;/summary&gt;
+          IBM。
+        &lt;/details&gt;
+      &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;9:50 - 10:00&lt;/td&gt;
+      &lt;td&gt;&lt;b&gt;Break&lt;/b&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
 &lt;hr /&gt;
 
 &lt;h2 id=&quot;-加入我们&quot;&gt;🙌 加入我们&lt;/h2&gt;
