@@ -36,12 +36,12 @@ The basic rule of Gluten's design is that we would reuse spark's whole control f
 ## 1.3 Target User
 
 Gluten's target user is anyone who wants to accelerate SparkSQL fundamentally. As a plugin to Spark, Gluten doesn't require any change for dataframe API or SQL query, but only requires user to make correct configuration.
-See Gluten configuration properties [here](https://gluten.apache.org/docs/configuration/).
+See Gluten configuration properties [here](https://github.com/apache/incubator-gluten/blob/main/docs/Configuration.md).
 
 ## 1.4 References
 
 You can click below links for more related information.
-- [Gluten References](https://gluten.apache.org/references/)
+- [Gluten References](/references/)
 
 # 2 Architecture
 
@@ -50,7 +50,7 @@ On native side, the native operator chain will be built out and offloaded to nat
 <p align="center">
 <img src="/assets/images/gluten_framework.png" width="800">
 </p>
-Currently, Gluten only supports Clickhouse backend & Velox backend. Velox is a C++ database acceleration library which provides reusable, extensible and high-performance data processing components. More details can be found from https://github.com/facebookincubator/velox/. Gluten can also be extended to support more backends.
+Currently, Gluten only supports Clickhouse backend & Velox backend. Velox is a C++ database acceleration library which provides reusable, extensible and high-performance data processing components. More details can be found from [here](https://github.com/facebookincubator/velox/). Gluten can also be extended to support more backends.
 
 There are several key components in Gluten:
 * **Query Plan Conversion**: converts Spark's physical plan to Substrait plan.
@@ -101,17 +101,17 @@ spark-shell \
 
 ## 3.2.1 Build and install Gluten with Velox backend
 
-If you want to use Gluten **Velox** backend, see [Build with Velox](https://gluten.apache.org/docs/getting-started/velox-backend/) to build and install the necessary libraries.
-You can also find more information in [Gluten with Velox backend](https://gluten.apache.org/docs/velox-backend/) and [velox](https://github.com/facebookincubator/velox).
+If you want to use Gluten **Velox** backend, see [Build with Velox](https://apache.github.io/incubator-gluten/developers/velox-backend-build-in-docker.html) to build and install the necessary libraries.
+You can also find more information in [Gluten with Velox backend](https://apache.github.io/incubator-gluten/get-started/Velox.html) and [velox](https://github.com/facebookincubator/velox).
 
 ## 3.2.2 Build and install Gluten with ClickHouse backend
 
-If you want to use Gluten **ClickHouse** backend, see [Build with ClickHouse Backend](http://gluten.apache.org/docs/getting-started/clickhouse-backend/).
+If you want to use Gluten **ClickHouse** backend, see [Build with ClickHouse Backend](https://apache.github.io/incubator-gluten/get-started/ClickHouse.html).
 ClickHouse backend is developed by [Kyligence](https://kyligence.io/), please visit [Kyligence's ClickHouse](https://github.com/Kyligence/ClickHouse) for more infomation.
 
 ## 3.2.3 Build options
 
-See [Build Parameters](https://gluten.apache.org/docs/getting-started/build-guide/).
+See [Build Parameters](https://apache.github.io/incubator-gluten/get-started/build-guide.html).
 
 
 # 4 Join the Community
@@ -120,7 +120,7 @@ See [Build Parameters](https://gluten.apache.org/docs/getting-started/build-guid
 
 Gluten was initiated by Intel and Kyligence in 2022. Several companies are also actively participating in the development, such as BIGO, Meituan, Alibaba Cloud, NetEase, Baidu, Microsoft, etc. If you are interested in Gluten project, please contact and subscribe below mailing lists for further discussion.
 
-Please see [contact us](https://gluten.apache.org/contact/) for more information.
+Please see [contact us](/community/) for more information.
 
 ## Source Code
 
@@ -128,7 +128,7 @@ Please see [gluten source code](https://github.com/apache/incubator-gluten) for 
 
 ## How to Contribute to Gluten
 
-Please see [contributing guide](https://gluten.apache.org/contributing/) about how to make contributions.
+Please see [contributing guide](/contributing/) about how to make contributions.
 
 ## Wechat Group
 
