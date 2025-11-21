@@ -92,7 +92,8 @@ Apache Gluten 是一个面向数据处理加速的开源项目，致力于通过
 
 ## 🙌 加入我们
 
-无论你是开发者、架构师、数据平台工程师，还是开源爱好者，GlutenCon 都欢迎你的参与！
+无论你是开发者、架构师、数据平台工程师，还是开源爱好者，GlutenCon 都欢迎你的参与！报名链接：
+https://bytedance.us.larkoffice.com/share/base/form/shrusjMDU22LxnSXOYwT757eAxc
 
 让我们一起打造一个 **开放、专业、有温度** 的技术盛会！
 
