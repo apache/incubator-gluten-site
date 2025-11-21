@@ -28,9 +28,10 @@ Apache Gluten 是一个面向数据处理加速的开源项目，致力于通过
 ## 📝 报名
 
 🎟 **免费票**：包含午餐、茶歇、纪念品  
-📣 **报名方式**：扫描二维码报名入群
+📣 **报名方式**：https://bytedance.us.larkoffice.com/share/base/form/shrusjMDU22LxnSXOYwT757eAxc
+📣 **社群**：请扫描二维码加入群聊以便交流和接受最新资讯
 
-<img width="300" height="303" alt="image" src="https://github.com/user-attachments/assets/098a4554-1f5f-4640-b573-1bc94a134c25" />
+<img width="300" height="303" alt="image" src="https://github.com/user-attachments/assets/0f437566-07cb-4777-a083-f6d792df3202" />
 
 ---
 
@@ -92,8 +93,7 @@ Apache Gluten 是一个面向数据处理加速的开源项目，致力于通过
 
 ## 🙌 加入我们
 
-无论你是开发者、架构师、数据平台工程师，还是开源爱好者，GlutenCon 都欢迎你的参与！报名链接：
-https://bytedance.us.larkoffice.com/share/base/form/shrusjMDU22LxnSXOYwT757eAxc
+无论你是开发者、架构师、数据平台工程师，还是开源爱好者，GlutenCon 都欢迎你的参与！
 
 让我们一起打造一个 **开放、专业、有温度** 的技术盛会！
 
