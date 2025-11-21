@@ -1,7 +1,8 @@
 # 🎉 GlutenCon 2025 首届大会正式启动！
 
 欢迎来到 Apache Gluten 社区的年度盛会 —— **GlutenCon 2025**！
-<div align="center"><img width="400"  alt="image" src="https://github.com/user-attachments/assets/0dff7486-5f7b-4e0b-9465-30c04193a303" /></div>
+<div align="center"><img width="400"  alt="image" src="https://github.com/user-attachments/assets/c74da4a6-e735-409e-874a-c046293c652e"/>
+" /></div>
 
 📅 日期：2025 年 12 月 6 日（星期六）  
 🕘 时间：09:00 - 18:00  
