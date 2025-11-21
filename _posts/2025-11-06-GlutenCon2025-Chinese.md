@@ -2,7 +2,7 @@
 
 欢迎来到 Apache Gluten 社区的年度盛会 —— **GlutenCon 2025**！
 <div align="center">
-  <img width="400"  alt="image" src="https://github.com/user-attachments/assets/7b66afb2-0531-46bc-a0cf-c9bba323c708"/>
+  <img width="400"  alt="image" src="_posts/images/glutenCon2025.jpg"/>
 </div>
 
 📅 日期：2025 年 12 月 6 日（星期六）  
@@ -34,7 +34,7 @@ Apache Gluten 是一个面向数据处理加速的开源项目，致力于通过
 
 📣 **加入社群**：请扫描二维码加入群聊以便交流和接受最新资讯
 
-<img width="300" height="303" alt="image" src="https://github.com/user-attachments/assets/0f437566-07cb-4777-a083-f6d792df3202" />
+<img width="300" height="303" alt="image" src="_posts/images/Image_20251121110102_3292_28.jpg" />
 
 ---
 
