@@ -41,7 +41,7 @@ Apache Gluten 是一个面向数据处理加速的开源项目，致力于通过
 ## 🗣 演讲嘉宾
 
 - 来自前Intel的Apache Gluten 的创始成员团队
-- 来自字节跳动， BigO，腾讯，微软，小红书，华为，小米等公司的Spark 团队
+- 来自字节跳动， BIGO，腾讯，微软，小红书，华为，小米等公司的Spark 团队
 
 ---
 
@@ -224,9 +224,9 @@ Apache Gluten 是一个面向数据处理加速的开源项目，致力于通过
       <td> </td>
       <td>
         <details>
-          <summary><strong>张志彪</strong> BigO</summary>
+          <summary><strong>张志彪</strong> BIGO</summary>
           <img width="150"  alt="image" src="/assets/images/GlutenCon2025/张志彪.png"/><br>
-          前百度搜索架构师、現為Bigo大数据团队负责人
+          BIGO大数据团队负责人, Gluten PPMC.
           <br>
           <br>
           在 BIGO，支持涵盖直播、社交和游戏平台的数据分析，需要具备高性能、低成本且可大规模扩展的计算能力。为了克服原生 Apache Spark 的局限性——尤其是 JVM 开销和 CPU 利用率不佳的问题，我们率先采用了 Gluten 这一开源查询加速层，并以 ClickHouse 作为原生后端执行引擎。
