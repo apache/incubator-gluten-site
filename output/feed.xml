@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.3">Jekyll</generator><link href="https://gluten.apache.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://gluten.apache.org/" rel="alternate" type="text/html" /><updated>2025-11-24T08:03:55+00:00</updated><id>https://gluten.apache.org/feed.xml</id><title type="html">Apache Gluten incubating</title><subtitle>Gluten is a middle layer responsible for offloading JVM-based SQL engines' execution to native engines.</subtitle><entry><title type="html">Glutencon2025 Chinese</title><link href="https://gluten.apache.org/2025/11/06/GlutenCon2025-Chinese.html" rel="alternate" type="text/html" title="Glutencon2025 Chinese" /><published>2025-11-06T00:00:00+00:00</published><updated>2025-11-06T00:00:00+00:00</updated><id>https://gluten.apache.org/2025/11/06/GlutenCon2025-Chinese</id><content type="html" xml:base="https://gluten.apache.org/2025/11/06/GlutenCon2025-Chinese.html">&lt;h1 id=&quot;-glutencon-2025-首届大会正式启动&quot;&gt;🎉 GlutenCon 2025 首届大会正式启动！&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.3">Jekyll</generator><link href="https://gluten.apache.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://gluten.apache.org/" rel="alternate" type="text/html" /><updated>2025-11-24T08:13:13+00:00</updated><id>https://gluten.apache.org/feed.xml</id><title type="html">Apache Gluten incubating</title><subtitle>Gluten is a middle layer responsible for offloading JVM-based SQL engines' execution to native engines.</subtitle><entry><title type="html">Glutencon2025 Chinese</title><link href="https://gluten.apache.org/2025/11/06/GlutenCon2025-Chinese.html" rel="alternate" type="text/html" title="Glutencon2025 Chinese" /><published>2025-11-06T00:00:00+00:00</published><updated>2025-11-06T00:00:00+00:00</updated><id>https://gluten.apache.org/2025/11/06/GlutenCon2025-Chinese</id><content type="html" xml:base="https://gluten.apache.org/2025/11/06/GlutenCon2025-Chinese.html">&lt;h1 id=&quot;-glutencon-2025-首届大会正式启动&quot;&gt;🎉 GlutenCon 2025 首届大会正式启动！&lt;/h1&gt;
 
 &lt;p&gt;欢迎来到 Apache Gluten 社区的年度盛会 —— &lt;strong&gt;GlutenCon 2025&lt;/strong&gt;！&lt;/p&gt;
 &lt;div align=&quot;center&quot;&gt;
@@ -237,40 +237,48 @@
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td&gt;3:00 - 3:30&lt;/td&gt;
-      &lt;td&gt;&lt;b&gt;keynote：&lt;/b&gt;&amp;lt;/b&amp;gt;&lt;/td&gt;
+      &lt;td&gt;&lt;b&gt;间歇&lt;/b&gt;&amp;lt;/b&amp;gt;&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td&gt; &lt;/td&gt;
       &lt;td&gt;
-        &lt;details&gt;
-          &lt;summary&gt;&lt;strong&gt;杨宾伟 IBM 陈伟霆 MSFT&lt;/strong&gt;&lt;/summary&gt;
-          欢迎词
-        &lt;/details&gt;
       &lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td&gt;3:30 - 4:00&lt;/td&gt;
-      &lt;td&gt;&lt;b&gt;keynote：&lt;/b&gt;&amp;lt;/b&amp;gt;&lt;/td&gt;
+      &lt;td&gt;&lt;b&gt;小红书的Native Engine技术进展及生产实践&lt;/b&gt;&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td&gt; &lt;/td&gt;
       &lt;td&gt;
         &lt;details&gt;
-          &lt;summary&gt;&lt;strong&gt;杨宾伟 IBM 陈伟霆 MSFT&lt;/strong&gt;&lt;/summary&gt;
-          欢迎词
+          &lt;summary&gt;&lt;strong&gt;魏秀利&lt;/strong&gt; 小红书&lt;/summary&gt;
+          小红书 Native Engine 团队技术负责人
+          &lt;br /&gt;
+          &lt;br /&gt;
+          基于 Apache Gluten 与 Velox，小红书自研 Native Engine 在 Spark 之上构建了一套高性能计算引擎，通过向量化执行、执行计划优化与 IO 加速，大幅提升离线与近实时计算性能。在小红书的实际业务场景中，Native Engine 相比原生 Spark 实现了 1.45 倍性能提升，并帮助 AI 平台、搜索推荐、应用算法、离线数仓等核心业务整体计算成本降低 30% 以上。本分享将系统介绍小红书的Native Engine技术进展、关键优化实践及在大规模业务落地过程中的经验与挑战。
         &lt;/details&gt;
       &lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td&gt;4:00 - 4:30&lt;/td&gt;
-      &lt;td&gt;&lt;b&gt;keynote：&lt;/b&gt;&amp;lt;/b&amp;gt;&lt;/td&gt;
+      &lt;td&gt;&lt;b&gt;小米利用 Gluten 和 Velox 加速 Spark 的工程实践&lt;/b&gt;&amp;lt;/b&amp;gt;&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td&gt; &lt;/td&gt;
       &lt;td&gt;
         &lt;details&gt;
-          &lt;summary&gt;&lt;strong&gt;杨宾伟 IBM 陈伟霆 MSFT&lt;/strong&gt;&lt;/summary&gt;
-          欢迎词
+          &lt;summary&gt;&lt;strong&gt;梁咏元&lt;/strong&gt; 小米&lt;/summary&gt;
+          小米计算引擎研发工程师，专注于Spark生态组件的研发与优化，包括 Spark、Gluten + Velox 和Celeborn。目前聚焦于增量计算技术，致力于提升数据处理效率。
+          &lt;br /&gt;
+          &lt;br /&gt;
+本分享主要讲解 Gluten 和 Velox 技术栈在小米在生产环境中的实践经验，包括以下主要内容：
+          &lt;ol type=&quot;1&quot;&gt;
+            &lt;li&gt;小米选择采用 Gluten + Velox 的决策依据；&lt;/li&gt;
+            &lt;li&gt;生产过程中遇到的关键挑战及我们的解决方案；&lt;/li&gt;
+            &lt;li&gt;在性能和效率方面取得的可量化收益；&lt;/li&gt;
+            &lt;li&gt;未来的计划。&lt;/li&gt;
+          &lt;/ol&gt;
         &lt;/details&gt;
       &lt;/td&gt;
     &lt;/tr&gt;
