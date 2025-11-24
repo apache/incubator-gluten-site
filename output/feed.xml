@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.3">Jekyll</generator><link href="https://gluten.apache.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://gluten.apache.org/" rel="alternate" type="text/html" /><updated>2025-11-24T15:41:43+00:00</updated><id>https://gluten.apache.org/feed.xml</id><title type="html">Apache Gluten incubating</title><subtitle>Gluten is a middle layer responsible for offloading JVM-based SQL engines' execution to native engines.</subtitle><entry><title type="html">Glutencon2025 Chinese</title><link href="https://gluten.apache.org/2025/11/06/GlutenCon2025-Chinese.html" rel="alternate" type="text/html" title="Glutencon2025 Chinese" /><published>2025-11-06T00:00:00+00:00</published><updated>2025-11-06T00:00:00+00:00</updated><id>https://gluten.apache.org/2025/11/06/GlutenCon2025-Chinese</id><content type="html" xml:base="https://gluten.apache.org/2025/11/06/GlutenCon2025-Chinese.html">&lt;h1 id=&quot;-glutencon-2025-首届大会正式启动&quot;&gt;🎉 GlutenCon 2025 首届大会正式启动！&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.3">Jekyll</generator><link href="https://gluten.apache.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://gluten.apache.org/" rel="alternate" type="text/html" /><updated>2025-11-24T15:43:47+00:00</updated><id>https://gluten.apache.org/feed.xml</id><title type="html">Apache Gluten incubating</title><subtitle>Gluten is a middle layer responsible for offloading JVM-based SQL engines' execution to native engines.</subtitle><entry><title type="html">Glutencon2025 Chinese</title><link href="https://gluten.apache.org/2025/11/06/GlutenCon2025-Chinese.html" rel="alternate" type="text/html" title="Glutencon2025 Chinese" /><published>2025-11-06T00:00:00+00:00</published><updated>2025-11-06T00:00:00+00:00</updated><id>https://gluten.apache.org/2025/11/06/GlutenCon2025-Chinese</id><content type="html" xml:base="https://gluten.apache.org/2025/11/06/GlutenCon2025-Chinese.html">&lt;h1 id=&quot;-glutencon-2025-首届大会正式启动&quot;&gt;🎉 GlutenCon 2025 首届大会正式启动！&lt;/h1&gt;
 
 &lt;p&gt;欢迎来到 Apache Gluten 社区的年度盛会 —— &lt;strong&gt;GlutenCon 2025&lt;/strong&gt;！&lt;/p&gt;
 &lt;div align=&quot;center&quot;&gt;
@@ -181,8 +181,12 @@
       &lt;td&gt; &lt;/td&gt;
       &lt;td&gt;
         &lt;details&gt;
-          &lt;summary&gt;&lt;strong&gt;华为&lt;/strong&gt; 华为&lt;/summary&gt;
-          华为
+          &lt;summary&gt;&lt;strong&gt;冯骁&lt;/strong&gt; 华为&lt;/summary&gt;
+          &lt;img width=&quot;150&quot; alt=&quot;image&quot; src=&quot;/assets/images/GlutenCon2025/冯骁.jpg&quot; /&gt;&lt;br /&gt;
+          冯骁现任华为公司大数据系统研究专家，专注于基于鲲鹏平台的大数据系统性能调优与创新研究。在加入华为之前，他已在大规模分布式系统领域深耕十余年，曾参与阿里巴巴大数据计算平台MaxCompute的核心研发工作。此外，在字节跳动任职期间，他还主导或参与了多个大数据分析系统的研发与优化项目。
+          &lt;br /&gt;
+          &lt;br /&gt;
+          华为鲲鹏自2020年起投入基于Arm架构的Native大数据引擎研发，在ARM平台性能优化方面积累了扎实经验。我们期望基于鲲鹏在大数据引擎中的原子能力与优化技术，与字节跳动开源的Bolt引擎展开深度合作，共同增强Bolt在ARM生态下的功能与性能表现。
         &lt;/details&gt;
       &lt;/td&gt;
     &lt;/tr&gt;
