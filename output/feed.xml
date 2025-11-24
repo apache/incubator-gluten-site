@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.3">Jekyll</generator><link href="https://gluten.apache.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://gluten.apache.org/" rel="alternate" type="text/html" /><updated>2025-11-24T08:17:35+00:00</updated><id>https://gluten.apache.org/feed.xml</id><title type="html">Apache Gluten incubating</title><subtitle>Gluten is a middle layer responsible for offloading JVM-based SQL engines' execution to native engines.</subtitle><entry><title type="html">Glutencon2025 Chinese</title><link href="https://gluten.apache.org/2025/11/06/GlutenCon2025-Chinese.html" rel="alternate" type="text/html" title="Glutencon2025 Chinese" /><published>2025-11-06T00:00:00+00:00</published><updated>2025-11-06T00:00:00+00:00</updated><id>https://gluten.apache.org/2025/11/06/GlutenCon2025-Chinese</id><content type="html" xml:base="https://gluten.apache.org/2025/11/06/GlutenCon2025-Chinese.html">&lt;h1 id=&quot;-glutencon-2025-首届大会正式启动&quot;&gt;🎉 GlutenCon 2025 首届大会正式启动！&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.3">Jekyll</generator><link href="https://gluten.apache.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://gluten.apache.org/" rel="alternate" type="text/html" /><updated>2025-11-24T08:23:47+00:00</updated><id>https://gluten.apache.org/feed.xml</id><title type="html">Apache Gluten incubating</title><subtitle>Gluten is a middle layer responsible for offloading JVM-based SQL engines' execution to native engines.</subtitle><entry><title type="html">Glutencon2025 Chinese</title><link href="https://gluten.apache.org/2025/11/06/GlutenCon2025-Chinese.html" rel="alternate" type="text/html" title="Glutencon2025 Chinese" /><published>2025-11-06T00:00:00+00:00</published><updated>2025-11-06T00:00:00+00:00</updated><id>https://gluten.apache.org/2025/11/06/GlutenCon2025-Chinese</id><content type="html" xml:base="https://gluten.apache.org/2025/11/06/GlutenCon2025-Chinese.html">&lt;h1 id=&quot;-glutencon-2025-首届大会正式启动&quot;&gt;🎉 GlutenCon 2025 首届大会正式启动！&lt;/h1&gt;
 
 &lt;p&gt;欢迎来到 Apache Gluten 社区的年度盛会 —— &lt;strong&gt;GlutenCon 2025&lt;/strong&gt;！&lt;/p&gt;
 &lt;div align=&quot;center&quot;&gt;
@@ -92,6 +92,7 @@
       &lt;td&gt;
         &lt;details&gt;
           &lt;summary&gt;&lt;strong&gt;Frank Hu &lt;/strong&gt;字节跳动&lt;/summary&gt;
+          &lt;img width=&quot;150&quot; alt=&quot;image&quot; src=&quot;/assets/images/GlutenCon2025/Frank.jpg&quot; /&gt;&lt;br /&gt;
           字节跳动引擎加速团队负责人
           &lt;br /&gt;
           &lt;br /&gt;
@@ -151,6 +152,7 @@
       &lt;td&gt;
         &lt;details&gt;
           &lt;summary&gt;&lt;strong&gt;靳成成 &lt;/strong&gt; IBM&lt;/summary&gt;
+          &lt;img width=&quot;150&quot; alt=&quot;image&quot; src=&quot;/assets/images/GlutenCon2025/chengcheng.png&quot; /&gt;&lt;br /&gt;
           IBM高级软件研发工程师，Gluten PPMC, Velox maintainer, focus on shuffle, GPU optimization，datalake iceberg native implementation.
           &lt;br /&gt;
           &lt;br /&gt;
@@ -189,6 +191,7 @@
       &lt;td&gt;
         &lt;details&gt;
           &lt;summary&gt;&lt;strong&gt;栾学东&lt;/strong&gt; 腾讯&lt;/summary&gt;
+          &lt;img width=&quot;150&quot; alt=&quot;image&quot; src=&quot;/assets/images/GlutenCon2025/栾学东.png&quot; /&gt;&lt;br /&gt;
           腾讯云大数据基础产品中心专家工程师，专注于分布式计算引擎系统研发
           &lt;br /&gt;
           &lt;br /&gt;
@@ -205,6 +208,7 @@
       &lt;td&gt;
         &lt;details&gt;
           &lt;summary&gt;&lt;strong&gt;张宏泽&lt;/strong&gt; IBM&lt;/summary&gt;
+          &lt;img width=&quot;150&quot; alt=&quot;image&quot; src=&quot;/assets/images/GlutenCon2025/hongze.png&quot; /&gt;&lt;br /&gt;
           IBM 高级软件研发工程师, Apache Gluten PPMC member, Apache Calcite committer. Currently working on Gluten's memory management and Gluten + Delta Lake integration.
           &lt;br /&gt;
           &lt;br /&gt;
@@ -221,6 +225,7 @@
       &lt;td&gt;
         &lt;details&gt;
           &lt;summary&gt;&lt;strong&gt;张志彪&lt;/strong&gt; BigO&lt;/summary&gt;
+          &lt;img width=&quot;150&quot; alt=&quot;image&quot; src=&quot;/assets/images/GlutenCon2025/张志彪.png&quot; /&gt;&lt;br /&gt;
           前百度搜索架构师、現為Bigo大数据团队负责人
           &lt;br /&gt;
           &lt;br /&gt;
@@ -253,6 +258,7 @@
       &lt;td&gt;
         &lt;details&gt;
           &lt;summary&gt;&lt;strong&gt;魏秀利&lt;/strong&gt; 小红书&lt;/summary&gt;
+          &lt;img width=&quot;150&quot; alt=&quot;image&quot; src=&quot;/assets/images/GlutenCon2025/魏秀利.png&quot; /&gt;&lt;br /&gt;
           小红书 Native Engine 团队技术负责人
           &lt;br /&gt;
           &lt;br /&gt;
@@ -269,6 +275,7 @@
       &lt;td&gt;
         &lt;details&gt;
           &lt;summary&gt;&lt;strong&gt;梁咏元&lt;/strong&gt; 小米&lt;/summary&gt;
+          &lt;img width=&quot;150&quot; alt=&quot;image&quot; src=&quot;/assets/images/GlutenCon2025/梁咏元.png&quot; /&gt;&lt;br /&gt;
           小米计算引擎研发工程师，专注于Spark生态组件的研发与优化，包括 Spark、Gluten + Velox 和Celeborn。目前聚焦于增量计算技术，致力于提升数据处理效率。
           &lt;br /&gt;
           &lt;br /&gt;
