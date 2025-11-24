@@ -103,6 +103,9 @@ Apache Gluten 是一个面向数据处理加速的开源项目，致力于通过
       <td>
         <details>
           <summary><strong>Ethan Zhang </strong>IBM</summary>
+          <img width="150"  alt="image" src="/assets/images/GlutenCon2025/Ethan.png"/><br>
+          IBM 项目总监， 开源数据湖引擎负责人
+          <br>
           介绍Apache Gluten在IBM团队一年以来的进展，目前的工作，2026年的规划以及长久发展规划
         </details>
       </td>
@@ -132,8 +135,12 @@ Apache Gluten 是一个面向数据处理加速的开源项目，致力于通过
       <td> </td>
       <td>
         <details>
-          <summary><strong>王广新 </strong>字节跳动</summary>
-          字节
+          <summary><strong>王刚 </strong>字节跳动</summary>
+          <img width="150"  alt="image" src="/assets/images/GlutenCon2025/王刚.png"/><br>
+          字节跳动软件工程师，gluten commiter
+          <br>
+          <br>
+          本次演讲中，我们将介绍字节跳动利用Apache Gluten和加速引擎Bolt, 在Spark应用场景中显著降低计算成本的生产实践经验，面临的挑战以及解决方案。
         </details>
       </td>
     </tr>
