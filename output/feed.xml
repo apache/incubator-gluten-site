@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.3">Jekyll</generator><link href="https://gluten.apache.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://gluten.apache.org/" rel="alternate" type="text/html" /><updated>2025-11-24T07:29:47+00:00</updated><id>https://gluten.apache.org/feed.xml</id><title type="html">Apache Gluten incubating</title><subtitle>Gluten is a middle layer responsible for offloading JVM-based SQL engines' execution to native engines.</subtitle><entry><title type="html">Glutencon2025 Chinese</title><link href="https://gluten.apache.org/2025/11/06/GlutenCon2025-Chinese.html" rel="alternate" type="text/html" title="Glutencon2025 Chinese" /><published>2025-11-06T00:00:00+00:00</published><updated>2025-11-06T00:00:00+00:00</updated><id>https://gluten.apache.org/2025/11/06/GlutenCon2025-Chinese</id><content type="html" xml:base="https://gluten.apache.org/2025/11/06/GlutenCon2025-Chinese.html">&lt;h1 id=&quot;-glutencon-2025-首届大会正式启动&quot;&gt;🎉 GlutenCon 2025 首届大会正式启动！&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.3">Jekyll</generator><link href="https://gluten.apache.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://gluten.apache.org/" rel="alternate" type="text/html" /><updated>2025-11-24T07:50:25+00:00</updated><id>https://gluten.apache.org/feed.xml</id><title type="html">Apache Gluten incubating</title><subtitle>Gluten is a middle layer responsible for offloading JVM-based SQL engines' execution to native engines.</subtitle><entry><title type="html">Glutencon2025 Chinese</title><link href="https://gluten.apache.org/2025/11/06/GlutenCon2025-Chinese.html" rel="alternate" type="text/html" title="Glutencon2025 Chinese" /><published>2025-11-06T00:00:00+00:00</published><updated>2025-11-06T00:00:00+00:00</updated><id>https://gluten.apache.org/2025/11/06/GlutenCon2025-Chinese</id><content type="html" xml:base="https://gluten.apache.org/2025/11/06/GlutenCon2025-Chinese.html">&lt;h1 id=&quot;-glutencon-2025-首届大会正式启动&quot;&gt;🎉 GlutenCon 2025 首届大会正式启动！&lt;/h1&gt;
 
 &lt;p&gt;欢迎来到 Apache Gluten 社区的年度盛会 —— &lt;strong&gt;GlutenCon 2025&lt;/strong&gt;！&lt;/p&gt;
 &lt;div align=&quot;center&quot;&gt;
@@ -64,16 +64,11 @@
   &lt;tbody&gt;
     &lt;tr&gt;
       &lt;td&gt;08:00 - 9:20&lt;/td&gt;
-      &lt;td&gt;前台&lt;/td&gt;
+      &lt;td&gt;签到&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td&gt;&lt;/td&gt;
-      &lt;td&gt;
-        &lt;details&gt;
-          &lt;summary&gt;&lt;strong&gt;签到&lt;/strong&gt;&lt;/summary&gt;
-          携带手机收到的注册短信
-        &lt;/details&gt;
-      &lt;/td&gt;
+      &lt;td&gt;&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td&gt;9:20 - 9:30&lt;/td&gt;
@@ -83,44 +78,49 @@
       &lt;td&gt;&lt;/td&gt;
       &lt;td&gt;
         &lt;details&gt;
-          &lt;summary&gt;&lt;strong&gt;杨宾伟 IBM 陈伟霆 MSFT&lt;/strong&gt;&lt;/summary&gt;
+          &lt;summary&gt;&lt;strong&gt;杨宾伟&lt;/strong&gt; IBM &lt;strong&gt;陈伟霆&lt;/strong&gt; MSFT&lt;/summary&gt;
           欢迎词
         &lt;/details&gt;
       &lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td&gt;9:30 - 10:00&lt;/td&gt;
-      &lt;td&gt;&lt;b&gt;keynote：&lt;/b&gt;&amp;lt;/b&amp;gt;&lt;/td&gt;
+      &lt;td&gt;keynote：&lt;b&gt; Bolt: 面向多引擎的生产级异构加速库&lt;/b&gt;&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td&gt; &lt;/td&gt;
       &lt;td&gt;
         &lt;details&gt;
           &lt;summary&gt;&lt;strong&gt;Frank Hu 字节跳动&lt;/strong&gt;&lt;/summary&gt;
+          字节跳动引擎加速团队负责人
+          &lt;br /&gt;
+          &lt;br /&gt;
         &lt;/details&gt;
       &lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td&gt;10:00 - 10:20&lt;/td&gt;
-      &lt;td&gt;&lt;b&gt;keynote：&lt;/b&gt;&amp;lt;/b&amp;gt;&lt;/td&gt;
+      &lt;td&gt;keynote：&lt;b&gt;Apache Gluten 在IBM的现状和发展&lt;/b&gt;&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td&gt; &lt;/td&gt;
       &lt;td&gt;
         &lt;details&gt;
           &lt;summary&gt;&lt;strong&gt;Ethan Zhang IBM&lt;/strong&gt;&lt;/summary&gt;
+          介绍Apache Gluten在IBM团队一年以来的进展，目前的工作，2026年的规划以及长久发展规划
         &lt;/details&gt;
       &lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td&gt;10:30 - 11:00&lt;/td&gt;
-      &lt;td&gt;&lt;b&gt;Apache Gluten现在和未来&lt;/b&gt;&amp;lt;/b&amp;gt;&lt;/td&gt;
+      &lt;td&gt;&lt;b&gt;Apache Gluten现在和未来&lt;/b&gt;&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td&gt; &lt;/td&gt;
       &lt;td&gt;
         &lt;details&gt;
           &lt;summary&gt;&lt;strong&gt;陈伟霆 MSFT&lt;/strong&gt;&lt;/summary&gt;
+          &lt;img width=&quot;150&quot; alt=&quot;image&quot; src=&quot;/assets/images/GlutenCon2025/Weiting.png&quot; /&gt;&lt;br /&gt;
           微软首席软件工程经理，Apache Gluten PMC 成员，长期积极参与开源社区并协助客户落地 Gluten 解决方案，推动高性能数据处理与技术创新，致力于帮助工程团队与社区共同成长。
           &lt;br /&gt;
           &lt;br /&gt;
@@ -130,41 +130,40 @@
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td&gt;11:00 - 11:30&lt;/td&gt;
-      &lt;td&gt;&lt;b&gt;Apache Gluten的現況及未來&lt;/b&gt;&amp;lt;/b&amp;gt;&lt;/td&gt;
+      &lt;td&gt;&lt;b&gt;Apache Gluten在字节跳动的落地实践&lt;/b&gt;&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td&gt; &lt;/td&gt;
       &lt;td&gt;
         &lt;details&gt;
-          &lt;summary&gt;&lt;strong&gt;陈伟霆 MSFT&lt;/strong&gt;&lt;/summary&gt;
-          欢迎词
+          &lt;summary&gt;&lt;strong&gt;王广新 字节跳动&lt;/strong&gt;&lt;/summary&gt;
+          字节
         &lt;/details&gt;
       &lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td&gt;11:30 - 12:00&lt;/td&gt;
-      &lt;td&gt;&lt;b&gt;keynote：&lt;/b&gt;&amp;lt;/b&amp;gt;&lt;/td&gt;
+      &lt;td&gt;&lt;b&gt;GPU加速在Gluten中的应用&lt;/b&gt;&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td&gt; &lt;/td&gt;
       &lt;td&gt;
         &lt;details&gt;
-          &lt;summary&gt;&lt;strong&gt;杨宾伟 IBM 陈伟霆 MSFT&lt;/strong&gt;&lt;/summary&gt;
-          欢迎词
+          &lt;summary&gt;&lt;strong&gt;靳成成 IBM&lt;/strong&gt;&lt;/summary&gt;
+          IBM高级软件研发工程师，Gluten PPMC, Velox maintainer, focus on shuffle, GPU optimization，datalake iceberg native implementation.
+          &lt;br /&gt;
+          &lt;br /&gt;
+          Gluten + Velox GPU优化， 在Velox中实现其算子，调用rapids libcudf API，cudf封装了CUDA。根据plan特征和代价判断其是否调度到GPU, 在用户实际场景，table scan往往取决于远程存储的吞吐量，难以获得较大的性能提升，而第二个计算密集型的stage可以取得极大的性能提升，在速度和成本上均有优势，以TPCDS Q95 SF100为例，相比cpu native执行，第2个stage将时间从70s降低到13s，提升了5倍。本次分享将详细讲述当前进度，实现方案和未来蓝图。
         &lt;/details&gt;
       &lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td&gt;12:00 - 1:00&lt;/td&gt;
-      &lt;td&gt;&lt;b&gt;午饭&lt;/b&gt;&amp;lt;/b&amp;gt;&lt;/td&gt;
+      &lt;td&gt;&lt;b&gt;午饭&lt;/b&gt;&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td&gt; &lt;/td&gt;
       &lt;td&gt;
-        &lt;details&gt;
-          &lt;summary&gt;&lt;strong&gt;杨宾伟 IBM 陈伟霆 MSFT&lt;/strong&gt;&lt;/summary&gt;
-          欢迎词
-        &lt;/details&gt;
       &lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
