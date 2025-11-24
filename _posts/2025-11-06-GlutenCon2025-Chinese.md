@@ -86,6 +86,7 @@ Apache Gluten 是一个面向数据处理加速的开源项目，致力于通过
       <td>
         <details>
           <summary><strong>Frank Hu </strong>字节跳动</summary>
+          <img width="150"  alt="image" src="/assets/images/GlutenCon2025/Frank.jpg"/><br>
           字节跳动引擎加速团队负责人
           <br>
           <br>
@@ -145,6 +146,7 @@ Apache Gluten 是一个面向数据处理加速的开源项目，致力于通过
       <td>
         <details>
           <summary><strong>靳成成 </strong> IBM</summary>
+          <img width="150"  alt="image" src="/assets/images/GlutenCon2025/chengcheng.png"/><br>
           IBM高级软件研发工程师，Gluten PPMC, Velox maintainer, focus on shuffle, GPU optimization，datalake iceberg native implementation.
           <br>
           <br>
@@ -183,6 +185,7 @@ Apache Gluten 是一个面向数据处理加速的开源项目，致力于通过
       <td>
         <details>
           <summary><strong>栾学东</strong> 腾讯</summary>
+          <img width="150"  alt="image" src="/assets/images/GlutenCon2025/栾学东.png"/><br>
           腾讯云大数据基础产品中心专家工程师，专注于分布式计算引擎系统研发
           <br>
           <br>
@@ -199,6 +202,7 @@ Apache Gluten 是一个面向数据处理加速的开源项目，致力于通过
       <td>
         <details>
           <summary><strong>张宏泽</strong> IBM</summary>
+          <img width="150"  alt="image" src="/assets/images/GlutenCon2025/hongze.png"/><br>
           IBM 高级软件研发工程师, Apache Gluten PPMC member, Apache Calcite committer. Currently working on Gluten's memory management and Gluten + Delta Lake integration.
           <br>
           <br>
@@ -215,6 +219,7 @@ Apache Gluten 是一个面向数据处理加速的开源项目，致力于通过
       <td>
         <details>
           <summary><strong>张志彪</strong> BigO</summary>
+          <img width="150"  alt="image" src="/assets/images/GlutenCon2025/张志彪.png"/><br>
           前百度搜索架构师、現為Bigo大数据团队负责人
           <br>
           <br>
@@ -247,6 +252,7 @@ Apache Gluten 是一个面向数据处理加速的开源项目，致力于通过
       <td>
         <details>
           <summary><strong>魏秀利</strong> 小红书</summary>
+          <img width="150"  alt="image" src="/assets/images/GlutenCon2025/魏秀利.png"/><br>
           小红书 Native Engine 团队技术负责人
           <br>
           <br>
@@ -263,6 +269,7 @@ Apache Gluten 是一个面向数据处理加速的开源项目，致力于通过
       <td>
         <details>
           <summary><strong>梁咏元</strong> 小米</summary>
+          <img width="150"  alt="image" src="/assets/images/GlutenCon2025/梁咏元.png"/><br>
           小米计算引擎研发工程师，专注于Spark生态组件的研发与优化，包括 Spark、Gluten + Velox 和Celeborn。目前聚焦于增量计算技术，致力于提升数据处理效率。
           <br>
           <br>
