@@ -108,22 +108,29 @@ Apache Gluten 是一个面向数据处理加速的开源项目，致力于通过
     </tr>
     <tr>
       <td>10:30 - 11:00</td>
-      <td><b>break</b></b></td>
-    </tr>
-    <tr>
-      <td> </td>
-      <td>
-      </td>
-    </tr>
-    <tr>
-      <td>11:00 - 11:30</td>
-      <td><b>keynote：</b></b></td>
+      <td><b>Apache Gluten现在和未来</b></b></td>
     </tr>
     <tr>
       <td> </td>
       <td>
         <details>
-          <summary><strong>杨宾伟 IBM 陈伟霆 MSFT</strong></summary>
+          <summary><strong>陈伟霆 MSFT</strong></summary>
+          微软首席软件工程经理，Apache Gluten PMC 成员，长期积极参与开源社区并协助客户落地 Gluten 解决方案，推动高性能数据处理与技术创新，致力于帮助工程团队与社区共同成长。
+          <br>
+          <br>
+          Apache Gluten 是一个专注于提升 Spark SQL 在多种计算引擎上性能的开源社区项目，旨在通过原生集成与优化，让大规模数据处理更快、更高效。本次分享将带来 Gluten 社区的最新现状，包括项目运营策略、目前已支持的功能，以及未来的技术路线图。我们将深入探讨近期的关键进展、面临的挑战与解决方案，让参与者能够全面了解 Gluten 的发展方向，并思考如何在自己的工作场景中加以应用。
+        </details>
+      </td>
+    </tr>
+    <tr>
+      <td>11:00 - 11:30</td>
+      <td><b>Apache Gluten的現況及未來</b></b></td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>
+        <details>
+          <summary><strong>陈伟霆 MSFT</strong></summary>
           欢迎词
         </details>
       </td>
