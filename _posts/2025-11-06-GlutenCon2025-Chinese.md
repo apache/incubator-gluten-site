@@ -231,40 +231,48 @@ Apache Gluten 是一个面向数据处理加速的开源项目，致力于通过
     </tr>
     <tr>
       <td>3:00 - 3:30</td>
-      <td><b>keynote：</b></b></td>
+      <td><b>间歇</b></b></td>
     </tr>
     <tr>
       <td> </td>
       <td>
-        <details>
-          <summary><strong>杨宾伟 IBM 陈伟霆 MSFT</strong></summary>
-          欢迎词
-        </details>
       </td>
     </tr>
     <tr>
       <td>3:30 - 4:00</td>
-      <td><b>keynote：</b></b></td>
+      <td><b>小红书的Native Engine技术进展及生产实践</b></td>
     </tr>
     <tr>
       <td> </td>
       <td>
         <details>
-          <summary><strong>杨宾伟 IBM 陈伟霆 MSFT</strong></summary>
-          欢迎词
+          <summary><strong>魏秀利</strong> 小红书</summary>
+          小红书 Native Engine 团队技术负责人
+          <br>
+          <br>
+          基于 Apache Gluten 与 Velox，小红书自研 Native Engine 在 Spark 之上构建了一套高性能计算引擎，通过向量化执行、执行计划优化与 IO 加速，大幅提升离线与近实时计算性能。在小红书的实际业务场景中，Native Engine 相比原生 Spark 实现了 1.45 倍性能提升，并帮助 AI 平台、搜索推荐、应用算法、离线数仓等核心业务整体计算成本降低 30% 以上。本分享将系统介绍小红书的Native Engine技术进展、关键优化实践及在大规模业务落地过程中的经验与挑战。
         </details>
       </td>
     </tr>
     <tr>
       <td>4:00 - 4:30</td>
-      <td><b>keynote：</b></b></td>
+      <td><b>小米利用 Gluten 和 Velox 加速 Spark 的工程实践</b></b></td>
     </tr>
     <tr>
       <td> </td>
       <td>
         <details>
-          <summary><strong>杨宾伟 IBM 陈伟霆 MSFT</strong></summary>
-          欢迎词
+          <summary><strong>梁咏元</strong> 小米</summary>
+          小米计算引擎研发工程师，专注于Spark生态组件的研发与优化，包括 Spark、Gluten + Velox 和Celeborn。目前聚焦于增量计算技术，致力于提升数据处理效率。
+          <br>
+          <br>
+本分享主要讲解 Gluten 和 Velox 技术栈在小米在生产环境中的实践经验，包括以下主要内容：
+          <ol type="1">
+            <li>小米选择采用 Gluten + Velox 的决策依据；</li>
+            <li>生产过程中遇到的关键挑战及我们的解决方案；</li>
+            <li>在性能和效率方面取得的可量化收益；</li>
+            <li>未来的计划。</li>
+          </ol>
         </details>
       </td>
     </tr>
