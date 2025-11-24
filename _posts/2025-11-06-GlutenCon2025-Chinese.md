@@ -118,7 +118,7 @@ Apache Gluten 是一个面向数据处理加速的开源项目，致力于通过
       <td> </td>
       <td>
         <details>
-          <summary><strong>陈伟霆 MSFT</strong></summary>
+          <summary><strong>陈韦廷</strong> 微软</summary>
           <img width="150"  alt="image" src="/assets/images/GlutenCon2025/Weiting.png"/><br>
           微软首席软件工程经理，Apache Gluten PMC 成员，长期积极参与开源社区并协助客户落地 Gluten 解决方案，推动高性能数据处理与技术创新，致力于帮助工程团队与社区共同成长。
           <br>
@@ -219,7 +219,7 @@ Apache Gluten 是一个面向数据处理加速的开源项目，致力于通过
     </tr>
     <tr>
       <td>2:30 - 3:00</td>
-      <td><b>Gluten Development and Adoption at BIGO</b></td>
+      <td><b>Gluten在BIGO的开发和应用</b></td>
     </tr>
     <tr>
       <td> </td>
