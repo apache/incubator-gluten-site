@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.3">Jekyll</generator><link href="https://gluten.apache.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://gluten.apache.org/" rel="alternate" type="text/html" /><updated>2025-11-24T08:57:59+00:00</updated><id>https://gluten.apache.org/feed.xml</id><title type="html">Apache Gluten incubating</title><subtitle>Gluten is a middle layer responsible for offloading JVM-based SQL engines' execution to native engines.</subtitle><entry><title type="html">Glutencon2025 Chinese</title><link href="https://gluten.apache.org/2025/11/06/GlutenCon2025-Chinese.html" rel="alternate" type="text/html" title="Glutencon2025 Chinese" /><published>2025-11-06T00:00:00+00:00</published><updated>2025-11-06T00:00:00+00:00</updated><id>https://gluten.apache.org/2025/11/06/GlutenCon2025-Chinese</id><content type="html" xml:base="https://gluten.apache.org/2025/11/06/GlutenCon2025-Chinese.html">&lt;h1 id=&quot;-glutencon-2025-首届大会正式启动&quot;&gt;🎉 GlutenCon 2025 首届大会正式启动！&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.3">Jekyll</generator><link href="https://gluten.apache.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://gluten.apache.org/" rel="alternate" type="text/html" /><updated>2025-11-24T14:03:08+00:00</updated><id>https://gluten.apache.org/feed.xml</id><title type="html">Apache Gluten incubating</title><subtitle>Gluten is a middle layer responsible for offloading JVM-based SQL engines' execution to native engines.</subtitle><entry><title type="html">Glutencon2025 Chinese</title><link href="https://gluten.apache.org/2025/11/06/GlutenCon2025-Chinese.html" rel="alternate" type="text/html" title="Glutencon2025 Chinese" /><published>2025-11-06T00:00:00+00:00</published><updated>2025-11-06T00:00:00+00:00</updated><id>https://gluten.apache.org/2025/11/06/GlutenCon2025-Chinese</id><content type="html" xml:base="https://gluten.apache.org/2025/11/06/GlutenCon2025-Chinese.html">&lt;h1 id=&quot;-glutencon-2025-首届大会正式启动&quot;&gt;🎉 GlutenCon 2025 首届大会正式启动！&lt;/h1&gt;
 
 &lt;p&gt;欢迎来到 Apache Gluten 社区的年度盛会 —— &lt;strong&gt;GlutenCon 2025&lt;/strong&gt;！&lt;/p&gt;
 &lt;div align=&quot;center&quot;&gt;
@@ -44,7 +44,7 @@
 
 &lt;ul&gt;
   &lt;li&gt;来自前Intel的Apache Gluten 的创始成员团队&lt;/li&gt;
-  &lt;li&gt;来自字节跳动， BigO，腾讯，微软，小红书，华为，小米等公司的Spark 团队&lt;/li&gt;
+  &lt;li&gt;来自字节跳动， BIGO，腾讯，微软，小红书，华为，小米等公司的Spark 团队&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;hr /&gt;
@@ -228,9 +228,9 @@
       &lt;td&gt; &lt;/td&gt;
       &lt;td&gt;
         &lt;details&gt;
-          &lt;summary&gt;&lt;strong&gt;张志彪&lt;/strong&gt; BigO&lt;/summary&gt;
+          &lt;summary&gt;&lt;strong&gt;张志彪&lt;/strong&gt; BIGO&lt;/summary&gt;
           &lt;img width=&quot;150&quot; alt=&quot;image&quot; src=&quot;/assets/images/GlutenCon2025/张志彪.png&quot; /&gt;&lt;br /&gt;
-          前百度搜索架构师、現為Bigo大数据团队负责人
+          BIGO大数据团队负责人, Gluten PPMC.
           &lt;br /&gt;
           &lt;br /&gt;
           在 BIGO，支持涵盖直播、社交和游戏平台的数据分析，需要具备高性能、低成本且可大规模扩展的计算能力。为了克服原生 Apache Spark 的局限性——尤其是 JVM 开销和 CPU 利用率不佳的问题，我们率先采用了 Gluten 这一开源查询加速层，并以 ClickHouse 作为原生后端执行引擎。
