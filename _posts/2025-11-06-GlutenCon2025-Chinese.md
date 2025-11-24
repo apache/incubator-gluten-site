@@ -57,38 +57,202 @@ Apache Gluten 是一个面向数据处理加速的开源项目，致力于通过
   </thead>
   <tbody>
     <tr>
-      <td>09:00 - 9:30</td>
-      <td>Room A</td>
+      <td>08:00 - 9:20</td>
+      <td>前台</td>
     </tr>
     <tr>
       <td></td>
       <td>
         <details>
-          <summary><strong>Opening Keynote: 字节跳动</strong></summary>
-          字节跳动
+          <summary><strong>签到</strong></summary>
+          携带手机收到的注册短信
         </details>
       </td>
     </tr>
     <tr>
-      <td>9:30 - 9:50</td>
-      <td>Room A</td>
+      <td>9:20 - 9:30</td>
+      <td>欢迎辞</td>
     </tr>
     <tr>
       <td></td>
       <td>
         <details>
-          <summary><strong>Keynote：IBM</strong></summary>
-          IBM。
+          <summary><strong>杨宾伟 IBM 陈伟霆 MSFT</strong></summary>
+          欢迎词
         </details>
       </td>
     </tr>
     <tr>
-      <td>9:50 - 10:00</td>
-      <td><b>Break</b></td>
+      <td>9:30 - 10:00</td>
+      <td><b>keynote：</b></b></td>
     </tr>
     <tr>
       <td> </td>
+      <td>
+        <details>
+          <summary><strong>Frank Hu 字节跳动</strong></summary>
+        </details>
+      </td>
+    </tr>
+    <tr>
+      <td>10:00 - 10:20</td>
+      <td><b>keynote：</b></b></td>
+    </tr>
+    <tr>
       <td> </td>
+      <td>
+        <details>
+          <summary><strong>Ethan Zhang IBM</strong></summary>
+        </details>
+      </td>
+    </tr>
+    <tr>
+      <td>10:30 - 11:00</td>
+      <td><b>break</b></b></td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>
+      </td>
+    </tr>
+    <tr>
+      <td>11:00 - 11:30</td>
+      <td><b>keynote：</b></b></td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>
+        <details>
+          <summary><strong>杨宾伟 IBM 陈伟霆 MSFT</strong></summary>
+          欢迎词
+        </details>
+      </td>
+    </tr>
+    <tr>
+      <td>11:30 - 12:00</td>
+      <td><b>keynote：</b></b></td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>
+        <details>
+          <summary><strong>杨宾伟 IBM 陈伟霆 MSFT</strong></summary>
+          欢迎词
+        </details>
+      </td>
+    </tr>
+    <tr>
+      <td>12:00 - 1:00</td>
+      <td><b>午饭</b></b></td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>
+        <details>
+          <summary><strong>杨宾伟 IBM 陈伟霆 MSFT</strong></summary>
+          欢迎词
+        </details>
+      </td>
+    </tr>
+    <tr>
+      <td>1:00 - 1:30</td>
+      <td><b>keynote：</b></b></td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>
+        <details>
+          <summary><strong>杨宾伟 IBM 陈伟霆 MSFT</strong></summary>
+          欢迎词
+        </details>
+      </td>
+    </tr>
+    <tr>
+      <td>1:30 - 2:00</td>
+      <td><b>keynote：</b></b></td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>
+        <details>
+          <summary><strong>杨宾伟 IBM 陈伟霆 MSFT</strong></summary>
+          欢迎词
+        </details>
+      </td>
+    </tr>
+    <tr>
+      <td>2:00 - 2:30</td>
+      <td><b>keynote：</b></b></td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>
+        <details>
+          <summary><strong>杨宾伟 IBM 陈伟霆 MSFT</strong></summary>
+          欢迎词
+        </details>
+      </td>
+    </tr>
+    <tr>
+      <td>2:30 - 3:00</td>
+      <td><b>keynote：</b></b></td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>
+        <details>
+          <summary><strong>杨宾伟 IBM 陈伟霆 MSFT</strong></summary>
+          欢迎词
+        </details>
+      </td>
+    </tr>
+    <tr>
+      <td>3:00 - 3:30</td>
+      <td><b>keynote：</b></b></td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>
+        <details>
+          <summary><strong>杨宾伟 IBM 陈伟霆 MSFT</strong></summary>
+          欢迎词
+        </details>
+      </td>
+    </tr>
+    <tr>
+      <td>3:30 - 4:00</td>
+      <td><b>keynote：</b></b></td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>
+        <details>
+          <summary><strong>杨宾伟 IBM 陈伟霆 MSFT</strong></summary>
+          欢迎词
+        </details>
+      </td>
+    </tr>
+    <tr>
+      <td>4:00 - 4:30</td>
+      <td><b>keynote：</b></b></td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>
+        <details>
+          <summary><strong>杨宾伟 IBM 陈伟霆 MSFT</strong></summary>
+          欢迎词
+        </details>
+      </td>
+    </tr>
+    <tr>
+      <td>4:30 - 5:00</td>
+      <td><b>结束/致谢</b></b></td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>
+      </td>
     </tr>
   </tbody>
 </table>
