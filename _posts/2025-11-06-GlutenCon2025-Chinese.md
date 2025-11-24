@@ -136,7 +136,7 @@ Apache Gluten 是一个面向数据处理加速的开源项目，致力于通过
       <td>
         <details>
           <summary><strong>王刚 </strong>字节跳动</summary>
-          <img width="150"  alt="image" src="/assets/images/GlutenCon2025/王刚.png"/><br>
+          <img width="150"  alt="image" src="/assets/images/GlutenCon2025/王刚.jpg"/><br>
           字节跳动软件工程师，gluten commiter
           <br>
           <br>
