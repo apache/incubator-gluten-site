@@ -58,16 +58,11 @@ Apache Gluten 是一个面向数据处理加速的开源项目，致力于通过
   <tbody>
     <tr>
       <td>08:00 - 9:20</td>
-      <td>前台</td>
+      <td>签到</td>
     </tr>
     <tr>
       <td></td>
-      <td>
-        <details>
-          <summary><strong>签到</strong></summary>
-          携带手机收到的注册短信
-        </details>
-      </td>
+      <td></td>
     </tr>
     <tr>
       <td>9:20 - 9:30</td>
@@ -77,44 +72,49 @@ Apache Gluten 是一个面向数据处理加速的开源项目，致力于通过
       <td></td>
       <td>
         <details>
-          <summary><strong>杨宾伟 IBM 陈伟霆 MSFT</strong></summary>
+          <summary><strong>杨宾伟</strong> IBM <strong>陈伟霆</strong> MSFT</summary>
           欢迎词
         </details>
       </td>
     </tr>
     <tr>
       <td>9:30 - 10:00</td>
-      <td><b>keynote：</b></b></td>
+      <td>keynote：<b> Bolt: 面向多引擎的生产级异构加速库</b></td>
     </tr>
     <tr>
       <td> </td>
       <td>
         <details>
           <summary><strong>Frank Hu 字节跳动</strong></summary>
+          字节跳动引擎加速团队负责人
+          <br>
+          <br>
         </details>
       </td>
     </tr>
     <tr>
       <td>10:00 - 10:20</td>
-      <td><b>keynote：</b></b></td>
+      <td>keynote：<b>Apache Gluten 在IBM的现状和发展</b></td>
     </tr>
     <tr>
       <td> </td>
       <td>
         <details>
           <summary><strong>Ethan Zhang IBM</strong></summary>
+          介绍Apache Gluten在IBM团队一年以来的进展，目前的工作，2026年的规划以及长久发展规划
         </details>
       </td>
     </tr>
     <tr>
       <td>10:30 - 11:00</td>
-      <td><b>Apache Gluten现在和未来</b></b></td>
+      <td><b>Apache Gluten现在和未来</b></td>
     </tr>
     <tr>
       <td> </td>
       <td>
         <details>
           <summary><strong>陈伟霆 MSFT</strong></summary>
+          <img width="150"  alt="image" src="/assets/images/GlutenCon2025/Weiting.png"/><br>
           微软首席软件工程经理，Apache Gluten PMC 成员，长期积极参与开源社区并协助客户落地 Gluten 解决方案，推动高性能数据处理与技术创新，致力于帮助工程团队与社区共同成长。
           <br>
           <br>
@@ -124,41 +124,40 @@ Apache Gluten 是一个面向数据处理加速的开源项目，致力于通过
     </tr>
     <tr>
       <td>11:00 - 11:30</td>
-      <td><b>Apache Gluten的現況及未來</b></b></td>
+      <td><b>Apache Gluten在字节跳动的落地实践</b></td>
     </tr>
     <tr>
       <td> </td>
       <td>
         <details>
-          <summary><strong>陈伟霆 MSFT</strong></summary>
-          欢迎词
+          <summary><strong>王广新 字节跳动</strong></summary>
+          字节
         </details>
       </td>
     </tr>
     <tr>
       <td>11:30 - 12:00</td>
-      <td><b>keynote：</b></b></td>
+      <td><b>GPU加速在Gluten中的应用</b></td>
     </tr>
     <tr>
       <td> </td>
       <td>
         <details>
-          <summary><strong>杨宾伟 IBM 陈伟霆 MSFT</strong></summary>
-          欢迎词
+          <summary><strong>靳成成 IBM</strong></summary>
+          IBM高级软件研发工程师，Gluten PPMC, Velox maintainer, focus on shuffle, GPU optimization，datalake iceberg native implementation.
+          <br>
+          <br>
+          Gluten + Velox GPU优化， 在Velox中实现其算子，调用rapids libcudf API，cudf封装了CUDA。根据plan特征和代价判断其是否调度到GPU, 在用户实际场景，table scan往往取决于远程存储的吞吐量，难以获得较大的性能提升，而第二个计算密集型的stage可以取得极大的性能提升，在速度和成本上均有优势，以TPCDS Q95 SF100为例，相比cpu native执行，第2个stage将时间从70s降低到13s，提升了5倍。本次分享将详细讲述当前进度，实现方案和未来蓝图。
         </details>
       </td>
     </tr>
     <tr>
       <td>12:00 - 1:00</td>
-      <td><b>午饭</b></b></td>
+      <td><b>午饭</b></td>
     </tr>
     <tr>
       <td> </td>
       <td>
-        <details>
-          <summary><strong>杨宾伟 IBM 陈伟霆 MSFT</strong></summary>
-          欢迎词
-        </details>
       </td>
     </tr>
     <tr>
