@@ -71,7 +71,7 @@ Apache Gluten 是一个面向数据处理加速的开源项目，致力于通过
       <td></td>
       <td>
         <details>
-          <summary><strong>杨宾伟</strong> IBM <strong>陈伟霆</strong> MSFT</summary>
+          <summary><strong>杨宾伟</strong> IBM <strong>陈韦廷</strong> 微软</summary>
           欢迎词
         </details>
       </td>
@@ -201,23 +201,6 @@ Apache Gluten 是一个面向数据处理加速的开源项目，致力于通过
     </tr>
     <tr>
       <td>2:00 - 2:30</td>
-      <td><b>Apache Gluten中的内存管理机制</b></td>
-    </tr>
-    <tr>
-      <td> </td>
-      <td>
-        <details>
-          <summary><strong>张宏泽</strong> IBM</summary>
-          <img width="150"  alt="image" src="/assets/images/GlutenCon2025/hongze.png"/><br>
-          IBM 高级软件研发工程师, Apache Gluten PPMC member, Apache Calcite committer. Currently working on Gluten's memory management and Gluten + Delta Lake integration.
-          <br>
-          <br>
-          主要将围绕 Apache Gluten 内存管理系统的整体架构设计展开介绍，深入分析其在高性能计算场景下对内存调度、数据组织方式以及与执行引擎交互模式所做的关键优化。同时，还会重点探讨堆内 / 堆外内存共享模型在实际工程实践中所引入的全新挑战，以及内存生命周期管理、零拷贝访问机制等方面的问题，并分享对应的设计思路、解决方案和落地经验。
-        </details>
-      </td>
-    </tr>
-    <tr>
-      <td>2:30 - 3:00</td>
       <td><b>Gluten在BIGO的开发和应用</b></td>
     </tr>
     <tr>
@@ -238,6 +221,24 @@ Apache Gluten 是一个面向数据处理加速的开源项目，致力于通过
       </ul>
         我们将分享关键技术洞察，包括对谓词下推、模式映射和容错机制的增强，以及构建混合执行架构过程中获得的经验教训。最后，我们将讨论这一创新如何融入 BIGO 更广泛的开源协作和下一代数据基础设施战略。
     </details>
+      </td>
+    </tr>
+    <tr>
+      <td>2:30 - 3:00</td>
+      <td><b>Apache Gluten中的内存管理机制</b></td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>
+        <details>
+          <summary><strong>张宏泽</strong> IBM</summary>
+          <img width="150"  alt="image" src="/assets/images/GlutenCon2025/hongze.png"/><br>
+          IBM 高级软件研发工程师, Apache Gluten PPMC member, Apache Calcite committer. Currently working on Gluten's memory management and Gluten + Delta Lake integration.
+          <br>
+          <br>
+          主要将围绕 Apache Gluten 内存管理系统的整体架构设计展开介绍，深入分析其在高性能计算场景下对内存调度、数据组织方式以及与执行引擎交互模式所做的关键优化。同时，还会重点探讨堆内 / 堆外内存共享模型在实际工程实践中所引入的全新挑战，以及内存生命周期管理、零拷贝访问机
+制等方面的问题，并分享对应的设计思路、解决方案和落地经验。
+        </details>
       </td>
     </tr>
     <tr>
