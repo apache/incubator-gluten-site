@@ -177,8 +177,12 @@ Apache Gluten 是一个面向数据处理加速的开源项目，致力于通过
       <td> </td>
       <td>
         <details>
-          <summary><strong>华为</strong> 华为</summary>
-          华为
+          <summary><strong>冯骁</strong> 华为</summary>
+          <img width="150"  alt="image" src="/assets/images/GlutenCon2025/冯骁.jpg"/><br>
+          冯骁现任华为公司大数据系统研究专家，专注于基于鲲鹏平台的大数据系统性能调优与创新研究。在加入华为之前，他已在大规模分布式系统领域深耕十余年，曾参与阿里巴巴大数据计算平台MaxCompute的核心研发工作。此外，在字节跳动任职期间，他还主导或参与了多个大数据分析系统的研发与优化项目。
+          <br>
+          <br>
+          华为鲲鹏自2020年起投入基于Arm架构的Native大数据引擎研发，在ARM平台性能优化方面积累了扎实经验。我们期望基于鲲鹏在大数据引擎中的原子能力与优化技术，与字节跳动开源的Bolt引擎展开深度合作，共同增强Bolt在ARM生态下的功能与性能表现。
         </details>
       </td>
     </tr>
