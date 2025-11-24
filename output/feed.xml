@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.3">Jekyll</generator><link href="https://gluten.apache.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://gluten.apache.org/" rel="alternate" type="text/html" /><updated>2025-11-24T08:37:35+00:00</updated><id>https://gluten.apache.org/feed.xml</id><title type="html">Apache Gluten incubating</title><subtitle>Gluten is a middle layer responsible for offloading JVM-based SQL engines' execution to native engines.</subtitle><entry><title type="html">Glutencon2025 Chinese</title><link href="https://gluten.apache.org/2025/11/06/GlutenCon2025-Chinese.html" rel="alternate" type="text/html" title="Glutencon2025 Chinese" /><published>2025-11-06T00:00:00+00:00</published><updated>2025-11-06T00:00:00+00:00</updated><id>https://gluten.apache.org/2025/11/06/GlutenCon2025-Chinese</id><content type="html" xml:base="https://gluten.apache.org/2025/11/06/GlutenCon2025-Chinese.html">&lt;h1 id=&quot;-glutencon-2025-首届大会正式启动&quot;&gt;🎉 GlutenCon 2025 首届大会正式启动！&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.3">Jekyll</generator><link href="https://gluten.apache.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://gluten.apache.org/" rel="alternate" type="text/html" /><updated>2025-11-24T08:38:14+00:00</updated><id>https://gluten.apache.org/feed.xml</id><title type="html">Apache Gluten incubating</title><subtitle>Gluten is a middle layer responsible for offloading JVM-based SQL engines' execution to native engines.</subtitle><entry><title type="html">Glutencon2025 Chinese</title><link href="https://gluten.apache.org/2025/11/06/GlutenCon2025-Chinese.html" rel="alternate" type="text/html" title="Glutencon2025 Chinese" /><published>2025-11-06T00:00:00+00:00</published><updated>2025-11-06T00:00:00+00:00</updated><id>https://gluten.apache.org/2025/11/06/GlutenCon2025-Chinese</id><content type="html" xml:base="https://gluten.apache.org/2025/11/06/GlutenCon2025-Chinese.html">&lt;h1 id=&quot;-glutencon-2025-首届大会正式启动&quot;&gt;🎉 GlutenCon 2025 首届大会正式启动！&lt;/h1&gt;
 
 &lt;p&gt;欢迎来到 Apache Gluten 社区的年度盛会 —— &lt;strong&gt;GlutenCon 2025&lt;/strong&gt;！&lt;/p&gt;
 &lt;div align=&quot;center&quot;&gt;
@@ -109,6 +109,9 @@
       &lt;td&gt;
         &lt;details&gt;
           &lt;summary&gt;&lt;strong&gt;Ethan Zhang &lt;/strong&gt;IBM&lt;/summary&gt;
+          &lt;img width=&quot;150&quot; alt=&quot;image&quot; src=&quot;/assets/images/GlutenCon2025/Ethan.png&quot; /&gt;&lt;br /&gt;
+          IBM 项目总监， 开源数据湖引擎负责人
+          &lt;br /&gt;
           介绍Apache Gluten在IBM团队一年以来的进展，目前的工作，2026年的规划以及长久发展规划
         &lt;/details&gt;
       &lt;/td&gt;
@@ -138,8 +141,12 @@
       &lt;td&gt; &lt;/td&gt;
       &lt;td&gt;
         &lt;details&gt;
-          &lt;summary&gt;&lt;strong&gt;王广新 &lt;/strong&gt;字节跳动&lt;/summary&gt;
-          字节
+          &lt;summary&gt;&lt;strong&gt;王刚 &lt;/strong&gt;字节跳动&lt;/summary&gt;
+          &lt;img width=&quot;150&quot; alt=&quot;image&quot; src=&quot;/assets/images/GlutenCon2025/王刚.png&quot; /&gt;&lt;br /&gt;
+          字节跳动软件工程师，gluten commiter
+          &lt;br /&gt;
+          &lt;br /&gt;
+          本次演讲中，我们将介绍字节跳动利用Apache Gluten和加速引擎Bolt, 在Spark应用场景中显著降低计算成本的生产实践经验，面临的挑战以及解决方案。
         &lt;/details&gt;
       &lt;/td&gt;
     &lt;/tr&gt;
