@@ -85,10 +85,11 @@ Apache Gluten 是一个面向数据处理加速的开源项目，致力于通过
       <td> </td>
       <td>
         <details>
-          <summary><strong>Frank Hu 字节跳动</strong></summary>
+          <summary><strong>Frank Hu </strong>字节跳动</summary>
           字节跳动引擎加速团队负责人
           <br>
           <br>
+          字节数据中台对面“多数据源，多引擎，多硬件”的挑战，推出Bolt加速库，在用户无感的情况下，不仅提升了Spark/Flink/Presto/ElasticSearch等引擎的性能和硬件资源利用率，而且降低了维护成本和数据不一致的情况。在内部大规模落地后，希望通过Bolt开源，进一步吸纳社区意见，证明异构统一运行时的可行性
         </details>
       </td>
     </tr>
@@ -100,14 +101,14 @@ Apache Gluten 是一个面向数据处理加速的开源项目，致力于通过
       <td> </td>
       <td>
         <details>
-          <summary><strong>Ethan Zhang IBM</strong></summary>
+          <summary><strong>Ethan Zhang </strong>IBM</summary>
           介绍Apache Gluten在IBM团队一年以来的进展，目前的工作，2026年的规划以及长久发展规划
         </details>
       </td>
     </tr>
     <tr>
       <td>10:30 - 11:00</td>
-      <td><b>Apache Gluten现在和未来</b></td>
+      <td><b>Apache Gluten社区的现在和未来</b></td>
     </tr>
     <tr>
       <td> </td>
@@ -130,7 +131,7 @@ Apache Gluten 是一个面向数据处理加速的开源项目，致力于通过
       <td> </td>
       <td>
         <details>
-          <summary><strong>王广新 字节跳动</strong></summary>
+          <summary><strong>王广新 </strong>字节跳动</summary>
           字节
         </details>
       </td>
@@ -143,7 +144,7 @@ Apache Gluten 是一个面向数据处理加速的开源项目，致力于通过
       <td> </td>
       <td>
         <details>
-          <summary><strong>靳成成 IBM</strong></summary>
+          <summary><strong>靳成成 </strong> IBM</summary>
           IBM高级软件研发工程师，Gluten PPMC, Velox maintainer, focus on shuffle, GPU optimization，datalake iceberg native implementation.
           <br>
           <br>
@@ -162,54 +163,70 @@ Apache Gluten 是一个面向数据处理加速的开源项目，致力于通过
     </tr>
     <tr>
       <td>1:00 - 1:30</td>
-      <td><b>keynote：</b></b></td>
+      <td><b>Gluten在华为的应用</b></td>
     </tr>
     <tr>
       <td> </td>
       <td>
         <details>
-          <summary><strong>杨宾伟 IBM 陈伟霆 MSFT</strong></summary>
-          欢迎词
+          <summary><strong>华为</strong> 华为</summary>
+          华为
         </details>
       </td>
     </tr>
     <tr>
       <td>1:30 - 2:00</td>
-      <td><b>keynote：</b></b></td>
+      <td><b>Gluten 在腾讯云上的规模化推广与挑战</b></b></td>
     </tr>
     <tr>
       <td> </td>
       <td>
         <details>
-          <summary><strong>杨宾伟 IBM 陈伟霆 MSFT</strong></summary>
-          欢迎词
+          <summary><strong>栾学东</strong> 腾讯</summary>
+          腾讯云大数据基础产品中心专家工程师，专注于分布式计算引擎系统研发
+          <br>
+          <br>
+          Gluten + Velox 作为新一代向量化执行引擎，是突破 Spark 性能瓶颈、实现云上降本增效的核心技术路径。本演讲将聚焦于我们在腾讯云大规模落地 Gluten 过程中面临的核心挑战——兼容性与稳定性, 并深入剖析我们为此构建的系统性解决方案与生产级最佳实践, 助力社区高效、平稳地应用 Gluten
         </details>
       </td>
     </tr>
     <tr>
       <td>2:00 - 2:30</td>
-      <td><b>keynote：</b></b></td>
+      <td><b>Apache Gluten中的内存管理机制</b></td>
     </tr>
     <tr>
       <td> </td>
       <td>
         <details>
-          <summary><strong>杨宾伟 IBM 陈伟霆 MSFT</strong></summary>
-          欢迎词
+          <summary><strong>张宏泽</strong> IBM</summary>
+          IBM 高级软件研发工程师, Apache Gluten PPMC member, Apache Calcite committer. Currently working on Gluten's memory management and Gluten + Delta Lake integration.
+          <br>
+          <br>
+          主要将围绕 Apache Gluten 内存管理系统的整体架构设计展开介绍，深入分析其在高性能计算场景下对内存调度、数据组织方式以及与执行引擎交互模式所做的关键优化。同时，还会重点探讨堆内 / 堆外内存共享模型在实际工程实践中所引入的全新挑战，以及内存生命周期管理、零拷贝访问机制等方面的问题，并分享对应的设计思路、解决方案和落地经验。
         </details>
       </td>
     </tr>
     <tr>
       <td>2:30 - 3:00</td>
-      <td><b>keynote：</b></b></td>
+      <td><b>Gluten Development and Adoption at BIGO</b></td>
     </tr>
     <tr>
       <td> </td>
       <td>
         <details>
-          <summary><strong>杨宾伟 IBM 陈伟霆 MSFT</strong></summary>
-          欢迎词
-        </details>
+          <summary><strong>张志彪</strong> BigO</summary>
+          前百度搜索架构师、現為Bigo大数据团队负责人
+          <br>
+          <br>
+          在 BIGO，支持涵盖直播、社交和游戏平台的数据分析，需要具备高性能、低成本且可大规模扩展的计算能力。为了克服原生 Apache Spark 的局限性——尤其是 JVM 开销和 CPU 利用率不佳的问题，我们率先采用了 Gluten 这一开源查询加速层，并以 ClickHouse 作为原生后端执行引擎。
+<br>在本次演讲中，我们将介绍 BIGO 从初步探索到在生产环境全面部署 Gluten + ClickHouse 的历程。通过将 SQL 执行从 Spark 的基于 JVM 的运行时卸载到 ClickHouse 的矢量化列式引擎，我们实现了：
+      <ul>
+        <li>复杂分析工作负载的作业完成时间提升 30%</li>
+        <li>计算资源消耗（CPU 和内存）减少 50%</li>
+        <li>与现有 Spark SQL 接口完全兼容——实现无缝迁移，无需重写管道</li>
+      </ul>
+        我们将分享关键技术洞察，包括对谓词下推、模式映射和容错机制的增强，以及构建混合执行架构过程中获得的经验教训。最后，我们将讨论这一创新如何融入 BIGO 更广泛的开源协作和下一代数据基础设施战略。
+    </details>
       </td>
     </tr>
     <tr>
