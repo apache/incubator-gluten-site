@@ -171,7 +171,7 @@ Apache Gluten 是一个面向数据处理加速的开源项目，致力于通过
     </tr>
     <tr>
       <td>1:00 - 1:30</td>
-      <td><b>Gluten在华为的应用</b></td>
+      <td><b>华为鲲鹏与Bolt基于Arm架构合作的规划与进展</b></td>
     </tr>
     <tr>
       <td> </td>
