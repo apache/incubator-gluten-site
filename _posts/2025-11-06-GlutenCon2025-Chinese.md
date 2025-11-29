@@ -134,12 +134,12 @@ Apache Gluten 是一个面向数据处理加速的开源项目，致力于通过
       <td> </td>
       <td>
         <details>
-          <summary><strong>王刚 </strong>字节跳动</summary>
+          <summary><strong>杨嘉义 </strong>字节跳动</summary>
           <img width="150"  alt="image" src="/assets/images/GlutenCon2025/王刚.jpg"/><br>
-          字节跳动软件工程师，gluten commiter
+          字节跳动数据引擎计算团队负责人
           <br>
           <br>
-          本次演讲中，我们将介绍字节跳动利用Apache Gluten和加速引擎Bolt, 在Spark应用场景中显著降低计算成本的生产实践经验，面临的挑战以及解决方案。
+          字节 Spark 集群规模庞大，总体成本较高。本次分享将介绍字节 Spark 团队基于 Apache Gluten 与加速引擎 Bolt 的生产实践：包括应用场景的workload 特点与性能瓶颈、落地过程中面临的挑战，并详细介绍整套技术方案。该方案已实现大规模落地应用，显著提升了 Spark 计算性能，大幅降低了集群整体成本。
         </details>
       </td>
     </tr>
