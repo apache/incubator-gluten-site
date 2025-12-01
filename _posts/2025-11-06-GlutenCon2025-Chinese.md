@@ -135,7 +135,7 @@ Apache Gluten 是一个面向数据处理加速的开源项目，致力于通过
       <td>
         <details>
           <summary><strong>杨嘉义 </strong>字节跳动</summary>
-          <img width="150"  alt="image" src="/assets/images/GlutenCon2025/王刚.jpg"/><br>
+          <img width="150"  alt="image" src="/assets/images/GlutenCon2025/杨嘉义.jpg"/><br>
           字节跳动数据引擎计算团队负责人
           <br>
           <br>
