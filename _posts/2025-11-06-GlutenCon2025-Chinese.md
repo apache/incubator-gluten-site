@@ -302,7 +302,7 @@ Apache Gluten 是一个面向数据处理加速的开源项目，致力于通过
       <td> </td>
       <td>
         <details>
-          <summary><strong>吴国晓</strong> 小米</summary>
+          <summary><strong>吴国晓</strong> 京东</summary>
           <img width="150"  alt="image" src="/assets/images/GlutenCon2025/吴国晓.jpg"/><br>
           京东 Spark计算引擎 Tech Lead
           <br>
