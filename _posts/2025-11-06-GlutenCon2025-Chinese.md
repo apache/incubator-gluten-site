@@ -34,7 +34,7 @@ Apache Gluten 是一个面向数据处理加速的开源项目，致力于通过
 
 📣 **加入社群**：请扫描二维码加入群聊以便交流和接受最新资讯
 
-<img width="300" height="303" alt="image" src="/assets/images/1127.png" />
+<img width="300" height="303" alt="image" src="/assets/images/GlutenCon2025/1210.png" />
 
 ---
 
