@@ -273,7 +273,7 @@ Apache Gluten 是一个面向数据处理加速的开源项目，致力于通过
     </tr>
     <tr>
       <td>4:00 - 4:30</td>
-      <td><b>小米利用 Gluten 和 Velox 加速 Spark 的工程实践</b></b></td>
+      <td><b>小米利用 Gluten 和 Velox 加速 Spark 的工程实践</b></td>
     </tr>
     <tr>
       <td> </td>
@@ -296,7 +296,25 @@ Apache Gluten 是一个面向数据处理加速的开源项目，致力于通过
     </tr>
     <tr>
       <td>4:30 - 5:00</td>
-      <td><b>结束/致谢</b></b></td>
+      <td><b>Spark增量计算在京东的的探索与实践</b></td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>
+        <details>
+          <summary><strong>吴国晓</strong> 小米</summary>
+          <img width="150"  alt="image" src="/assets/images/GlutenCon2025/吴国晓.jpg"/><br>
+          京东 Spark计算引擎 Tech Lead
+          <br>
+          <br>
+在大数据计算中，数据规模持续膨胀与业务时效要求不断提升，使传统大数据计算在成本与效率上日益面临压力，无法满足业务需求。为应对这一挑战，我们基于 Apache Spark 构建了一套增量计算框架。
+本次分享将首先解析增量计算的必要性，并介绍京东自研的落地实践。将以流量地图场景为例，阐述框架的关键研发工作，包括：Agg 算子执行计划改写、增量函数与状态支持、增量数据读写优化、动态表支持与全流程设计。最后也展望下未来的演进方向。
+        </details>
+      </td>
+    </tr>
+    <tr>
+      <td>5:00 - 5:30</td>
+      <td><b>结束/致谢</b></td>
     </tr>
     <tr>
       <td> </td>
