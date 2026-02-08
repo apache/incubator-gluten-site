@@ -34,6 +34,11 @@ For more information on Apache Gluten (incubating), including related articles a
 |State of the Union: Apache Gluten|IBM|Apr. 2025|[Link](https://www.youtube.com/watch?v=Mk_d25rb_vk&list=PLJvBe8nQAEsE0dT7XVIrD8QE-gmuX3Fe6&index=6)|
 |Real World Applications of Velox and Apache Gluten in Dataproc’s NQE|Google|Apr. 2025|[Link](https://www.youtube.com/watch?v=c2V0jWR8xh8&list=PLJvBe8nQAEsE0dT7XVIrD8QE-gmuX3Fe6&index=7)|
 |Apache Gluten: Revolutionizing Data Processing Efficiency|IBM| Apr. 2025|[Link](https://www.youtube.com/watch?v=f5ICT9wNK2A&list=PLfXiENmg6yyXKICQiUNutmDyJKk84BVSP&index=3)|
+|The R&D and Application of Gluten ClickHouse Backend at BIGO and Progress on Flink Native(in Chinese)|BIGO|May. 2025|[Link](https://www.datafuntalk.com/detail/l_682b1c45e4b0694c5ad6efec/4)|
 |Gluten + ClickHouse Backend Performance Optimization Practise(in Chinese)|BIGO|Jun. 2025|[Link](https://0rt0w.hk.xet.citv.cn/sl/v900b)|
-|The R&D and Application of Gluten ClickHouse Backend at BIGO and Progress on Flink Native(in Chinese)|BIGO|May 2025|[Link](https://www.datafuntalk.com/detail/l_682b1c45e4b0694c5ad6efec/4)|
-|Apache Gluten: Applications and Practices at SF Express(in Chinese)|Shunfeng|Nov 2025|[Link](https://zhuanlan.zhihu.com/p/1960371911935653160)|
+|Apache Gluten: Applications and Practices at SF Express(in Chinese)|SF Express|Nov. 2025|[Link](https://zhuanlan.zhihu.com/p/1960371911935653160)|
+|Apache Gluten's implementation and practical application at ByteDance (in Chinese)|bytedance|Dec. 2025|[Link](https://bytedance.us.larkoffice.com/minutes/obuso7i79162h6xn6f414f5m)|
+|The large-scale deployment and challenges of Gluten on Tencent Cloud (in Chinese)|Tencent|Dec. 2025|[Link](https://bytedance.us.larkoffice.com/minutes/obuso76a2491g8usaq63fr8i)|
+|Gluten's development and application at BIGO (in Chinese)|BIGO|Dec. 2025|[Link](https://bytedance.us.larkoffice.com/minutes/obuspl28h658191g17kk2253)|
+|Xiaohongshu's Native Engine Technology Progress and Production Practices (in Chinese)|Xiaohongshu|Dec. 2025|[Link](https://bytedance.us.larkoffice.com/minutes/obusplle2j6t88vmw7dm769o)|
+|Engineering practices of accelerating Spark using Gluten and Velox at Xiaomi (in Chinese)|Xiaomi|Dec. 2025|[Link](https://bytedance.us.larkoffice.com/minutes/obuspk636n4cm2h3c1vjm63l)|
