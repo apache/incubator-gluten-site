@@ -27,9 +27,11 @@ The project is mentored by several mentors during its Apache incubation process 
 | ------------- | ----------------------------------------------------------------------- | ----------------------------------------------- |
 | Binwei Yang   | [felixybw](https://people.apache.org/phonebook.html?uid=felixybw)       | [FelixYBW](https://github.com/FelixYBW) |
 | Chang Chen    | [changchen](https://people.apache.org/phonebook.html?uid=changchen)     | [baibaichen](https://github.com/baibaichen) |
+| Chengcheng Jin | [chengchengjin](https://people.apache.org/phonebook.html?uid=chengchengjin) | [jinchengchenghh](https://github.com/jinchengchenghh) |
 | Hongbin Ma    | [mahongbin](https://people.apache.org/phonebook.html?uid=mahongbin)     | [binmahone](https://github.com/binmahone) |
 | Hongze Zhang  | [hongze](https://people.apache.org/phonebook.html?uid=hongze)           | [zhztheplayer](https://github.com/zhztheplayer) |
 | Junqing Li    | [jackylee](https://people.apache.org/phonebook.html?uid=jackylee)       | [jackylee-ch](https://github.com/jackylee-ch) |
+| Jiayi Liu     | [liujiayi771](https://people.apache.org/phonebook.html?uid=liujiayi771) | [liujiayi771](https://github.com/liujiayi771) |
 | Ke Jia        | [kejia](https://people.apache.org/phonebook.html?uid=kejia)             | [JkSelf](https://github.com/JkSelf)             |
 | Keyong Zhou   | [zhouky](https://people.apache.org/phonebook.html?uid=zhouky)           | [waitinfuture](https://github.com/waitinfuture) |
 | Liang JiaBiao | [lgbo](https://people.apache.org/phonebook.html?uid=lgbo)               | [lgbo-ustc](https://github.com/lgbo-ustc) |
@@ -54,9 +56,7 @@ The project is mentored by several mentors during its Apache incubation process 
 | Name           | Apache ID                                                                     | GitHub ID                                     |
 | -------------- | ----------------------------------------------------------------------------- | --------------------------------------------- |
 | Arnav Balyan   | [arnavbalyan](https://people.apache.org/phonebook.html?uid=arnavbalyan)       | [ArnavBalyan](https://github.com/ArnavBalyan) |
-| Chengcheng Jin | [chengchengjin](https://people.apache.org/phonebook.html?uid=chengchengjin)   | [jinchengchenghh](https://github.com/jinchengchenghh) |
 | Guangxin Wang  | [wangguangxin](https://people.apache.org/phonebook.html?uid=wangguangxin)     | [WangGuangxin](https://github.com/WangGuangxin) |
-| Jiayi Liu      | [liujiayi771](https://people.apache.org/phonebook.html?uid=liujiayi771)       | [liujiayi771](https://github.com/liujiayi771) |
 | Kerwin Zhang   | [kerwinzhang](https://people.apache.org/phonebook.html?uid=kerwinzhang)       | [kerwin-zk](https://github.com/kerwin-zk)     |
 | Mingliang Zhu  | [mingliang](https://people.apache.org/phonebook.html?uid=mingliang)           | [zml1206](https://github.com/zml1206) |
 | Mingyong Xu    | [exmy](https://people.apache.org/phonebook.html?uid=exmy)                     | [exmy](https://github.com/exmy) |
