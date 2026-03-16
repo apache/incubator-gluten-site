@@ -101,17 +101,17 @@ spark-shell \
 
 ## 3.2.1 Build and install Gluten with Velox backend
 
-If you want to use Gluten **Velox** backend, see [Build with Velox](https://apache.github.io/incubator-gluten/developers/velox-backend-build-in-docker.html) to build and install the necessary libraries.
-You can also find more information in [Gluten with Velox backend](https://apache.github.io/incubator-gluten/get-started/Velox.html) and [velox](https://github.com/facebookincubator/velox).
+If you want to use Gluten **Velox** backend, see [Build with Velox](https://apache.github.io/gluten/developers/velox-backend-build-in-docker.html) to build and install the necessary libraries.
+You can also find more information in [Gluten with Velox backend](https://apache.github.io/gluten/get-started/Velox.html) and [velox](https://github.com/facebookincubator/velox).
 
 ## 3.2.2 Build and install Gluten with ClickHouse backend
 
-If you want to use Gluten **ClickHouse** backend, see [Build with ClickHouse Backend](https://apache.github.io/incubator-gluten/get-started/ClickHouse.html).
+If you want to use Gluten **ClickHouse** backend, see [Build with ClickHouse Backend](https://apache.github.io/gluten/get-started/ClickHouse.html).
 ClickHouse backend is developed by [Kyligence](https://kyligence.io/), please visit [Kyligence's ClickHouse](https://github.com/Kyligence/ClickHouse) for more infomation.
 
 ## 3.2.3 Build options
 
-See [Build Parameters](https://apache.github.io/incubator-gluten/get-started/build-guide.html).
+See [Build Parameters](https://apache.github.io/gluten/get-started/build-guide.html).
 
 
 # 4 Join the Community
