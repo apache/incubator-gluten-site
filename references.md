@@ -30,6 +30,7 @@ For more information on Apache Gluten (incubating), including related articles a
 |Unlocking Data Query Performance|Pinterest|Apr. 2024|[Link](https://www.youtube.com/watch?v=pQ4bMyXXLss&list=PLJvBe8nQAEsEBSoUY0lRFVZr2_YeHYkUR&index=10&t=3s&ab_channel=VeloxCon)|
 |Native execution engine for Fabric Spark|Microsoft|May 2024|[Link](https://learn.microsoft.com/en-us/fabric/data-engineering/native-execution-engine-overview?tabs=sparksql)|
 |Best Practice of Gluten and Velox in Meituan|Meituan|Jun. 2024|[Link](https://mp.weixin.qq.com/s/VvmhQi8YMsm0P5xYoiGEZQ)|
+|Accelerate Spark SQL on Arm64 with Gluten and Velox|Arm|Aug. 2024|[Link](https://developer.arm.com/community/arm-community-blogs/b/servers-and-cloud-computing-blog/posts/spark-sql-arm64-gluten-velox)|
 |Alibaba Cloud AnalyticDB Spark Vectorization Capability Analysis|AlibabaCloud| Nov. 2024|[Link](https://www.alibabacloud.com/blog/sevenfold-performance-improvement-%7C-alibaba-cloud-analyticdb-spark-vectorization-capability-analysis_601761)
 |EMR in Bytedance's Volcengine(in Chinese)|ByteDance|Dec. 2024 | [Link](https://www.volcengine.com/docs/6491/1263264)|
 |State of the Union: Apache Gluten|IBM|Apr. 2025|[Link](https://www.youtube.com/watch?v=Mk_d25rb_vk&list=PLJvBe8nQAEsE0dT7XVIrD8QE-gmuX3Fe6&index=6)|
@@ -37,9 +38,17 @@ For more information on Apache Gluten (incubating), including related articles a
 |Apache Gluten: Revolutionizing Data Processing Efficiency|IBM| Apr. 2025|[Link](https://www.youtube.com/watch?v=f5ICT9wNK2A&list=PLfXiENmg6yyXKICQiUNutmDyJKk84BVSP&index=3)|
 |The R&D and Application of Gluten ClickHouse Backend at BIGO and Progress on Flink Native(in Chinese)|BIGO|May. 2025|[Link](https://www.datafuntalk.com/detail/l_682b1c45e4b0694c5ad6efec/4)|
 |Gluten + ClickHouse Backend Performance Optimization Practise(in Chinese)|BIGO|Jun. 2025|[Link](https://0rt0w.hk.xet.citv.cn/sl/v900b)|
+|Accelerating Apache Spark with Gluten & Velox|Community|Sept. 2025|[Link](https://medium.com/@neuw84/accelerating-apache-spark-with-gluten-velox-3529c4235632)|
 |Apache Gluten: Applications and Practices at SF Express(in Chinese)|SF Express|Nov. 2025|[Link](https://zhuanlan.zhihu.com/p/1960371911935653160)|
 |Apache Gluten's implementation and practical application at ByteDance (in Chinese)|bytedance|Dec. 2025|[Link](https://bytedance.us.larkoffice.com/minutes/obuso7i79162h6xn6f414f5m)|
 |The large-scale deployment and challenges of Gluten on Tencent Cloud (in Chinese)|Tencent|Dec. 2025|[Link](https://bytedance.us.larkoffice.com/minutes/obuso76a2491g8usaq63fr8i)|
 |Gluten's development and application at BIGO (in Chinese)|BIGO|Dec. 2025|[Link](https://bytedance.us.larkoffice.com/minutes/obuspl28h658191g17kk2253)|
 |Xiaohongshu's Native Engine Technology Progress and Production Practices (in Chinese)|Xiaohongshu|Dec. 2025|[Link](https://bytedance.us.larkoffice.com/minutes/obusplle2j6t88vmw7dm769o)|
 |Engineering practices of accelerating Spark using Gluten and Velox at Xiaomi (in Chinese)|Xiaomi|Dec. 2025|[Link](https://bytedance.us.larkoffice.com/minutes/obuspk636n4cm2h3c1vjm63l)|
+|Enable AI with enterprise data using new IBM watsonx.data features on AWS|IBM|Dec. 2025|[Link](https://aws.amazon.com/blogs/ibm-redhat/enable-ai-with-enterprise-data-using-new-ibm-watsonx-data-features-on-aws/)|
+
+# Related Documentation
+
+| Title | Project | Reference |
+|-------------------|---------|-----------------|
+|Deploy Gluten with Apache Kyuubi|Apache Kyuubi|[Link](https://kyuubi.readthedocs.io/en/master/deployment/spark/gluten.html)|
