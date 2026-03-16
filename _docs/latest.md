@@ -5,10 +5,10 @@ has_children: false
 ---
 
 
-<a href="https://apache.github.io/incubator-gluten/" target="_blank" rel="noopener noreferrer">
+<a href="https://apache.github.io/gluten/" target="_blank" rel="noopener noreferrer">
   Click here to view the latest documentation
 </a>
 
 
-If you are not redirected, <a href="https://apache.github.io/incubator-gluten/" target="_blank">click here</a>.
+If you are not redirected, <a href="https://apache.github.io/gluten/" target="_blank">click here</a>.
 
