@@ -1,3 +1,3 @@
-# Apache Gluten (Incubating) Website
+# Apache Gluten Website
 
 This repository contains the content for https://gluten.apache.org/.

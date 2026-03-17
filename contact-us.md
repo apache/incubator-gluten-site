@@ -9,7 +9,7 @@ permalink: /community/
 
 ## Team
 
-The project is mentored by several mentors during its Apache incubation process and is governed by a Podling Project Management Committee (PPMC). The project’s committers also have write access to the codebase.
+The project is governed by a Project Management Committee (PMC). The project’s committers also have write access to the codebase.
 
 ### Mentors
 
@@ -21,7 +21,7 @@ The project is mentored by several mentors during its Apache incubation process 
 | Wenli Zhang   | [ovilia](https://people.apache.org/phonebook.html?uid=ovilia)           | [Ovilia](https://github.com/Ovilia)           |
 | Yu Li         | [liyu](https://people.apache.org/phonebook.html?uid=liyu)               | [carp84](https://github.com/carp84)           |
 
-### PPMC Members
+### PMC Members
 
 | Name          | Apache ID                                                               | GitHub ID                                       |
 | ------------- | ----------------------------------------------------------------------- | ----------------------------------------------- |
@@ -103,4 +103,4 @@ To unsubscribe to the dev@gluten.apache.org mailing list as an example, please f
 ### Issues and Discussions
 
 We use github to track bugs, feature requests, and answer questions. File an
-[issue](https://github.com/apache/incubator-gluten/issues) for a bug or feature request.
+[issue](https://github.com/apache/gluten/issues) for a bug or feature request.
