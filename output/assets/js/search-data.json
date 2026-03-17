@@ -78,7 +78,7 @@
   },"11": {
     "doc": "Community",
     "title": "Team",
-    "content": "The project is mentored by several mentors during its Apache incubation process and is governed by a Podling Project Management Committee (PPMC). The project’s committers also have write access to the codebase. Mentors . | Name | Apache ID | GitHub ID | . | Felix Cheung | felixcheung | felixcheung | . | Kent Yao | yao | yaooqinn | . | Shao Feng Shi | shaofengshi | shaofengshi | . | Wenli Zhang | ovilia | Ovilia | . | Yu Li | liyu | carp84 | . PPMC Members . | Name | Apache ID | GitHub ID | . | Binwei Yang | felixybw | FelixYBW | . | Chang Chen | changchen | baibaichen | . | Chengcheng Jin | chengchengjin | jinchengchenghh | . | Hongbin Ma | mahongbin | binmahone | . | Hongze Zhang | hongze | zhztheplayer | . | Junqing Li | jackylee | jackylee-ch | . | Jiayi Liu | liujiayi771 | liujiayi771 | . | Ke Jia | kejia | JkSelf | . | Keyong Zhou | zhouky | waitinfuture | . | Liang JiaBiao | lgbo | lgbo-ustc | . | Neng Liu | liuneng | liuneng1994 | . | Philo He | philo | PHILO-HE | . | Rong Ma | marong | marin-ma | . | Rui Mo | rui | rui-mo | . | Shuai Li | loneylee | loneylee | . | Taiyang Li | taiyangli | taiyang-li | . | Weiting Chen | weitingchen | weiting-chen | . | XiDuo You | ulyssesyou | ulysses-you | . | Yang Zhang | yangzy | Yohahaha | . | Yuan Zhou | yuanzhou | zhouyuan | . | Zhao Kuo | zhaokuo | kecookier | . | Zhen Li | zhli | zhli1142015 | . | ZhiBiao Zhang | zhanglistar | zhanglistar | . | Zhichao Zhang | zhangzc | zzcclp | . | Zuo Chunwei | zuochunwei | zuochunwei | . Committers . | Name | Apache ID | GitHub ID | . | Arnav Balyan | arnavbalyan | ArnavBalyan | . | Guangxin Wang | wangguangxin | WangGuangxin | . | Kerwin Zhang | kerwinzhang | kerwin-zk | . | Mingliang Zhu | mingliang | zml1206 | . | Mingyong Xu | exmy | exmy | . | Qian Sun | qiansun | dcoliversun | . | Shuai Xu | shuaixu | shuai-xu | . | Wenzheng Liu | lwz9103 | lwz9103 | . | Yan Ma | yma | yma11 | . | Yangyang Gao | gaoyangxiaozhu | gaoyangxiaozhu | . | Yunhe Zou | kevinyhzou | KevinyhZou | . | Zhen Wang | wangzhen | wForget | . ",
+    "content": "The project is governed by a Project Management Committee (PMC). The project’s committers also have write access to the codebase. Mentors . | Name | Apache ID | GitHub ID | . | Felix Cheung | felixcheung | felixcheung | . | Kent Yao | yao | yaooqinn | . | Shao Feng Shi | shaofengshi | shaofengshi | . | Wenli Zhang | ovilia | Ovilia | . | Yu Li | liyu | carp84 | . PMC Members . | Name | Apache ID | GitHub ID | . | Binwei Yang | felixybw | FelixYBW | . | Chang Chen | changchen | baibaichen | . | Chengcheng Jin | chengchengjin | jinchengchenghh | . | Hongbin Ma | mahongbin | binmahone | . | Hongze Zhang | hongze | zhztheplayer | . | Junqing Li | jackylee | jackylee-ch | . | Jiayi Liu | liujiayi771 | liujiayi771 | . | Ke Jia | kejia | JkSelf | . | Keyong Zhou | zhouky | waitinfuture | . | Liang JiaBiao | lgbo | lgbo-ustc | . | Neng Liu | liuneng | liuneng1994 | . | Philo He | philo | PHILO-HE | . | Rong Ma | marong | marin-ma | . | Rui Mo | rui | rui-mo | . | Shuai Li | loneylee | loneylee | . | Taiyang Li | taiyangli | taiyang-li | . | Weiting Chen | weitingchen | weiting-chen | . | XiDuo You | ulyssesyou | ulysses-you | . | Yang Zhang | yangzy | Yohahaha | . | Yuan Zhou | yuanzhou | zhouyuan | . | Zhao Kuo | zhaokuo | kecookier | . | Zhen Li | zhli | zhli1142015 | . | ZhiBiao Zhang | zhanglistar | zhanglistar | . | Zhichao Zhang | zhangzc | zzcclp | . | Zuo Chunwei | zuochunwei | zuochunwei | . Committers . | Name | Apache ID | GitHub ID | . | Arnav Balyan | arnavbalyan | ArnavBalyan | . | Guangxin Wang | wangguangxin | WangGuangxin | . | Kerwin Zhang | kerwinzhang | kerwin-zk | . | Mingliang Zhu | mingliang | zml1206 | . | Mingyong Xu | exmy | exmy | . | Qian Sun | qiansun | dcoliversun | . | Shuai Xu | shuaixu | shuai-xu | . | Wenzheng Liu | lwz9103 | lwz9103 | . | Yan Ma | yma | yma11 | . | Yangyang Gao | gaoyangxiaozhu | gaoyangxiaozhu | . | Yunhe Zou | kevinyhzou | KevinyhZou | . | Zhen Wang | wangzhen | wForget | . ",
     "url": "/community/#team",
     
     "relUrl": "/community/#team"
@@ -105,11 +105,11 @@
     "relUrl": "/contributing/"
   },"15": {
     "doc": "Downloads",
-    "title": "Download Apache Gluten (incubating)",
+    "title": "Download Apache Gluten",
     "content": " ",
-    "url": "/downloads/#download-apache-gluten-incubating",
+    "url": "/downloads/#download-apache-gluten",
     
-    "relUrl": "/downloads/#download-apache-gluten-incubating"
+    "relUrl": "/downloads/#download-apache-gluten"
   },"16": {
     "doc": "Downloads",
     "title": "Instructions",
@@ -155,7 +155,7 @@
   },"22": {
     "doc": "Home",
     "title": "Overview",
-    "content": "Apache Gluten(incubating) is a middle layer responsible for offloading JVM-based SQL engines’ execution to native engines. ",
+    "content": "Apache Gluten is a middle layer responsible for offloading JVM-based SQL engines’ execution to native engines. ",
     "url": "/#overview",
     
     "relUrl": "/#overview"
@@ -309,7 +309,7 @@
   },"44": {
     "doc": "Home",
     "title": "6 Security",
-    "content": "Gluten aims to provide secure software. If you discover a vulnerability, please report it promptly to the project’s PPMC or the ASF security team. We appreciate your effort to help keep the project secure. ",
+    "content": "Gluten aims to provide secure software. If you discover a vulnerability, please report it promptly to the project’s PMC or the ASF security team. We appreciate your effort to help keep the project secure. ",
     "url": "/#6-security",
     
     "relUrl": "/#6-security"
@@ -330,7 +330,7 @@
   },"47": {
     "doc": "Powered by Gluten",
     "title": "Project and Product Name using Apache Gluten",
-    "content": "Organizations developing products and projects for use with Apache Gluten (incubating), as well as related marketing materials, should ensure they respect the trademark of “Apache Gluten” and its logo. For comprehensive and authoritative guidance on the proper usage of ASF trademarks, please refer to the ASF Trademarks Guidance and the associated FAQ. ",
+    "content": "Organizations developing products and projects for use with Apache Gluten, as well as related marketing materials, should ensure they respect the trademark of “Apache Gluten” and its logo. For comprehensive and authoritative guidance on the proper usage of ASF trademarks, please refer to the ASF Trademarks Guidance and the associated FAQ. ",
     "url": "/poweredby/#project-and-product-name-using-apache-gluten",
     
     "relUrl": "/poweredby/#project-and-product-name-using-apache-gluten"
