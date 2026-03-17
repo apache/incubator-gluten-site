@@ -18,7 +18,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Apache Gluten incubating
+title: Apache Gluten
 email: weitingchen@apache.org
 description:  "Gluten is a middle layer responsible for offloading JVM-based SQL engines' execution to native engines."
 baseurl: "/" # the subpath of your site, e.g. /blog
@@ -99,7 +99,7 @@ search:
 # Aux links for the upper right navigation
 aux_links:
   "Apache Gluten Github":
-    - "//github.com/apache/incubator-gluten"
+    - "//github.com/apache/gluten"
 
 # Makes Aux links open in a new tab. Default is false
 aux_links_new_tab: true

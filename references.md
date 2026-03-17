@@ -7,7 +7,7 @@ permalink: /references/
 
 # Gluten related Use Cases and Publications
 
-For more information on Apache Gluten (incubating), including related articles and videos, please refer to the following links.
+For more information on Apache Gluten, including related articles and videos, please refer to the following links.
 
 | Title | Company | Publish Date | Reference |
 |-------------------|---------|--------------|-----------------|

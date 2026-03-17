@@ -6,7 +6,7 @@ permalink: /
 description: This site serves as a collection of documentation about the Gluten, a plugin to Double SparkSQL's Performance
 ---
 # Overview
-Apache Gluten(incubating) is a middle layer responsible for offloading JVM-based SQL engines' execution to native engines.
+Apache Gluten is a middle layer responsible for offloading JVM-based SQL engines' execution to native engines.
 
 # 1 Introduction
 
@@ -36,7 +36,7 @@ The basic rule of Gluten's design is that we would reuse spark's whole control f
 ## 1.3 Target User
 
 Gluten's target user is anyone who wants to accelerate SparkSQL fundamentally. As a plugin to Spark, Gluten doesn't require any change for dataframe API or SQL query, but only requires user to make correct configuration.
-See Gluten configuration properties [here](https://github.com/apache/incubator-gluten/blob/main/docs/Configuration.md).
+See Gluten configuration properties [here](https://github.com/apache/gluten/blob/main/docs/Configuration.md).
 
 ## 1.4 References
 
@@ -67,7 +67,7 @@ There are two methods for utilizing Gluten. The first is to use a pre-built JAR 
 # 3.1 Use a pre-Built Jar
 
 One way is to use released jar. Here is a simple example. Currently, only centos7/8 and ubuntu20.04/22.04 are well supported.
-You can find a pre-built gluten release jar in [Apache Gluten Download](https://downloads.apache.org/incubator/gluten/).
+You can find a pre-built gluten release jar in [Apache Gluten Download](https://downloads.apache.org/gluten/).
 Please be aware that the pre-built JAR is compiled using static linking via vcpkg, based on the Intel® Xeon® Gold 6252 processor.
 It should be compatible with most operating systems, including CentOS and Ubuntu, although performance is not guaranteed. 
 For the optimal performance experience, we recommend using the 3.2 Custom Build to compile Gluten from source tailored to your specific platform.
@@ -124,7 +124,7 @@ Please see [contact us](/community/) for more information.
 
 ## Source Code
 
-Please see [gluten source code](https://github.com/apache/incubator-gluten) for more information.
+Please see [gluten source code](https://github.com/apache/gluten) for more information.
 
 ## How to Contribute to Gluten
 
@@ -142,7 +142,7 @@ For Velox backend, we recommend to use [velox community](https://github.com/face
 # 5 Performance
 
 We use TPCH-like and TPCDS-like as decison support benchmarks to evaluate Gluten's performance.
-TPCH-like is a query set for modified from [TPC-H benchmark](http://tpc.org/tpch/default5.asp) and TPCDS-like is a query set for modified from [TPC-DS benchmark](https://tpc.org/tpcds/default5.asp). We use Parquet file format for Velox testing & MergeTree file format for Clickhouse testing, compared to Parquet file format as baseline. See [Decision Support Benchmark](https://github.com/apache/incubator-gluten/tree/main/tools/workload).
+TPCH-like is a query set for modified from [TPC-H benchmark](http://tpc.org/tpch/default5.asp) and TPCDS-like is a query set for modified from [TPC-DS benchmark](https://tpc.org/tpcds/default5.asp). We use Parquet file format for Velox testing & MergeTree file format for Clickhouse testing, compared to Parquet file format as baseline. See [Decision Support Benchmark](https://github.com/apache/gluten/tree/main/tools/workload).
 
 ## Gluten + Velox backend Performance
 
@@ -172,11 +172,11 @@ The below testing environment: a 8-nodes AWS cluster with 1TB data; Spark-3.1.1 
 
 # 6 Security
 
-Gluten aims to provide secure software. If you discover a vulnerability, please report it promptly to [the project's PPMC](mailto:private@gluten.apache.org) or [the ASF security team](https://www.apache.org/security/). We appreciate your effort to help keep the project secure.
+Gluten aims to provide secure software. If you discover a vulnerability, please report it promptly to [the project's PMC](mailto:private@gluten.apache.org) or [the ASF security team](https://www.apache.org/security/). We appreciate your effort to help keep the project secure.
 
 # Thanks to our contributors
 
-<a href="https://github.com/apache/incubator-gluten/graphs/contributors">
+<a href="https://github.com/apache/gluten/graphs/contributors">
   <img src="/assets/images/gluten_contributors.svg" />
 </a>
 

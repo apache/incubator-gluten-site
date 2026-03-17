@@ -333,5 +333,5 @@ Apache Gluten 是一个面向数据处理加速的开源项目，致力于通过
 
 ---
 
-📌 关注 [Apache Gluten GitHub](https://github.com/apache/incubator-gluten) 获取最新动态  
+📌 关注 [Apache Gluten GitHub](https://github.com/apache/gluten) 获取最新动态<br>
 📧 有任何问题欢迎联系：dev@gluten.apache.org

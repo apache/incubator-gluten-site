@@ -56,5 +56,5 @@ Let’s build an **open, professional, and warm** technical gathering together!
 
 ---
 
-📌 Follow [Gluten GitHub](https://github.com/apache/incubator-gluten) for updates  
+📌 Follow [Gluten GitHub](https://github.com/apache/gluten) for updates<br>
 📧 Questions? Contact us at: dev@gluten.apache.org
