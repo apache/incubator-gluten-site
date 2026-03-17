@@ -31,7 +31,7 @@ For more information on Apache Gluten, including related articles and videos, pl
 |Native execution engine for Fabric Spark|Microsoft|May 2024|[Link](https://learn.microsoft.com/en-us/fabric/data-engineering/native-execution-engine-overview?tabs=sparksql)|
 |Best Practice of Gluten and Velox in Meituan|Meituan|Jun. 2024|[Link](https://mp.weixin.qq.com/s/VvmhQi8YMsm0P5xYoiGEZQ)|
 |Accelerate Spark SQL on Arm64 with Gluten and Velox|Arm|Aug. 2024|[Link](https://developer.arm.com/community/arm-community-blogs/b/servers-and-cloud-computing-blog/posts/spark-sql-arm64-gluten-velox)|
-|Alibaba Cloud AnalyticDB Spark Vectorization Capability Analysis|AlibabaCloud| Nov. 2024|[Link](https://www.alibabacloud.com/blog/sevenfold-performance-improvement-%7C-alibaba-cloud-analyticdb-spark-vectorization-capability-analysis_601761)
+|Alibaba Cloud AnalyticDB Spark Vectorization Capability Analysis|AlibabaCloud|Nov. 2024|[Link](https://www.alibabacloud.com/blog/sevenfold-performance-improvement-%7C-alibaba-cloud-analyticdb-spark-vectorization-capability-analysis_601761)|
 |EMR in Bytedance's Volcengine(in Chinese)|ByteDance|Dec. 2024 | [Link](https://www.volcengine.com/docs/6491/1263264)|
 |State of the Union: Apache Gluten|IBM|Apr. 2025|[Link](https://www.youtube.com/watch?v=Mk_d25rb_vk&list=PLJvBe8nQAEsE0dT7XVIrD8QE-gmuX3Fe6&index=6)|
 |Real World Applications of Velox and Apache Gluten in Dataproc’s NQE|Google|Apr. 2025|[Link](https://www.youtube.com/watch?v=c2V0jWR8xh8&list=PLJvBe8nQAEsE0dT7XVIrD8QE-gmuX3Fe6&index=7)|
