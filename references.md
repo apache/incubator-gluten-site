@@ -7,7 +7,7 @@ permalink: /references/
 
 # Gluten related Use Cases and Publications
 
-For more information on Apache Gluten (incubating), including related articles and videos, please refer to the following links.
+For more information on Apache Gluten, including related articles and videos, please refer to the following links.
 
 | Title | Company | Publish Date | Reference |
 |-------------------|---------|--------------|-----------------|
@@ -46,6 +46,16 @@ For more information on Apache Gluten (incubating), including related articles a
 |Xiaohongshu's Native Engine Technology Progress and Production Practices (in Chinese)|Xiaohongshu|Dec. 2025|[Link](https://bytedance.us.larkoffice.com/minutes/obusplle2j6t88vmw7dm769o)|
 |Engineering practices of accelerating Spark using Gluten and Velox at Xiaomi (in Chinese)|Xiaomi|Dec. 2025|[Link](https://bytedance.us.larkoffice.com/minutes/obuspk636n4cm2h3c1vjm63l)|
 |Enable AI with enterprise data using new IBM watsonx.data features on AWS|IBM|Dec. 2025|[Link](https://aws.amazon.com/blogs/ibm-redhat/enable-ai-with-enterprise-data-using-new-ibm-watsonx-data-features-on-aws/)|
+|Spark Native Execution Engine - Quick Tips|Microsoft|Mar. 2026|[Link](https://www.youtube.com/watch?v=RAD3mhTqnZI)|
+|Accelerating Spark in Microsoft Fabric: Native Execution and Beyond|Microsoft|Mar. 2026|[Link](https://www.youtube.com/watch?v=tAhnOsyFrF0)|
+|Boost Performance with Fabric's Native Execution Engine|Microsoft|Mar. 2026|[Link](https://www.youtube.com/watch?v=MNJ0XtPsNa8)|
+|Native execution engine for Apache Spark in Fabric|Microsoft|Mar. 2026|[Link](https://www.youtube.com/watch?v=8GJj4QlFlsw)|
+|Apache Gluten: Revolutionizing Big Data Processing Efficiency|IBM|Mar. 2026|[Link](https://www.youtube.com/watch?v=21dAy6rH2jQ)|
+|Real World Applications of Velox and Apache Gluten in Dataproc’s NQE|Google|Apr. 2025|[Link](https://www.youtube.com/watch?v=c2V0jWR8xh8)|
+|Big Data Bellevue: Apache Gluten: Accelerating SparkSQL with Spark on Velox|BDB|Mar. 2026|[Link](https://www.youtube.com/watch?v=GWTj3INSzPg)|
+|Learn Apache Gluten & Apache Iceberg | Featuring Rui Mo (IBM) & Soumil Shah Zeta Global|IBM|Mar. 2026|[Link](https://www.youtube.com/watch?v=MIO4UZuDT9M)|
+|Accelerating Spark at Microsoft using Gluten & Velox - Swinky Mann and Zhen Li|Microsoft|Apr. 2024|[Link](https://www.youtube.com/watch?v=7pXOAjSITYs)|
+|Apache Spark | Gluten | Velox | Substrait | Arrow|Community|Mar. 2026|[Link](https://www.youtube.com/watch?v=pJED_tZNeMY)|
 
 # Related Documentation
 
