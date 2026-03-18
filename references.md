@@ -55,7 +55,7 @@ For more information on Apache Gluten, including related articles and videos, pl
 |Big Data Bellevue: Apache Gluten: Accelerating SparkSQL with Spark on Velox|BDB|Mar. 2026|[Link](https://www.youtube.com/watch?v=GWTj3INSzPg)|
 |Learn Apache Gluten & Apache Iceberg \| Featuring Rui Mo (IBM) & Soumil Shah Zeta Global|IBM|Mar. 2026|[Link](https://www.youtube.com/watch?v=MIO4UZuDT9M)|
 |Accelerating Spark at Microsoft using Gluten & Velox - Swinky Mann and Zhen Li|Microsoft|Apr. 2024|[Link](https://www.youtube.com/watch?v=7pXOAjSITYs)|
-|Apache Spark | Gluten \| Velox \| Substrait \| Arrow\|Community|Mar. 2026|[Link](https://www.youtube.com/watch?v=pJED_tZNeMY)|
+|Apache Spark \| Gluten \| Velox \| Substrait \| Arrow\|Community| NA |Mar. 2026|[Link](https://www.youtube.com/watch?v=pJED_tZNeMY)|
 
 # Related Documentation
 
